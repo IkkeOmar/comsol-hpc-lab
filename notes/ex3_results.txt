@@ -1,0 +1,50 @@
+EXERCISE 3 — ANALYTICAL RESULTS
+========================================================================
+
+3.1  thermal velocity / diffusion time
+  particle radius            a = 150 nm
+  particle mass              m = 1.4844e-17 kg
+  thermal velocity (1 DOF)   v = 0.0165 m/s
+  thermal velocity (3 DOF)   v = 0.0286 m/s
+  diffusion coefficient      D = 1.4315e-12 m^2/s
+  ballistic time for 5 um    t = 1.748e-04 s   (INVALID: random walk)
+  diffusive time, 1 DOF rms  t = 8.732 s
+  diffusive time, 3 DOF rms  t = 2.911 s
+  diffusive time, 1 DOF 95% t = 2.183 s
+  diffusive time, 3 DOF 95% t = 0.728 s
+
+3.2  threshold force
+   alpha[nm]    dt[s]     f[N s/m]      F_th[N]     v_t[m/s]
+         150    0.001   2.8274e-09   4.5386e-13   1.6052e-04
+         150     0.01   2.8274e-09   1.4352e-13   5.0761e-05
+         150      0.1   2.8274e-09   4.5386e-14   1.6052e-05
+         300    0.001   5.6549e-09   6.4185e-13   1.1350e-04
+         300     0.01   5.6549e-09   2.0297e-13   3.5893e-05
+         300      0.1   5.6549e-09   6.4185e-14   1.1350e-05
+        1500    0.001   2.8274e-08   1.4352e-12   5.0761e-05
+        1500     0.01   2.8274e-08   4.5386e-13   1.6052e-05
+        1500      0.1   2.8274e-08   1.4352e-13   5.0761e-06
+
+3.3  Clausius-Mossotti
+  Re{K} closed-form vs complex-arithmetic max error: 1.665e-16
+  turnover frequency f_to = 1.8e+06 Hz
+  DC limit  Re{K} = 0.04950
+  HF limit  Re{K} = -0.47692
+  Re{K}(1 MHz)  = 0.03316
+  Re{K}(10 MHz) = -0.35172
+   dist[um]    grad|E|^2     F_DEP[N]        dt[s]   dt(10x)[s]
+          0        1e+19   2.4903e-12   3.3214e-05   3.3214e-10
+         15        1e+15   2.4903e-16   3.3214e+03   3.3214e-02
+         50        1e+12   2.4903e-19   3.3214e+09   3.3214e+04
+        100        1e+09   2.4903e-22   3.3214e+15   3.3214e+10
+
+3.4  equilibrium height (V0 = 10 V, d = 10 um, f = 10 MHz)
+  Re{K}(10 MHz) = -0.35172
+   particle   a[nm]   rho_p    y_eq[um]
+          1     150    1050      40.964
+          2     300    1050      40.964
+          3     150    1200      36.551
+          4     300    1200      36.551
+          5    1500    1050      40.964
+  separation (1050 vs 1200 kg/m^3): 4.413 um
+  trajectory: y_eq = 40.96 um, tau_relax = 1.298e+03 s, t99 = 8.249e+03 s, x99 = 789.7 mm, U_avg = 0.00003 m/s

@@ -1,0 +1,430 @@
+==============================================================================
+EXERCISE 1 - THE H-FILTER (Bruus p.99) - ANALYTICAL SOLUTION
+the lab-on-a-chip course, Assignment 1
+==============================================================================
+
+Constants: k_B = 1.380649e-23 J/K, eps0 = 8.8541878128e-12 F/m,
+           eta = 1e-3 Pa*s (water), T = 293.15 K, g = 9.80665 m/s^2
+Geometry : w = 100 um, h = 5 um, D(sugar) = 2e-10 m^2/s, c0 = 1 mol/m^3
+Case A (Bruus p.99): L = 25 mm   Case B (COMSOL): L = 6 mm, Q = 0.1 uL/min
+
+------------------------------------------------------------------------------
+0.  VERIFICATION OF ASSIGNMENT EQ. (1)
+------------------------------------------------------------------------------
+Eq.(1) at t=0 vs the step function (N = 2000 terms):
+  max |c_series - step| for |y| > w/100      = 2.533e-03 mol/m^3 (2.533e-03 of c0)
+  rms |c_series - step| for |y| > w/100      = 3.618e-04 mol/m^3
+  L2 error over the whole width (step norm)  = 1.181e-02
+  value at the jump, y = 0                   = 0.5000 mol/m^3 (= c0/2 as required)
+  Gibbs overshoot above the step value c0    = 1.0895 mol/m^3 (8.95 % of the jump; classical Gibbs constant)
+  => Eq.(1) DOES reproduce the step initial condition c(y,0) = c0 for
+     y<0 and 0 for y>0.  The only defect is the classical Gibbs
+     ringing in a thin neighbourhood of the jump (width ~ w/N).
+
+Eq.(1) vs the general Neumann series (ystar = 0), t = 3.7 s:
+  max difference = 0.000e+00 mol/m^3   (must be ~0)
+
+Independent finite-difference check of the same PDE (no-flux walls,
+801 nodes, exact matrix exponential of the FD generator), t = 3.7 s:
+  max |c_FD - c_Eq1| over all nodes          = 6.923e-04 mol/m^3
+  max |c_FD - c_Eq1| away from the jump      = 6.923e-04 mol/m^3
+  (the FD initial condition is a piecewise-constant step, so the
+   difference is O(dx) in the jump cell only.)
+
+Independent image-sum check (exact, built only from the erfc closed
+form), t = 3.7 s:
+  max |c_images - c_Eq1|                     = 3.331e-16 mol/m^3
+  => Eq.(1) is exactly the Neumann (no-flux wall) solution, and it is
+     the image sum of the free-space erfc closed form.
+
+Mass conservation (no-flux walls):
+  int c dy at t = 2.3 s = 0.00005000 mol/m^2
+  int c dy at t = 0     = 0.00004999 mol/m^2 (relative error 2.50e-04)
+
+Closed-form averages vs brute-force quadrature (t = 2.3 s):
+  flux-weighted top half : closed form 0.29082642  vs quadrature 0.29082645  (diff 3.23e-08)
+  area-averaged top half : closed form 0.24185413  vs quadrature 0.24185415  (diff 1.36e-08)
+  generalised (ystar=0)  : flux diff 3.23e-08, area diff 1.36e-08
+
+Shifted-interface closed forms vs quadrature (ystar = 21.000 um, t = 2.3 s):
+  flux-weighted : closed form 0.56200300  vs quadrature 0.56200303  (diff 2.94e-08)
+  area-averaged : closed form 0.50692364  vs quadrature 0.50692365  (diff 1.03e-08)
+
+==============================================================================
+(a)  WHY THIS IS REASONABLY A 1D DIFFUSION PROBLEM
+==============================================================================
+Assumptions (stated explicitly):
+  A1  Shallow channel: h = 5 um << w = 100 um, so the flow is 2D in the
+      x-y plane with a parabolic (Poiseuille) profile; h enters only the
+      hydraulic resistance, not the concentration field.
+  A2  Stokes flow, laminar, single phase (Re << 1, see below).
+  A3  Dilute, non-reacting sugar: pure diffusion with constant D.
+  A4  No-flux walls at y = +-w/2 (no sugar leaves through the walls).
+  A5  Convective mixing between the two side streams is neglected; the
+      only cross-stream mechanism is transverse diffusion.
+  A6  The concentration profile is 'frozen' in x: the advective travel
+      time along x is ~1e5 times shorter than the longitudinal diffusion
+      time, so Pe_x >> 1 and dc/dx ~ 0 (quantified below).
+
+CASE B - COMSOL geometry:
+   L = 6 mm,  Q0 = 0.1 uL/min (1.666667e-12 m^3/s)
+   channel volume V = L w h              = 3.000000e-12 m^3
+   residence time t_res = V/Q0            = 1.8 s
+   mean velocity U = Q0/(w h)             = 0.00333333 m/s
+   transverse diffusion time (1st eigenvalue) t_diff,y = w^2/(pi^2 D) = 5.06606 s
+   longitudinal diffusion time t_diff,x = L^2/D            = 180000 s
+   Peclet x: Pe_x = U L/D                  = 100000
+   Peclet y: Pe_y = U w/D                  = 1666.67
+   Reynolds: Re_h = rho U h/eta           = 1.667e-02 (Re_w = 3.333e-01)
+   ratios: t_diff,x/t_res = 100000   t_res/t_diff,y = 0.355306
+
+CASE A - Bruus geometry (flow rate NOT given in the assignment;
+   L = 25 mm,  Q0 = 0.1 uL/min (1.666667e-12 m^3/s)
+   channel volume V = L w h              = 1.250000e-11 m^3
+   residence time t_res = V/Q0            = 7.5 s
+   mean velocity U = Q0/(w h)             = 0.00333333 m/s
+   transverse diffusion time (1st eigenvalue) t_diff,y = w^2/(pi^2 D) = 5.06606 s
+   longitudinal diffusion time t_diff,x = L^2/D            = 3.125e+06 s
+   Peclet x: Pe_x = U L/D                  = 416667
+   Peclet y: Pe_y = U w/D                  = 1666.67
+   Reynolds: Re_h = rho U h/eta           = 1.667e-02 (Re_w = 3.333e-01)
+   ratios: t_diff,x/t_res = 416667   t_res/t_diff,y = 1.48044
+         the COMSOL flow rate 0.1 uL/min is used as the reference):
+
+General formulas in the (unspecified) total flow Q0:
+   t_res(Q0)  = L w h / Q0  -> Case A: 1.250000e-11/Q0 [s],  Case B: 3.000000e-12/Q0 [s]
+   U(Q0)      = Q0/(w h)
+   Pe_y(Q0)   = U w/D = Q0/(h D)  -> Case B at 0.1 uL/min: 1666.67
+   Pe_x(Q0)   = U L/D = Q0 L/(w h D)
+   t_diff,y   = w^2/(pi^2 D) = 5.06606 s   (both cases, same w and D)
+   t_diff,x   = L^2/D = 3.125e+06 s (Case A), 180000 s (Case B)
+
+Conclusion (the physical argument):
+  * Convection along x dominates diffusion along x by Pe_x ~ 100000 (Case B) to 416667 (Case A).
+    t_diff,x/t_res = 100000 (Case B): the
+    concentration profile has no time to diffuse along a 6 mm channel,
+    so c(y) is essentially independent of x over the channel length -
+    the profile is 'frozen' in the streamwise direction.
+  * Transversally, t_res = 1.8 s (Case B) is a factor
+    2.81 SMALLER than the transverse
+    diffusion time t_diff,y = 5.066 s: diffusion across
+    the width is only PARTLY complete within one residence time, which
+    is exactly the regime the H-filter exploits (it sorts on D).
+  * Hence dc/dt = D d2c/dy2 with x frozen: a 1D (transverse) diffusion
+    problem.  The transverse length scale is w = 100 um; the streamwise
+    length scale L does not enter the concentration field at all.
+
+==============================================================================
+(b)  TIME t1 FOR 30 % SUGAR IN THE UPPER EXIT CHANNEL
+==============================================================================
+Criterion (as prescribed): c(+w/2, t1) = 0.30 c0, i.e. the Eq.(1)
+concentration evaluated at the upper wall of the channel, y = +w/2,
+which is the wall of the upper (particle) exit channel.
+
+B1  Eq.(1) - finite width, no-flux walls at y = +-w/2  [PRIMARY]
+    t1 = 5.8656 s
+    achieved c(+w/2, t1)/c0 = 0.30000000  (target 0.30)
+    dimensionless x = pi^2 D t1 / w^2 = 1.157824
+    independent image-sum root (exact erfc form): t1 = 5.8656 s (difference 0.00e+00 s)
+
+B2  Closed form for an INFINITE domain (no walls, free space):
+    c(+w/2,t) = c0/2 * erfc(w/(4 sqrt(D t)))
+    t1 = 22.7276 s
+    achieved c(+w/2, t1)/c0 = 0.30000000
+    absolute difference |t1_series - t1_erfc| = 16.862 s
+      = 287.47 % of t1_series, 74.19 % of t1_erfc
+    ratio t1_erfc / t1_series = 3.8747
+
+    WHY THE TWO DIFFER BY A FACTOR ~4 (both are correct, for different
+    geometries):
+      * Eq.(1) solves the REAL channel: solid walls at y = +-w/2.
+        Sugar that diffuses towards the upper wall is reflected and
+        accumulates, so the wall concentration rises quickly.
+      * erfc() assumes an UNBOUNDED medium: sugar that diffuses past
+        y = +w/2 is simply lost to the exterior, so the wall value lags.
+      * Diffusion length sqrt(2 D t1):
+          Eq.(1)  : t1 = 5.866 s -> 48.44 um  (= 0.97 w/2)
+          erfc    : t1 = 22.73 s -> 95.35 um  (= 1.35 w)
+      * The erfc value corresponds to a front that has travelled PAST the
+        wall by ~35 % of the channel width, i.e. it is only valid for a
+        channel much wider than the diffusion length.  At the 30 %
+        level the front has already reached the upper wall, so the wall
+        BC matters and Eq.(1) is the physically correct one for the
+        H-filter of this assignment.
+    => PRIMARY t1 = 5.866 s (Eq. 1).
+       erfc cross-check: t1 = 22.73 s (74.2 % longer than Eq. 1).
+
+    Convergence of the series at y = +w/2 (sin((2n-1)pi/2) = +-1):
+      N =     2 : t1 = 5.86560273 s, c(+w/2,t1)/c0 = 0.30000000
+      N =     5 : t1 = 5.86560273 s, c(+w/2,t1)/c0 = 0.30000000
+      N =    10 : t1 = 5.86560273 s, c(+w/2,t1)/c0 = 0.30000000
+      N =    20 : t1 = 5.86560273 s, c(+w/2,t1)/c0 = 0.30000000
+      N =    50 : t1 = 5.86560273 s, c(+w/2,t1)/c0 = 0.30000000
+      N =   100 : t1 = 5.86560273 s, c(+w/2,t1)/c0 = 0.30000000
+      N =   500 : t1 = 5.86560273 s, c(+w/2,t1)/c0 = 0.30000000
+      N =  2000 : t1 = 5.86560273 s, c(+w/2,t1)/c0 = 0.30000000
+    The root is insensitive to N (agreement to 8 significant figures from
+    N = 20 upwards), so the conditional convergence of the series at
+    t -> 0 (Leibniz series) is not a problem at t1.
+
+    Supplementary (the concentration actually COLLECTED by the upper exit
+    channel is an average over the upper half, not the wall value):
+      area-averaged top half, c_up(t) = 0.30 c0 at t = 3.57999 s
+      flux-weighted top half (Poiseuille weights) at t = 2.51518 s
+      wall value at those times: 0.1863 and 0.1149 of c0
+
+==============================================================================
+(c)  COMPARISON WITH THE RELEVANT DIFFUSION TIME
+==============================================================================
+  t_diff        = w^2/(4 D)    = 12.5 s   (as prescribed)
+  t_diff,eigen  = w^2/(pi^2 D) = 5.06606 s   (1st eigenmode)
+  t_diff,hw     = w^2/(8 D)    = 6.25 s   (<x^2> = 2Dt with x = w/2)
+  (consistency note: <x^2> = 2Dt with x = w/2 gives w^2/(8D) = 6.25 s;
+   the prescribed w^2/(4D) is the same estimate with the <x^2> = 4Dt
+   convention.)
+
+  t1 / t_diff        = 0.469248
+  t1 / t_diff,eigen  = 1.15782
+  t1 / t_diff,hw     = 0.938496
+  (same ratios for the infinite-domain value t1 = 22.73 s:
+   t1_erfc/t_diff = 1.81821, t1_erfc/t_diff,eigen = 4.48625, t1_erfc/t_diff,hw = 3.63642)
+
+  Does it make sense?  Yes - with one honest caveat:
+   * t1 = 5.866 s EXCEEDS the first-eigenmode transverse
+     relaxation time t_diff,eigen = 5.066 s (ratio 1.1578).
+     This is the meaningful statement: diffusion only REDISTRIBUTES the
+     sugar, it cannot create a step, so the 30 % level can only be
+     reached after the slowest (fundamental) transverse mode has had
+     time to relax, i.e. after at least one eigen-relaxation time.
+   * t1 = 5.866 s is slightly BELOW t_diff,hw = 6.25 s = the time for the front to travel the
+     half width w/2, and below the prescribed w^2/(4D) = 12.5 s.
+     Reason: the 30 % WALL value is reached while the front is still
+     spreading (it is a tail value, not the front), and the reflecting
+     wall of the real channel accelerates it.  For the infinite-domain
+     model the ordering is the textbook one: t1_erfc = 22.73 s
+     > t_diff = 12.5 s (ratio 1.818).
+   * Order-of-magnitude check: at t1 the front has travelled
+     sqrt(2 D t1) = 48.44 um
+     ~ w/2 = 50 um, i.e. exactly the distance from the interface to the
+     upper wall.  The 30 % level at the wall is reached when the
+     spreading front has just arrived there - self-consistent.
+
+==============================================================================
+(d)  FLOW RESISTANCE OF THE HORIZONTAL (MAIN) CHANNEL SEGMENT
+==============================================================================
+  Hagen-Poiseuille for a rectangular channel with gap h << width w:
+      R_h = 12 eta L / (w h^3)      [Pa s / m^3]
+      eta = 0.001 Pa s, w = 0.0001 m, h = 5e-06 m
+
+  Case A (Bruus p.99, L = 25 mm):
+      R_h = 12 * 0.001 * 0.025 / (0.0001 * 5e-06^3)
+          = 2.400000e+16 Pa s/m^3
+  Case B (COMSOL, L = 6 mm):
+      R_h = 12 * 0.001 * 0.006 / (0.0001 * 5e-06^3)
+          = 5.760000e+15 Pa s/m^3
+  Ratio R_A/R_B = L_A/L_B = 4.167 (same cross-section)
+  Cross-check via the pressure gradient: dp/dx = 12 eta U / h^2 with
+  U = 0.003333 m/s gives dp/dx = 1.600000e+06 Pa/m; over L = 0.006 m that is
+  9.600000e+03 Pa = Q0 R_h = 9.600000e+03 Pa  (consistent).
+
+==============================================================================
+(e)  DRIVING PRESSURE NEEDED FOR 30 % SUGAR IN THE UPPER EXIT
+==============================================================================
+MODEL - stated explicitly, with the algebra.
+
+  The main channel carries the total flow Q0; the two side channels feed
+  it (sugar below, water above) and the two exit channels leave it.
+  With identical side and exit channels the inlet split is
+      alpha = Q_sugar/Q0 = 1/2,   the exit split f_up = Q_up/Q0 = 1/2,
+  and the interface sits on the midline y = 0, which is exactly the
+  initial condition of Eq. (1).  In the main channel the transverse
+  velocity is u(y) = (3/2) U (1 - (2y/w)^2), U = Q0/(w h), and the
+  steady state obeys  u(y) dc/dx = D d2c/dy2.
+
+  (1) Along the channel the transverse sugar FLUX is conserved:
+      d/dx int_0^{w/2} u(y) c(y,x) dy = D [dc/dy]_{y=0}^{w/2} = 0,
+      because the walls at y = +-w/2 are no-flux.
+  (2) The upper exit carries flow Q_up = f_up Q0 and collects the sugar
+      that has crossed the interface, so its concentration is
+      c_up = Phi_up(L) / (f_up Q0),
+      Phi_up(L) = int_0^{w/2} u(y) c(y, t_res) dy.
+  (3) The total sugar molar flow entering is n_s = alpha Q0 c0, so the
+      fraction that crossed is F_cross = Phi_up/(alpha Q0 c0) and
+          c_up/c0 = F_cross * alpha / f_up.                     (*)
+  (4) For the symmetric device (alpha = f_up = 1/2) (*) reduces to
+          c_up/c0 = F_cross(t_res),
+      i.e. the 30 % condition means that 30 % of the entering sugar has
+      crossed the midline within the residence time.  F_cross is given
+      by the same series as Eq. (1).
+  (5) The residence time is set by the flow rate, t_res = L w h/Q0, so
+      the 30 % condition fixes Q0, and then dp = Q0 R_h.
+
+  ALTERNATIVE READING (flagged): the assignment wording ('the flow split
+  that gives 30 % sugar in the upper exit') can also be read as: keep
+  Q0 fixed and tune the inlet split alpha instead.  That is solved
+  below for the COMSOL operating point; note that alpha > 1/2 means
+  the sugar stream itself is wider than half the channel, so the sugar
+  reaches the upper exit by ADVECTION, not by diffusive crossover -
+  which defeats the purpose of an H-filter.  The symmetric device
+  (alpha = 1/2) with a suitable Q0 is therefore the defensible
+  reading, and the residence-time criterion is used as primary.
+
+  E1  PRIMARY: residence-time criterion (symmetric device, alpha=1/2)
+      t_res = t1 (Eq. 1 wall criterion) -> Q0 = L w h / t1 -> dp = Q0 R_h
+
+      Case A (L = 25 mm), wall criterion (wall value c(+w/2)=0.30 c0):
+          t_res = 5.8656 s, Q0 = 2.131068e-12 m^3/s = 0.127864 uL/min
+          dp = Q0 R_h = 51145.6 Pa = 511.456 mbar
+      Case A (L = 25 mm), area criterion (collected avg (area)):
+          t_res = 3.57999 s, Q0 = 3.491629e-12 m^3/s = 0.209498 uL/min
+          dp = Q0 R_h = 83799.1 Pa = 837.991 mbar
+      Case A (L = 25 mm), flux criterion (collected avg (Poiseuille)):
+          t_res = 2.51518 s, Q0 = 4.969815e-12 m^3/s = 0.298189 uL/min
+          dp = Q0 R_h = 119276 Pa = 1192.76 mbar
+      Case B (L = 6 mm), wall criterion (wall value c(+w/2)=0.30 c0):
+          t_res = 5.8656 s, Q0 = 5.114564e-13 m^3/s = 0.0306874 uL/min
+          dp = Q0 R_h = 2945.99 Pa = 29.4599 mbar
+      Case B (L = 6 mm), area criterion (collected avg (area)):
+          t_res = 3.57999 s, Q0 = 8.379908e-13 m^3/s = 0.0502795 uL/min
+          dp = Q0 R_h = 4826.83 Pa = 48.2683 mbar
+      Case B (L = 6 mm), flux criterion (collected avg (Poiseuille)):
+          t_res = 2.51518 s, Q0 = 1.192755e-12 m^3/s = 0.0715653 uL/min
+          dp = Q0 R_h = 6870.27 Pa = 68.7027 mbar
+
+  E2  The COMSOL operating point as specified in the assignment
+      Q0 = 0.1 uL/min = 1.666667e-12 m^3/s, L = 6 mm, R_h = 5.760000e+15 Pa s/m^3
+      dp = Q0 R_h = 9600 Pa = 96 mbar
+      Mixing state at that flow rate (t_res = 1.8 s):
+        c(+w/2)/c0 (wall value)   = 0.0624
+        top-half area average/c0   = 0.2141
+        top-half flux average/c0   = 0.2668
+      => at 0.1 uL/min the 6 mm channel is only PARTLY mixed.  To
+         deliver 30 % with the symmetric device one needs Q0 ~ 0.03069 uL/min
+         (wall criterion) or 0.07157 uL/min
+         (collected-average criterion), i.e. dp ~ 2946 Pa to 6870 Pa.
+      For reference, the same 0.1 uL/min in the 25 mm (Case A) channel
+      would need dp = 40000 Pa = 400 mbar.
+
+  E3  ALTERNATIVE READING: fixed Q0, tune the inlet split alpha.
+      The interface between the two side streams sits at y*; with the
+      Poiseuille profile of the main channel the flow fraction below y*
+      is  F(y*) = [y* - 4y*^3/(3w^2) + w/3] / (2w/3),  so alpha = F(y*)
+      (F(-w/2)=0, F(0)=1/2, F(w/2)=1).  The upper exit (equal exit
+      channels, divide line y=0) then sees the flow-weighted average
+      c_up(alpha) = int_0^{w/2} u c dy / int_0^{w/2} u dy, evaluated with
+      the general Neumann series for a step at y*.  Solve
+      c_up(alpha) = 0.30 c0 at the COMSOL operating point
+      (Q0 = 0.1 uL/min, t_res = 1.8 s):
+      alpha = Q_sugar/Q0 = 0.542019  (water share 0.457981)
+      interface at y* = 2.8042 um (midline would be 0 um)
+      check: c_up/c0 at that split = 0.300000
+      QUANTITATIVE CAVEAT: alpha > 1/2 by 0.0420, so a
+      fraction 0.0420 of the total flow is sugar that
+      sits ABOVE the midline and is convected straight into the
+      upper exit without ever diffusing.  Of the 30 % delivered,
+      only 86.0 % of the
+      sugar fraction is due to genuine diffusive crossover.
+      So this branch is only weakly 'sorting' - it is not the
+      intended operating regime.  The physically meaningful design
+      point is the symmetric device (alpha = 1/2) at a LOWER flow
+      rate, see E1.
+
+  E4  FALLBACK ESTIMATE (the simple split-only model requested):
+      If the upper exit carries a fraction f_up of the total flow Q0 and
+      the sugar entering at the bottom is (to first order) retained in
+      its own stream, then the sugar concentration in the upper exit is
+      set by the diffusive exchange alone:
+          c_up/c0 = F_cross(t_res) * alpha / f_up = 0.30
+      i.e.   alpha = 0.30 f_up / F_cross(t_res),
+      with F_cross(t_res) = c_up(t_res)/c0 from the same series
+      (symmetric interface, alpha = 1/2):
+        at the COMSOL operating point (t_res = 1.8 s):
+          F_cross = 0.266845 (flux-weighted), alpha = 0.562125
+          F_cross = 0.214070 (area-weighted),  alpha = 0.700705
+        => a solution EXISTS, but only for alpha > 1/2, i.e. the sugar
+        side stream must carry MORE than half the total flow, which
+        pushes the interface above the midline so that part of the
+        sugar reaches the upper exit by ADVECTION rather than by
+        diffusion.  That is the degenerate branch, and it confirms that
+        the physically meaningful design point is the symmetric device
+        (alpha = 1/2) running at a LOWER flow rate (see E1).
+        At the 30 % residence time (t1 = 5.866 s, the
+        wall criterion) the crossover fractions are F_cross = 0.397371 (flux) / 0.372671 (area);
+        with alpha = f_up = 1/2 the balance (*) gives
+        c_up/c0 = F_cross * (1/2)/(1/2) = 0.397371 (flux-weighted collected concentration).
+
+  SANITY CHECK of the pressure magnitudes:
+     R_h(6 mm)  = 5.7600e+15 Pa s/m^3  ->  dp = 9600 Pa (96 mbar) at 0.1 uL/min
+     R_h(25 mm) = 2.4000e+16 Pa s/m^3  ->  dp = 4e+04 Pa (400 mbar) at 0.1 uL/min
+     per 1 uL/min: dp = 9.6e+04 Pa (6 mm), 4e+05 Pa (25 mm)
+     Independent check via the Poiseuille gradient dp/dx = 12 eta U/h^2:
+       Case B: 1.6000e+06 Pa/m x 0.006 m = 9600 Pa
+     The resistance is enormous (h^3 = 1.25e-16 m^3 in the
+     denominator), so dp is O(1e3-1e4) Pa = tens to hundreds of mbar
+     for these flow rates.  A value of ~1e-3 Pa would mean a unit error
+     in Q (uL/min -> m^3/s) or in R; the unit conversion used here is
+     0.1 uL/min = 0.1e-9 m^3 / 60 s = 1.666667e-12 m^3/s.
+
+==============================================================================
+BONUS - critical diffusion coefficient and largest sortable particle
+     (cross-check for the COMSOL part (a)-(c); not part of a-e)
+==============================================================================
+  The crossover is governed by the single dimensionless group
+      x = pi^2 D t_res / w^2.
+  Two common definitions of the critical diffusion coefficient D_c:
+   (i)  'classical' crossing criterion: the diffusion front travels the
+        half width w/2 in the residence time, <x^2> = 2 D t_res:
+            D_c = w^2/(8 t_res)
+   (ii) 'wall criterion' used in this assignment (30 % at the upper
+        wall at the end of the channel), i.e. x = x(t1) = 1.1578:
+            D_c = x(t1) w^2/(pi^2 t_res)
+  Largest sphere that can still be SORTED (i.e. that does NOT cross):
+      d_max = k_B T / (3 pi eta D_c)   [Stokes-Einstein]
+
+  Case B (COMSOL, Q = 0.1 uL/min):  t_res = 1.8 s
+     (i)  D_c = w^2/(8 t_res)      = 6.944444e-10 m^2/s -> d_max = 0.00061839 um
+     (ii) D_c = x(t1) w^2/(pi^2 t_res) = 6.517336e-10 m^2/s -> d_max = 0.00065892 um
+  Case A (Bruus, L = 25 mm, Q = 0.1 uL/min):  t_res = 7.5 s
+     (i)  D_c = w^2/(8 t_res)      = 1.666667e-10 m^2/s -> d_max = 0.0025766 um
+     (ii) D_c = x(t1) w^2/(pi^2 t_res) = 1.564161e-10 m^2/s -> d_max = 0.0027455 um
+  Sugar itself has D = 2.000e-10 m^2/s, i.e. D/D_c = 0.288
+  (classical) - a slow tracer that only partially crosses the 6 mm
+  channel within the residence time (consistent with part b).
+
+
+Figures:
+  figure written: <project>\figures\ex1_a_time_scales.png
+  figure written: <project>\figures\ex1_b_mixing.png
+  figure written: <project>\figures\ex1_b_profiles.png
+  figure written: <project>\figures\ex1_e_pressure.png
+  figure written: <project>\figures\ex1_e_crossing_fraction.png
+==============================================================================
+SELF-CHECK (files and order-of-magnitude sanity)
+==============================================================================
+  [OK ] <project>\scripts\ex1_analytical.py  (64779 bytes)
+  [OK ] <project>\notes\ex1_analytical_results.txt  (23070 bytes)
+  [OK ] <project>\notes\ex1_analytical_results.json  (10810 bytes)
+  [OK ] <project>\figures\ex1_a_time_scales.png  (103903 bytes)
+  [OK ] <project>\figures\ex1_b_mixing.png  (114191 bytes)
+  [OK ] <project>\figures\ex1_b_profiles.png  (96850 bytes)
+  [OK ] <project>\figures\ex1_e_pressure.png  (135866 bytes)
+  [OK ] dp (COMSOL, 0.1 uL/min) is O(1e3-1e4) Pa  (9600 Pa = 96 mbar)
+  [OK ] dp (analytical, 30 % wall criterion) is O(1e3-1e5) Pa  (5.115e+04 Pa)
+  [OK ] dp/dx check agrees with Q0 R_h  (exact)
+  [OK ] t1 > t_diff,eigen  (5.866 > 5.066)
+  [OK ] t1 ~ half-width diffusion time (within a factor 1.3)  (ratio 0.938)
+  [OK ] diffusion length at t1 ~ w/2  (48.44 um vs 50 um)
+  [OK ] Pe_x >> 1 (profile frozen in x)  (Pe_x = 1e+05)
+  [OK ] Re << 1 (laminar)  (Re_h = 1.67e-02)
+  [OK ] Eq.(1) reproduces the step at t=0  (max residual 2.53e-03 mol/m^3)
+  [OK ] Eq.(1) = independent FD solution  (max diff 6.92e-04 mol/m^3)
+  [OK ] Eq.(1) = exact image sum of the erfc form  (max diff 3.33e-16 mol/m^3)
+  [OK ] series root is N-independent  (dN(500->2000) = 1.78e-15 s)
+  [OK ] closed-form averages match quadrature  (3.2e-08 / 1.4e-08)
+  [OK ] generalised closed forms match quadrature  (3.2e-08 / 1.4e-08)
+  [OK ] shifted-interface closed forms match quadrature  (2.9e-08 / 1.0e-08)
+  [OK ] t1 (Eq.1) and t1 (image sum) agree  (0.00e+00 s)
+  [OK ] flow fraction map consistent (F(0)=0.5, F(-w/2)=0, F(w/2)=1)  (ok)
+
+ALL CHECKS PASSED
+==============================================================================

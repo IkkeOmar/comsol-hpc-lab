@@ -1,0 +1,7 @@
+=== [01:23:45] compiling GeomExport.java ===
+
+    marker ok: GEOMEXPORT DONE
+=== [01:23:51] compile ok, starting GeomExport ===
+=== [01:24:13] comsolbatch finished, exit code 0 ===
+--- log: ../notes/geom_export.log ---
+GEOMEXPORT DONE

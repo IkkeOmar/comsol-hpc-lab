@@ -1,0 +1,545 @@
+*******************************************
+***COMSOL 6.4.0.429 progress output file***
+*******************************************
+Sat Oct 24 00:55:07 CEST 2026
+COMSOL Multiphysics 6.4 (Build: 429) starting in batch mode
+Running: <project>\comsol\Ex1_HFilter.class
+---------- Current Progress: 100 % - Updating selections
+Memory: 354/358 382/385
+           Current Progress:   0 % - Rectangle 1
+Memory: 359/359 387/387
+           Current Progress:   8 % - Line Segment 1
+Memory: 361/361 387/387
+-          Current Progress:  17 % - Form Union
+--------   Current Progress:  87 % - Resolving domains and void regions
+Memory: 362/362 387/387
+---------- Current Progress: 100 % - Updating selections
+           Current Progress:   0 % - Mesh Control Edges 1
+Memory: 364/364 388/388
+---------- Current Progress: 100 % - Updating selections
+Memory: 365/365 388/388
+---------- Current Progress: 100 % - Creating visualization mesh
+Memory: 367/367 390/390
+---------- Current Progress: 100 % - Updating selections
+Memory: 369/369 391/391
+inlet edges     : [1]
+outlet edges    : [4]
+--- spf done ---
+--- tds done ---
+           Current Progress:   0 % - Free Triangular 1
+Memory: 551/561 574/584
+Number of vertex elements: 6
+           Current Progress:   3 % - Adjusting boundary mesh
+Memory: 553/561 574/584
+           Current Progress:   6 % - Adjusting boundary mesh
+Memory: 554/561 574/584
+Number of boundary elements: 6068
+           Current Progress:   8 % - Preparing for advancing front meshing
+Memory: 555/561 578/584
+           Current Progress:   9 % - Preparing for advancing front meshing
+Memory: 578/578 608/608
+-          Current Progress:  16 % - Inserting interior points
+Memory: 576/580 607/608
+-          Current Progress:  18 % - Inserting interior points
+-          Current Progress:  19 % - Inserting interior points
+--         Current Progress:  20 % - Inserting interior points
+--         Current Progress:  25 % - Inserting interior points
+---        Current Progress:  32 % - Inserting interior points
+Memory: 577/580 607/608
+---        Current Progress:  33 % - Inserting interior points
+---        Current Progress:  35 % - Inserting interior points
+---        Current Progress:  39 % - Inserting interior points
+Memory: 578/580 607/608
+----       Current Progress:  42 % - Inserting interior points
+----       Current Progress:  43 % - Inserting interior points
+Memory: 579/580 607/608
+----       Current Progress:  46 % - Inserting interior points
+Memory: 582/582 614/614
+----       Current Progress:  48 % - Inserting interior points
+-----      Current Progress:  50 % - Inserting interior points
+Memory: 587/587 618/618
+-----      Current Progress:  51 % - Inserting interior points
+-----      Current Progress:  52 % - Inserting interior points
+Memory: 590/590 620/620
+-----      Current Progress:  54 % - Inserting interior points
+-----      Current Progress:  58 % - Inserting interior points
+Memory: 595/595 627/627
+-------    Current Progress:  74 % - Improving element quality
+Memory: 596/596 628/628
+-----      Current Progress:  54 % - Improving element quality
+Memory: 589/596 620/628
+Number of elements: 168056
+-------    Current Progress:  76 % - Improving element quality
+Memory: 595/596 626/628
+--------   Current Progress:  80 % - Improving element quality
+Memory: 588/596 620/628
+---------- Current Progress: 100 % - Smoothing across removed control entities
+Memory: 585/596 615/628
+Number of vertex elements: 4
+Number of boundary elements: 4068
+Number of elements: 168056
+Minimum element quality: 0.6817
+--- mesh done, elements: 168056 ---
+----       Current Progress:  47 % - Generating equations
+Memory: 646/654 674/683
+------     Current Progress:  60 % - Generating equations
+Memory: 652/657 678/683
+------     Current Progress:  66 % - Generating equations
+Memory: 695/698 721/724
+---        Current Progress:  39 % - Generating equations
+Memory: 661/698 689/724
+------     Current Progress:  60 % - Generating equations
+Memory: 676/698 701/724
+-------    Current Progress:  72 % - Generating equations
+Memory: 676/698 702/724
+           Current Progress:   1 % - Generating equations
+Memory: 665/698 697/724
+           Current Progress:   2 % - Generating equations
+Memory: 689/698 717/724
+           Current Progress:   3 % - Generating equations
+Memory: 695/698 724/725
+<---- Compile Equations: Stationary in Study 1/Solution 1 (sol1) ---------------
+Started at Oct 24, 2026, 12:56:25?AM.
+Geometry shape function: Linear Lagrange
+Running on Intel64 Family 6 Model 142 Stepping 12, GenuineIntel.
+Using 1 socket with 4 cores in total on DESKTOP-K4OD2KS.
+Available memory: 16.18 GB.
+           Current Progress:   3 % - Compile Equations: Stationary
+Memory: 690/699 716/725
+           Current Progress:   4 % - Compile Equations: Stationary
+Memory: 698/700 724/727
+Time: 5 s.
+Physical memory: 700 MB
+Virtual memory: 727 MB
+Warning: Fluid flow interfaces are defined in the spatial frame. In the component node, select Permanently Define All Frames to avoid unexpected behavior.
+
+  - Node: Laminar Flow (spf)
+Ended at Oct 24, 2026, 12:56:30?AM.
+----- Compile Equations: Stationary in Study 1/Solution 1 (sol1) -------------->
+<---- Dependent Variables 1 in Study 1/Solution 1 (sol1) -----------------------
+Started at Oct 24, 2026, 12:56:30?AM.
+           Current Progress:   4 % - Dependent Variables 1
+Memory: 706/721 731/746
+Solution time: 0 s.
+Physical memory: 721 MB
+Virtual memory: 746 MB
+Ended at Oct 24, 2026, 12:56:30?AM.
+----- Dependent Variables 1 in Study 1/Solution 1 (sol1) ---------------------->
+<---- Stationary Solver 1 in Study 1/Solution 1 (sol1) -------------------------
+Started at Oct 24, 2026, 12:56:30?AM.
+Parametric solver
+           Current Progress:   5 % - Stationary Solver 1
+Memory: 743/743 765/765
+Nonlinear solver
+Number of degrees of freedom solved for: 344252 (plus 4073 internal DOFs).
+    
+Parameter D_sweep = 1e-11.
+           Current Progress:   5 % - Assembling residual
+Memory: 754/762 771/784
+           Current Progress:   5 % - Assembling sparsity pattern
+Memory: 755/762 771/784
+           Current Progress:   5 % - Assembling matrices
+Memory: 901/911 923/934
+Nonsymmetric matrix found.
+Scales for dependent variables:
+Concentration (comp1.c): 1
+Pressure (comp1.p): 0.005
+Velocity Field (comp1.u): 0.00011
+Orthonormal null-space function used.
+           Current Progress:   5 % - 
+Memory: 929/956 961/984
+           Current Progress:   5 % - Matrix factorization
+Memory: 958/1019 975/1056
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+           Current Progress:   5 % - Solving linear system
+Memory: 1763/1763 1995/1995
+           Current Progress:   5 % - Assembling residual
+Memory: 1768/1768 1994/1998
+           Current Progress:   5 % - Solving linear system
+Memory: 1777/1777 2003/2003
+   1          52     4.2e+02   0.0100000          53    2    1    2  6.6e-12  1.9e-11
+           Current Progress:   6 % - 
+Memory: 1787/1787 2035/2035
+           Current Progress:   6 % - Assembling sparsity pattern
+Memory: 1720/1809 1944/2035
+           Current Progress:   6 % - Assembling matrices
+Memory: 1875/1899 2120/2130
+           Current Progress:   6 % - 
+Memory: 1897/1928 2143/2176
+           Current Progress:   6 % - Constraint handling
+Memory: 1927/1983 2171/2231
+           Current Progress:   6 % - Matrix factorization
+Memory: 1919/1983 2155/2231
+           Current Progress:   6 % - Solving linear system
+Memory: 1859/1983 2101/2231
+           Current Progress:   6 % - Assembling residual
+Memory: 1863/1983 2098/2231
+           Current Progress:   6 % - Solving linear system
+Memory: 1861/1983 2096/2231
+   2         4.6     3.9e+02   0.1000000         5.2    3    2    4    4e-13  3.8e-12
+           Current Progress:   8 % - Assembling sparsity pattern
+Memory: 1822/1983 2055/2231
+           Current Progress:   8 % - Assembling matrices
+Memory: 1928/1983 2165/2231
+           Current Progress:   8 % - Matrix factorization
+Memory: 1969/2038 2206/2282
+           Current Progress:   8 % - Solving linear system
+Memory: 1960/2038 2196/2282
+           Current Progress:   8 % - Assembling residual
+Memory: 1876/2038 2108/2282
+           Current Progress:   8 % - Solving linear system
+Memory: 1886/2038 2118/2282
+   3     3.8e-08     6.9e+03   1.0000000        0.51    4    3    6  7.9e-12  7.1e-16
+--         Current Progress:  21 % - 
+Memory: 1911/2038 2152/2282
+--         Current Progress:  21 % - Assembling matrices
+Memory: 1921/2038 2157/2282
+--         Current Progress:  21 % - Matrix factorization
+Memory: 1991/2060 2229/2305
+--         Current Progress:  21 % - Solving linear system
+Memory: 1917/2060 2152/2305
+--         Current Progress:  21 % - Assembling residual
+Memory: 1908/2060 2142/2305
+--         Current Progress:  21 % - 
+--         Current Progress:  21 % - Assembling residual
+--         Current Progress:  21 % - 
+Memory: 1880/2060 2112/2305
+   4     3.5e-10      0.0015   1.0000000       6e-06    6    4    8  5.4e-12  8.4e-15
+    
+Parameter D_sweep = 5e-11.
+--         Current Progress:  21 % - Assembling residual
+Memory: 1890/2060 2120/2305
+--         Current Progress:  21 % - Assembling matrices
+Memory: 1929/2060 2164/2305
+--         Current Progress:  21 % - Constraint handling
+Memory: 2064/2064 2312/2312
+--         Current Progress:  21 % - Matrix factorization
+Memory: 1170/2064 1357/2312
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+--         Current Progress:  21 % - Assembling residual
+Memory: 1986/2064 2220/2312
+--         Current Progress:  21 % - Solving linear system
+Memory: 1914/2064 2142/2312
+   1          11     4.2e+02   0.0100000          11    8    5   10    1e-11  1.9e-11
+--         Current Progress:  22 % - 
+Memory: 1944/2064 2172/2312
+--         Current Progress:  22 % - Assembling matrices
+Memory: 2000/2064 2232/2312
+--         Current Progress:  22 % - Constraint handling
+Memory: 2114/2114 2371/2371
+--         Current Progress:  22 % - Matrix factorization
+Memory: 1736/2130 1957/2371
+--         Current Progress:  22 % - Solving linear system
+Memory: 2040/2130 2281/2371
+--         Current Progress:  22 % - Assembling residual
+Memory: 2036/2130 2271/2371
+--         Current Progress:  22 % - Solving linear system
+Memory: 2034/2130 2269/2371
+   2         5.1     3.9e+02   0.1000000         5.7    9    6   12  1.5e-12  3.8e-12
+--         Current Progress:  24 % - Assembling matrices
+Memory: 2048/2130 2285/2371
+--         Current Progress:  24 % - 
+Memory: 2103/2130 2345/2371
+--         Current Progress:  24 % - Matrix factorization
+Memory: 1916/2188 2139/2433
+--         Current Progress:  24 % - Solving linear system
+Memory: 2112/2188 2350/2433
+--         Current Progress:  24 % - 
+Memory: 2028/2188 2262/2433
+--         Current Progress:  24 % - Assembling residual
+--         Current Progress:  24 % - Solving linear system
+Memory: 2038/2188 2272/2433
+   3       6e-06     6.9e+03   1.0000000        0.62   10    7   14  6.8e-13  2.4e-16
+---        Current Progress:  37 % - Assembling matrices
+Memory: 2042/2188 2278/2433
+---        Current Progress:  37 % - Matrix factorization
+Memory: 1999/2188 2267/2433
+---        Current Progress:  37 % - Solving linear system
+Memory: 2040/2188 2276/2433
+---        Current Progress:  37 % - Assembling residual
+Memory: 1905/2188 2137/2433
+---        Current Progress:  37 % - 
+---        Current Progress:  37 % - Assembling residual
+   4     3.5e-10      0.0015   1.0000000       6e-06   12    8   16  2.1e-12  8.3e-15
+---        Current Progress:  37 % - 
+    
+Parameter D_sweep = 1e-10.
+---        Current Progress:  37 % - Assembling residual
+Memory: 1877/2188 2107/2433
+---        Current Progress:  37 % - 
+Memory: 1859/2188 2093/2433
+---        Current Progress:  37 % - Assembling matrices
+Memory: 1919/2188 2153/2433
+---        Current Progress:  37 % - 
+Memory: 1974/2188 2214/2433
+---        Current Progress:  37 % - Matrix factorization
+Memory: 1360/2188 1584/2433
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+---        Current Progress:  37 % - Solving linear system
+Memory: 1902/2188 2129/2433
+---        Current Progress:  37 % - Assembling residual
+Memory: 1892/2188 2119/2433
+   1          11     4.2e+02   0.0100000          11   14    9   18  8.9e-12  1.9e-11
+---        Current Progress:  38 % - 
+Memory: 1924/2188 2159/2433
+---        Current Progress:  38 % - Assembling matrices
+Memory: 1988/2188 2235/2433
+---        Current Progress:  38 % - Constraint handling
+Memory: 2061/2188 2352/2433
+---        Current Progress:  38 % - Matrix factorization
+Memory: 1279/2188 1334/2433
+---        Current Progress:  38 % - 
+Memory: 2029/2188 2280/2433
+---        Current Progress:  38 % - Assembling residual
+---        Current Progress:  38 % - Solving linear system
+Memory: 2039/2188 2290/2433
+   2         5.1     3.9e+02   0.1000000         5.7   15   10   20    2e-11  1.9e-11
+----       Current Progress:  40 % - Assembling matrices
+Memory: 1964/2188 2215/2433
+----       Current Progress:  40 % - Constraint handling
+Memory: 1992/2188 2275/2433
+----       Current Progress:  40 % - Matrix factorization
+Memory: 1284/2188 1373/2433
+----       Current Progress:  40 % - Solving linear system
+Memory: 2003/2188 2255/2433
+----       Current Progress:  40 % - Assembling residual
+Memory: 1904/2188 2152/2433
+----       Current Progress:  40 % - Solving linear system
+Memory: 1914/2188 2158/2433
+   3       6e-06     6.9e+03   1.0000000        0.62   16   11   22  5.6e-13  2.5e-16
+-----      Current Progress:  52 % - 
+Memory: 1913/2188 2164/2433
+-----      Current Progress:  52 % - Assembling matrices
+Memory: 1918/2188 2164/2433
+-----      Current Progress:  52 % - Constraint handling
+Memory: 2027/2188 2280/2433
+-----      Current Progress:  52 % - Matrix factorization
+Memory: 1188/2188 1247/2433
+-----      Current Progress:  52 % - Solving linear system
+Memory: 1995/2188 2243/2433
+-----      Current Progress:  52 % - Assembling residual
+Memory: 1901/2188 2145/2433
+-----      Current Progress:  52 % - 
+Memory: 1901/2188 2141/2433
+-----      Current Progress:  52 % - Assembling residual
+   4     3.5e-10      0.0015   1.0000000       6e-06   18   12   24  4.8e-12  8.4e-15
+    
+Parameter D_sweep = 5e-10.
+-----      Current Progress:  52 % - Assembling matrices
+Memory: 1915/2188 2157/2433
+-----      Current Progress:  52 % - Constraint handling
+Memory: 1943/2188 2245/2433
+-----      Current Progress:  52 % - Matrix factorization
+Memory: 1153/2188 1350/2433
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+-----      Current Progress:  52 % - Solving linear system
+Memory: 1886/2188 2121/2433
+-----      Current Progress:  52 % - Assembling residual
+-----      Current Progress:  52 % - Solving linear system
+Memory: 1886/2188 2124/2433
+   1          11     4.2e+02   0.0100000          11   20   13   26  9.9e-12  1.9e-11
+-----      Current Progress:  54 % - 
+Memory: 1870/2188 2121/2433
+-----      Current Progress:  54 % - Assembling matrices
+Memory: 1903/2188 2141/2433
+-----      Current Progress:  54 % - 
+Memory: 1957/2188 2201/2433
+-----      Current Progress:  54 % - Matrix factorization
+Memory: 1713/2188 1920/2433
+-----      Current Progress:  54 % - Solving linear system
+Memory: 1995/2188 2239/2433
+-----      Current Progress:  54 % - Assembling residual
+Memory: 1903/2188 2144/2433
+-----      Current Progress:  54 % - Solving linear system
+Memory: 1913/2188 2154/2433
+   2         5.1     3.9e+02   0.1000000         5.7   21   14   28  1.9e-11  1.9e-11
+-----      Current Progress:  56 % - Assembling matrices
+Memory: 1917/2188 2160/2433
+-----      Current Progress:  56 % - Matrix factorization
+Memory: 1856/2188 2126/2433
+-----      Current Progress:  56 % - Solving linear system
+Memory: 2000/2188 2244/2433
+-----      Current Progress:  56 % - Assembling residual
+Memory: 1905/2188 2145/2433
+-----      Current Progress:  56 % - Solving linear system
+Memory: 1915/2188 2155/2433
+   3       6e-06     6.9e+03   1.0000000        0.62   22   15   30  4.6e-13    2e-16
+------     Current Progress:  68 % - Assembling matrices
+Memory: 1919/2188 2161/2433
+------     Current Progress:  68 % - Constraint handling
+Memory: 1975/2188 2277/2433
+------     Current Progress:  68 % - Matrix factorization
+Memory: 1287/2188 1413/2433
+------     Current Progress:  68 % - Solving linear system
+Memory: 1906/2188 2146/2433
+------     Current Progress:  68 % - Assembling residual
+------     Current Progress:  68 % - Solving linear system
+Memory: 1916/2188 2156/2433
+------     Current Progress:  68 % - Assembling residual
+Memory: 1906/2188 2146/2433
+   4     3.5e-10      0.0015   1.0000000       6e-06   24   16   32    1e-12  1.6e-15
+    
+Parameter D_sweep = 1e-09.
+------     Current Progress:  68 % - Assembling matrices
+Memory: 1921/2188 2162/2433
+------     Current Progress:  68 % - Matrix factorization
+Memory: 1808/2188 2031/2433
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+------     Current Progress:  68 % - Solving linear system
+Memory: 1975/2188 2220/2433
+------     Current Progress:  68 % - Assembling residual
+Memory: 1887/2188 2121/2433
+------     Current Progress:  68 % - Solving linear system
+Memory: 1897/2188 2132/2433
+   1          11     4.2e+02   0.0100000          11   26   17   34  8.4e-12  1.9e-11
+-------    Current Progress:  70 % - Assembling matrices
+Memory: 1903/2188 2141/2433
+-------    Current Progress:  70 % - 
+Memory: 1958/2188 2202/2433
+-------    Current Progress:  70 % - Matrix factorization
+Memory: 1298/2188 1358/2433
+-------    Current Progress:  70 % - Assembling residual
+Memory: 1921/2188 2184/2433
+-------    Current Progress:  70 % - 
+Memory: 1903/2188 2144/2433
+   2         5.1     3.9e+02   0.1000000         5.7   27   18   36  1.7e-11  1.9e-11
+-------    Current Progress:  71 % - Assembling matrices
+Memory: 1918/2188 2160/2433
+-------    Current Progress:  71 % - 
+Memory: 1972/2188 2220/2433
+-------    Current Progress:  71 % - Matrix factorization
+Memory: 1886/2188 2126/2433
+-------    Current Progress:  71 % - Solving linear system
+Memory: 1995/2188 2238/2433
+-------    Current Progress:  71 % - Assembling residual
+Memory: 1985/2188 2228/2433
+-------    Current Progress:  71 % - Solving linear system
+Memory: 1911/2188 2150/2433
+   3       6e-06     6.9e+03   1.0000000        0.62   28   19   38  8.5e-12  6.9e-16
+--------   Current Progress:  84 % - Assembling matrices
+Memory: 1915/2188 2156/2433
+--------   Current Progress:  84 % - 
+Memory: 1969/2188 2216/2433
+--------   Current Progress:  84 % - Matrix factorization
+Memory: 1985/2188 2228/2433
+--------   Current Progress:  84 % - Solving linear system
+Memory: 1995/2188 2245/2433
+--------   Current Progress:  84 % - Assembling residual
+Memory: 1907/2188 2146/2433
+--------   Current Progress:  84 % - Solving linear system
+Memory: 1917/2188 2157/2433
+--------   Current Progress:  84 % - Assembling residual
+Memory: 1907/2188 2146/2433
+   4     3.5e-10      0.0015   1.0000000       6e-06   30   20   40  3.9e-13  1.6e-15
+--------   Current Progress:  84 % - 
+    
+Parameter D_sweep = 5e-09.
+--------   Current Progress:  84 % - Assembling residual
+Memory: 1904/2188 2144/2433
+--------   Current Progress:  84 % - 
+Memory: 1942/2188 2188/2433
+--------   Current Progress:  84 % - Assembling matrices
+Memory: 1919/2188 2160/2433
+--------   Current Progress:  84 % - Matrix factorization
+Memory: 1982/2188 2224/2433
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+--------   Current Progress:  84 % - Solving linear system
+Memory: 1976/2188 2217/2433
+--------   Current Progress:  84 % - Assembling residual
+Memory: 1873/2188 2107/2433
+--------   Current Progress:  84 % - Solving linear system
+Memory: 1883/2188 2113/2433
+   1          11     4.2e+02   0.0100000          11   32   21   42  9.4e-12  1.9e-11
+--------   Current Progress:  86 % - Assembling matrices
+Memory: 1887/2188 2120/2433
+--------   Current Progress:  86 % - 
+Memory: 1942/2188 2181/2433
+--------   Current Progress:  86 % - Matrix factorization
+Memory: 1786/2188 2004/2433
+--------   Current Progress:  86 % - Assembling residual
+Memory: 1913/2188 2164/2433
+--------   Current Progress:  86 % - Solving linear system
+Memory: 1888/2188 2124/2433
+   2         5.1     3.9e+02   0.1000000         5.7   33   22   44  2.2e-11  1.9e-11
+--------   Current Progress:  87 % - Assembling matrices
+Memory: 1903/2188 2140/2433
+--------   Current Progress:  87 % - Constraint handling
+Memory: 1962/2188 2289/2433
+--------   Current Progress:  87 % - Matrix factorization
+Memory: 1247/2188 1340/2433
+--------   Current Progress:  87 % - Solving linear system
+Memory: 1884/2188 2122/2433
+--------   Current Progress:  87 % - Assembling residual
+Memory: 1885/2188 2120/2433
+--------   Current Progress:  87 % - Solving linear system
+   3       6e-06     6.9e+03   1.0000000        0.62   34   23   46  5.5e-12    7e-16
+---------- Current Progress: 100 % - Assembling matrices
+Memory: 1881/2188 2117/2433
+---------- Current Progress: 100 % - Constraint handling
+Memory: 2017/2188 2265/2433
+---------- Current Progress: 100 % - Matrix factorization
+Memory: 1602/2188 1724/2433
+---------- Current Progress: 100 % - Solving linear system
+Memory: 1961/2188 2206/2433
+---------- Current Progress: 100 % - Assembling residual
+Memory: 1873/2188 2107/2433
+---------- Current Progress: 100 % - Solving linear system
+Memory: 1883/2188 2117/2433
+---------- Current Progress: 100 % - Assembling residual
+Memory: 1873/2188 2107/2433
+   4     3.5e-10      0.0015   1.0000000       6e-06   36   24   48  2.9e-13  1.6e-15
+---------- Current Progress: 100 % - 
+Memory: 1034/2188 1071/2433
+Solution time: 178 s. (2 minutes, 58 seconds)
+Physical memory: 2.19 GB
+Virtual memory: 2.43 GB
+Ended at Oct 24, 2026, 12:59:28?AM.
+----- Stationary Solver 1 in Study 1/Solution 1 (sol1) ------------------------>
+=== Study 1 (stationary + D sweep) DONE ===
+=== upper-half outlet average concentration ===
+n combos = 6
+combo 0: c_avg_upper = 0.0
+combo 1: c_avg_upper = 0.0
+combo 2: c_avg_upper = 0.0
+combo 3: c_avg_upper = 0.0
+combo 4: c_avg_upper = 0.0
+combo 5: c_avg_upper = 0.0
+=== concentration at the outlet wall (y = +w/2) ===
+combo 0: c_wall = 0.0
+combo 1: c_wall = 0.0
+combo 2: c_wall = 0.0
+combo 3: c_wall = 0.0
+combo 4: c_wall = 0.0
+combo 5: c_wall = 0.0
+Ave |U| at inlet = 0.003284313725490196 m/s  (U_avg = 0.0033333333333333344 m/s)
+Ave p at inlet = 9696.292392381769 Pa
+           Current Progress:   0 % - Plotting
+Memory: 913/2188 948/2433
+           Current Progress:   6 % - Evaluating
+-          Current Progress:  10 % - Plotting
+Memory: 914/2188 949/2433
+--------   Current Progress:  82 % - Evaluating
+Memory: 949/2188 1013/2433
+--------   Current Progress:  83 % - Evaluating
+--------   Current Progress:  86 % - Evaluating
+Memory: 934/2188 976/2433
+           Current Progress:   0 % - Plotting
+Memory: 943/2188 984/2433
+           Current Progress:   6 % - Evaluating
+Memory: 927/2188 969/2433
+-          Current Progress:  10 % - Plotting
+Memory: 928/2188 970/2433
+--------   Current Progress:  82 % - Evaluating
+Memory: 955/2188 995/2433
+--------   Current Progress:  83 % - Evaluating
+Memory: 965/2188 1002/2433
+--------   Current Progress:  86 % - Evaluating
+Memory: 965/2188 1004/2433
+---        Current Progress:  30 % - Generating image
+Memory: 1013/2188 1027/2433
+=== PNGs exported ===
+=== Model saved ===
+Class run time: 270 s.
+Saving model: <project>\comsol\Ex1_HFilter_Ex1_HFilter.mph
+Save time: 2 s.
+Total time: 272 s.

@@ -1,0 +1,902 @@
+*******************************************
+***COMSOL 6.4.0.429 progress output file***
+*******************************************
+Sat Oct 24 11:35:29 CEST 2026
+COMSOL Multiphysics 6.4 (Build: 429) starting in batch mode
+Running: <project>\comsol\Ex3_Check.class
+=== Ex4_FFF config: quick=false N_EL=4 L_ch=80.0um  OUT=. ===
+---------- Current Progress: 100 % - Updating selections
+Memory: 350/353 392/394
+           Current Progress:   0 % - Block 1
+Memory: 365/365 406/406
+-----      Current Progress:  50 % - Work Plane 1
+Memory: 370/370 407/407
+-----      Current Progress:  50 % - Rectangle
+------     Current Progress:  63 % - Rectangle 1
+Memory: 371/371 407/407
+-------    Current Progress:  75 % - Rectangle 2
+--------   Current Progress:  88 % - Rectangle 3
+---------  Current Progress:  92 % - Resolving domains and void regions
+Memory: 372/372 408/408
+           Current Progress:   0 % - Form Union
+           Current Progress:   0 % - Performing Boolean operation
+Memory: 374/374 408/409
+---------- Current Progress: 100 % - Updating selections
+Memory: 376/376 408/409
+---------- Current Progress: 100 % - Creating visualization mesh
+Memory: 383/383 410/410
+--         Current Progress:  22 % - Creating visualization mesh
+---------- Current Progress: 100 % - Creating visualization mesh
+Memory: 384/384 410/410
+           Current Progress:   0 % - Form Union
+Memory: 386/386 412/412
+           Current Progress:   0 % - Performing Boolean operation
+Memory: 386/386 412/413
+---------- Current Progress: 100 % - Updating selections
+inlet  faces: [1]
+outlet faces: [14]
+floor  edges: 28
+Terminal faces: 2   Ground faces: 2
+--- spf BCs done ---
+--- es BCs done ---
+           Current Progress:   0 % - Point 1
+Memory: 550/552 571/576
+---------- Current Progress: 100 % - Updating selections
+SET OK epsilonr_mat = from_mat
+SET OK sigma_mat = from_mat
+--- fpt forces done ---
+--- fpt release done ---
+           Current Progress:   0 % - Free Tetrahedral 1
+Memory: 559/560 580/581
+Number of vertex elements: 24
+           Current Progress:   1 % - Creating boundary mesh
+Memory: 571/571 588/588
+           Current Progress:   2 % - Creating boundary mesh
+Memory: 572/572 588/588
+           Current Progress:   5 % - Creating boundary mesh
+           Current Progress:   5 % - Analyzing domains
+Memory: 576/576 591/591
+           Current Progress:   6 % - Analyzing domains
+Memory: 537/577 553/591
+           Current Progress:   7 % - Analyzing domains
+Memory: 539/577 557/591
+           Current Progress:   8 % - Analyzing domains
+Memory: 540/577 558/591
+           Current Progress:   9 % - Analyzing domains
+-          Current Progress:  11 % - Adjusting boundary mesh
+Memory: 542/577 559/591
+-          Current Progress:  13 % - Adjusting boundary mesh
+-          Current Progress:  16 % - Adjusting boundary mesh
+Memory: 545/577 562/591
+-          Current Progress:  18 % - Adjusting boundary mesh
+-          Current Progress:  19 % - Adjusting boundary mesh
+--         Current Progress:  22 % - Creating boundary mesh
+Memory: 546/577 562/591
+--         Current Progress:  23 % - Creating boundary mesh
+--         Current Progress:  24 % - Creating boundary mesh
+---        Current Progress:  34 % - Creating boundary mesh
+Number of edge elements: 748
+Number of boundary elements: 12254
+---        Current Progress:  37 % - Creating initial tetrahedra
+Memory: 547/577 563/591
+----       Current Progress:  40 % - Creating initial tetrahedra
+Memory: 548/577 563/591
+----       Current Progress:  43 % - Creating initial tetrahedra
+----       Current Progress:  46 % - Creating initial tetrahedra
+Memory: 547/577 561/591
+----       Current Progress:  49 % - Creating initial tetrahedra
+-----      Current Progress:  53 % - Creating initial tetrahedra
+Memory: 548/577 565/591
+-----      Current Progress:  54 % - Respecting boundaries
+Memory: 551/577 569/591
+-----      Current Progress:  57 % - Respecting boundaries
+Memory: 556/577 574/591
+------     Current Progress:  67 % - Inserting interior points
+Memory: 558/577 578/591
+-------    Current Progress:  71 % - Inserting interior points
+Memory: 561/577 586/591
+-------    Current Progress:  73 % - Inserting interior points
+Memory: 562/577 586/591
+-------    Current Progress:  74 % - Inserting interior points
+Memory: 564/577 586/591
+-------    Current Progress:  75 % - Inserting interior points
+Memory: 565/577 586/591
+-------    Current Progress:  76 % - Inserting interior points
+Memory: 567/577 587/591
+-------    Current Progress:  77 % - Inserting interior points
+Memory: 568/577 587/591
+-------    Current Progress:  79 % - Inserting interior points
+--------   Current Progress:  80 % - Inserting interior points
+Memory: 569/577 587/591
+--------   Current Progress:  81 % - Inserting interior points
+--------   Current Progress:  82 % - Inserting interior points
+Memory: 575/577 597/597
+--------   Current Progress:  83 % - Inserting interior points
+Memory: 578/578 599/599
+--------   Current Progress:  84 % - Inserting interior points
+Memory: 579/579 599/599
+--------   Current Progress:  85 % - Inserting interior points
+Memory: 580/580 599/599
+--------   Current Progress:  86 % - Inserting interior points
+Memory: 581/581 599/599
+--------   Current Progress:  86 % - Improving element quality
+Memory: 578/581 595/599
+--------   Current Progress:  88 % - Improving element quality
+--------   Current Progress:  89 % - Improving element quality
+---------  Current Progress:  92 % - Improving element quality
+Memory: 577/584 597/605
+---------  Current Progress:  94 % - Improving element quality
+---------  Current Progress:  95 % - Improving element quality
+Number of elements: 145179
+---------- Current Progress: 100 % - Finalizing mesh
+Memory: 570/584 587/605
+Minimum element quality: 0.2031
+=== mesh done, elements: 145179  minQ: 0.1908  meanQ: 0.6754  [30366 ms] ===
+-----      Current Progress:  54 % - Generating equations
+Memory: 646/661 657/673
+------     Current Progress:  66 % - Generating equations
+Memory: 655/661 666/673
+-------    Current Progress:  72 % - Generating equations
+Memory: 657/661 667/673
+-----      Current Progress:  54 % - Generating equations
+------     Current Progress:  66 % - Generating equations
+Memory: 656/664 666/674
+---        Current Progress:  39 % - Generating equations
+Memory: 646/664 657/674
+-----      Current Progress:  54 % - Generating equations
+Memory: 605/690 623/704
+------     Current Progress:  60 % - Generating equations
+Memory: 632/690 649/704
+-------    Current Progress:  72 % - Generating equations
+Memory: 634/690 651/704
+---        Current Progress:  39 % - Generating equations
+Memory: 655/690 669/704
+-----      Current Progress:  54 % - Generating equations
+Memory: 663/690 674/704
+------     Current Progress:  66 % - Generating equations
+Memory: 736/740 747/754
+-------    Current Progress:  72 % - Generating equations
+---        Current Progress:  39 % - Generating equations
+Memory: 738/740 749/754
+-----      Current Progress:  54 % - Generating equations
+Memory: 737/742 748/754
+           Current Progress:   2 % - Generating equations
+Memory: 740/745 751/756
+           Current Progress:   3 % - Generating equations
+Memory: 737/745 747/756
+<---- Compile Equations: Stationary in Study 1/Solution 1 (sol1) ---------------
+Started at Oct 24, 2026, 11:38:50?AM.
+Geometry shape function: Linear Lagrange
+Geometry shape function: Quadratic Lagrange
+Running on Intel64 Family 6 Model 142 Stepping 12, GenuineIntel.
+Using 1 socket with 4 cores in total on DESKTOP-K4OD2KS.
+Available memory: 16.18 GB.
+           Current Progress:   3 % - Compile Equations: Stationary
+Memory: 750/750 776/776
+           Current Progress:   4 % - Compile Equations: Stationary
+Memory: 785/792 809/819
+Time: 15 s.
+Physical memory: 792 MB
+Virtual memory: 819 MB
+Warning: Fluid flow interfaces are defined in the spatial frame. In the component node, select Permanently Define All Frames to avoid unexpected behavior.
+
+  - Node: Laminar Flow (spf)
+Ended at Oct 24, 2026, 11:39:06?AM.
+----- Compile Equations: Stationary in Study 1/Solution 1 (sol1) -------------->
+<---- Dependent Variables 1 in Study 1/Solution 1 (sol1) -----------------------
+Started at Oct 24, 2026, 11:39:06?AM.
+           Current Progress:   4 % - Dependent Variables 1
+Memory: 823/823 850/850
+Solution time: 1 s.
+Physical memory: 823 MB
+Virtual memory: 850 MB
+Ended at Oct 24, 2026, 11:39:07?AM.
+----- Dependent Variables 1 in Study 1/Solution 1 (sol1) ---------------------->
+<---- Stationary Solver 1 in Study 1/Solution 1 (sol1) -------------------------
+Started at Oct 24, 2026, 11:39:07?AM.
+           Current Progress:   5 % - Stationary Solver 1
+Memory: 837/837 862/862
+Nonlinear solver
+Number of degrees of freedom solved for: 109513 (plus 1 internal DOFs).
+           Current Progress:   5 % - Assembling residual
+Memory: 826/841 833/865
+           Current Progress:   5 % - 
+Memory: 837/841 849/865
+           Current Progress:   5 % - Assembling sparsity pattern
+Memory: 838/841 849/865
+           Current Progress:   5 % - Assembling matrices
+Memory: 938/939 954/956
+Nonsymmetric matrix found.
+           Current Progress:   5 % - 
+Memory: 942/987 954/1002
+Scales for dependent variables:
+Pressure (comp1.p): 0.028
+Velocity Field (comp1.u): 2.5e-05
+Help Ode Variable (comp1.spf.inl1.Pinl): 1
+Orthonormal null-space function used.
+           Current Progress:   5 % - Preconditioning
+Memory: 993/1009 1016/1032
+           Current Progress:   5 % - Creating multigrid hierarchy
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol LinIt   LinErr   LinRes
+           Current Progress:   5 % - Solving linear system
+Memory: 1053/1082 1184/1198
+           Current Progress:   5 % - Assembling residual
+Memory: 1054/1082 1183/1198
+           Current Progress:   5 % - Solving linear system
+Memory: 1073/1082 1215/1215
+           Current Progress:   5 % - 
+   1          57     1.4e+06   0.0100000          58    2    1    2     5    0.058   0.0066
+           Current Progress:   6 % - 
+Memory: 1075/1082 1213/1215
+           Current Progress:   6 % - Assembling sparsity pattern
+Memory: 983/1082 1120/1217
+           Current Progress:   6 % - Assembling matrices
+Memory: 815/1082 1213/1219
+           Current Progress:   6 % - 
+Memory: 833/1082 1230/1278
+           Current Progress:   6 % - Constraint handling
+Memory: 846/1082 1285/1285
+           Current Progress:   6 % - Preconditioning
+Memory: 870/1082 1269/1285
+           Current Progress:   6 % - Creating multigrid hierarchy
+           Current Progress:   6 % - Solving linear system
+Memory: 844/1082 1232/1285
+           Current Progress:   6 % - 
+Memory: 842/1082 1229/1285
+           Current Progress:   6 % - Solving linear system
+           Current Progress:   6 % - 
+Memory: 832/1082 1237/1285
+           Current Progress:   6 % - Assembling residual
+Memory: 842/1082 1237/1285
+           Current Progress:   6 % - Solving linear system
+Memory: 838/1082 1232/1285
+           Current Progress:   6 % - 
+Memory: 830/1082 1232/1285
+   2         4.7     4.4e+02   0.1000000         5.2    3    2    5    14  4.6e-05  8.8e-06
+           Current Progress:   8 % - Assembling sparsity pattern
+Memory: 790/1082 1189/1285
+           Current Progress:   8 % - Assembling matrices
+Memory: 892/1082 1300/1300
+           Current Progress:   8 % - 
+Memory: 859/1082 1257/1317
+           C           Current Progress:   8 % - 
+Memory: 2850/5078 5355/6039
+           Current Progress:   8 % - Constraint handling
+Memory: 2922/5078 5394/6039
+           Current Progress:   8 % - Preconditioning
+Memory: 2911/5078 5421/6557
+           Current Progress:   8 % - Creating multigrid hierarchy
+Memory: 2942/5078 5430/6557
+           Current Progress:   8 % - Solving linear system
+Memory: 3254/5078 5536/6557
+           Current Progress:   8 % - 
+Memory: 3379/5078 5618/6557
+           Current Progress:   8 % - Assembling residual
+Memory: 3371/5078 5568/6557
+           Current Progress:   8 % - Solving linear system
+Memory: 3435/5078 5618/6557
+           Current Progress:   8 % - 
+Memory: 3444/5078 5618/6557
+   3     3.7e-06     3.2e+02   1.0000000        0.51    4    3    8    23    0.091   0.0016
+--         Current Progress:  20 % - 
+Memory: 3500/5078 5637/6557
+--         Current Progress:  20 % - Assembling matrices
+Memory: 3516/5078 5622/6557
+--         Current Progress:  20 % - 
+Memory: 1951/5078 5452/6557
+--         Current Progress:  20 % - Constraint handling
+Memory: 1963/5078 5460/6557
+--         Current Progress:  20 % - Preconditioning
+Memory: 1428/5078 5478/6623
+--         Current Progress:  20 % - Creating multigrid hierarchy
+Memory: 1471/5078 5478/6623
+--         Current Progress:  20 % - Solving linear system
+Memory: 1050/5078 5580/6623
+--         Current Progress:  20 % - 
+Memory: 2488/5078 5662/6623
+--         Current Progress:  20 % - Solving linear system
+Memory: 2494/5078 5662/6623
+--         Current Progress:  20 % - 
+Memory: 2704/5078 5691/6623
+--         Current Progress:  20 % - Assembling residual
+Memory: 2705/5078 5617/6623
+--         Current Progress:  20 % - 
+Memory: 2843/5078 5615/6623
+--         Current Progress:  20 % - Solving linear system
+Memory: 2852/5078 5615/6623
+--         Current Progress:  20 % - 
+Memory: 2946/5078 5706/6623
+--         Current Progress:  20 % - Assembling residual
+Memory: 2877/5078 5615/6623
+--         Current Progress:  20 % - 
+Memory: 2920/5078 5653/6623
+   4     3.1e-08        0.26   1.0000000      0.0015    6    4   11    26  5.8e-08        -
+Solution time: 1604 s. (26 minutes, 44 seconds)
+Physical memory: 5.08 GB
+Virtual memory: 6.62 GB
+Ended at Oct 24, 2026, 11:57:18?AM.
+----- Stationary Solver 1 in Study 1/Solution 1 (sol1) ------------------------>
+<---- Compile Equations: Frequency Domain in Study 1/Solution 1 (sol1) ---------
+Started at Oct 24, 2026, 11:57:18?AM.
+Geometry shape function: Linear Lagrange
+Geometry shape function: Quadratic Lagrange
+--         Current Progress:  20 % - Generating equations
+Memory: 1023/5078 2525/6623
+--         Current Progress:  20 % - Compile Equations: Frequency Domain
+Memory: 1236/5078 2573/6623
+--         Current Progress:  21 % - Compile Equations: Frequency Domain
+Memory: 1332/5078 1950/6623
+Time: 78 s. (1 minute, 18 seconds)
+Physical memory: 1.6 GB
+Virtual memory: 2.57 GB
+Ended at Oct 24, 2026, 11:58:36?AM.
+----- Compile Equations: Frequency Domain in Study 1/Solution 1 (sol1) -------->
+<---- Dependent Variables 2 in Study 1/Solution 1 (sol1) -----------------------
+Started at Oct 24, 2026, 11:58:48?AM.
+Initial values of variables solved for: Solution 1 (sol1).
+Values of variables not solved for: Solution 1 (sol1).
+--         Current Progress:  21 % - Dependent Variables 2
+Memory: 1896/5078 2458/6623
+Solution time: 3 s.
+Physical memory: 1.9 GB
+Virtual memory: 2.46 GB
+Ended at Oct 24, 2026, 11:58:51?AM.
+----- Dependent Variables 2 in Study 1/Solution 1 (sol1) ---------------------->
+<---- Stationary Solver 2 in Study 1/Solution 1 (sol1) -------------------------
+Started at Oct 24, 2026, 11:58:51?AM.
+--         Current Progress:  22 % - Stationary Solver 2
+Memory: 1903/5078 2458/6623
+Linear solver
+Number of degrees of freedom solved for: 2354154.
+---        Current Progress:  30 % - Stationary Solver 2
+Memory: 2022/5078 2567/6623
+---        Current Progress:  30 % - Assembling residual
+Memory: 2010/5078 2555/6623
+---        Current Progress:  30 % - 
+Memory: 2033/5078 2579/6623
+---        Current Progress:  30 % - Assembling sparsity pattern
+Memory: 1855/5078 2414/6623
+---        Current Progress:  31 % - Assembling sparsity pattern
+Memory: 2045/5078 2587/6623
+---        Current Progress:  32 % - Assembling sparsity pattern
+Memory: 2156/5078 2701/6623
+---        Current Progress:  33 % - Assembling sparsity pattern
+Memory: 2261/5078 2808/6623
+---        Current Progress:  33 % - Assembling matrices
+Memory: 3048/5078 3642/6623
+---        Current Progress:  34 % - Assembling matrices
+---        Current Progress:  35 % - Assembling matrices
+---        Current Progress:  36 % - Assembling matrices
+---        Current Progress:  37 % - Assembling matrices
+---        Current Progress:  38 % - Assembling matrices
+---        Current Progress:  39 % - Assembling matrices
+----       Current Progress:  40 % - Assembling matrices
+----       Current Progress:  41 % - Assembling matrices
+----       Current Progress:  42 % - Assembling matrices
+----       Current Progress:  43 % - Assembling matrices
+----       Current Progress:  44 % - Assembling matrices
+----       Current Progress:  45 % - Assembling matrices
+----       Current Progress:  45 % - 
+Memory: 3103/5078 3780/6623
+Symmetric matrices found.
+Scales for dependent variables:
+Electric Potential (comp1.V): 1
+Orthonormal null-space function used.
+----       Current Progress:  45 % - Creating multigrid levels
+Memory: 2777/5078 3385/6623
+----       Current Progress:  45 % - Assembling prolongations
+Memory: 2742/5078 3334/6623
+------     Current Progress:  61 % - Assembling prolongations
+Memory: 3019/5078 3686/6623
+------     Current Progress:  61 % - Assembling sparsity pattern
+Memory: 2807/5078 3399/6623
+------     Current Progress:  61 % - Assembling matrices
+Memory: 2932/5078 3529/6623
+------     Current Progress:  69 % - 
+Memory: 2946/5078 3541/6623
+------     Current Progress:  69 % - Constraint handling
+Memory: 2970/5078 3566/6623
+------     Current Progress:  69 % - Matrix factorization
+Memory: 2996/5078 3604/6623
+Iter      SolEst     Damping    Stepsize #Res #Jac #Sol LinIt   LinErr   LinRes
+-------    Current Progress:  77 % - Solving linear system
+Memory: 5084/5328 5841/6623
+---------  Current Progress:  92 % - Solving linear system
+Memory: 5301/5328 6070/6623
+---------- Current Progress: 100 % - 
+   1           1   1.0000000           1    1    1    1     2  5.9e-05  8.1e-07
+Solution time: 243 s. (4 minutes, 3 seconds)
+Physical memory: 5.36 GB
+Virtual memory: 6.34 GB
+Ended at Oct 24, 2026, 12:02:54?PM.
+----- Stationary Solver 2 in Study 1/Solution 1 (sol1) ------------------------>
+=== Study 1 (spf + es) DONE [1964949 ms] ===
+FLOWCHECK outlet flux = -2.8856263189136607E-13 m^3/s = -0.0010388254748089178 uL/h   (target 1 uL/h)
+FLOWCHECK U_avg nominal = 2.7777777777777782E-5 m/s
+           Current Progress:   2 % - Generating equations
+Memory: 2062/5365 2623/6623
+           Current Progress:   3 % - Generating equations
+Memory: 2136/5365 2641/6623
+<---- Compile Equations: Time Dependent in Study 2/Solution 3 (sol3) -----------
+Started at Oct 24, 2026, 12:03:18?PM.
+Geometry shape function: Linear Lagrange
+Geometry shape function: Quadratic Lagrange
+Running on Intel64 Family 6 Model 142 Stepping 12, GenuineIntel.
+Using 1 socket with 4 cores in total on DESKTOP-K4OD2KS.
+Available memory: 16.18 GB.
+           Current Progress:   3 % - Compile Equations: Time Dependent
+Memory: 2051/5365 2550/6623
+           Current Progress:   5 % - Compile Equations: Time Dependent
+Memory: 2132/5365 2632/6623
+Time: 19 s.
+Physical memory: 2.18 GB
+Virtual memory: 2.69 GB
+Ended at Oct 24, 2026, 12:03:36?PM.
+----- Compile Equations: Time Dependent in Study 2/Solution 3 (sol3) ---------->
+<---- Dependent Variables 1 in Study 2/Solution 3 (sol3) -----------------------
+Started at Oct 24, 2026, 12:03:36?PM.
+Values of variables not solved for: Solution 1 (sol1), freq=1E7 Hz [Automatic (single solution)].
+           Current Progress:   5 % - Dependent Variables 1
+Memory: 2287/5365 2789/6623
+Solution time: 4 s.
+Physical memory: 2.37 GB
+Virtual memory: 2.87 GB
+Ended at Oct 24, 2026, 12:03:40?PM.
+----- Dependent Variables 1 in Study 2/Solution 3 (sol3) ---------------------->
+<---- Time-Dependent Solver 1 in Study 2/Solution 3 (sol3) ---------------------
+Started at Oct 24, 2026, 12:03:40?PM.
+Time-dependent solver (Generalized alpha)
+           Current Progress:   7 % - Time-Dependent Solver 1
+Memory: 2344/5365 2847/6623
+Number of degrees of freedom solved for: 3.
+Nonsymmetric matrix found.
+Scales for dependent variables:
+Particle Position (comp1.qfpt): 1
+           Current Progress:   7 % - 
+Memory: 2420/5365 2906/6623
+Step        Time    Stepsize      Res  Jac  Sol Order Tfail NLfail LinIt   LinErr   LinRes
+           Current Progress:   7 % - Assembling residual
+Memory: 2468/5365 2957/6623
+           Current Progress:   7 % - 
+Symmetric matrices found.
+   0           0           - out    2    3    2                  0     0        0        0
+           Current Progress:   7 % - Assembling residual
+Memory: 2549/5365 3041/6623
+Nonsymmetric matrix found.
+   1        0.12        0.12        4    4    4     2     0      0     2  9.5e-11        -
+   2        0.36        0.24        6    5    6     2     0      0     5  3.5e-11        -
+           Current Progress:   7 % - 
+   3        0.68        0.32        8    5    8     2     0      0     9  4.3e-10        -
+   4           1        0.32 out    9    5    9     2     0      0     9        0        -
+Symmetric matrices found.
+   5         1.5         0.5       10    6   10     2     0      0     9        0        -
+           Current Progress:   8 % - 
+   6           2         0.5 out   11    6   11     2     0      0     9        0        -
+   7           3           1 out   12    7   12     2     0      0     9        0        -
+           Current Progress:   9 % - 
+   8           4           1 out   13    7   13     2     0      0     9        0        -
+   9           5           1 out   14    7   14     2     0      0     9        0        -
+  10           6           1 out   15    7   15     2     0      0     9        0        -
+  11           7           1 out   16    7   16     2     0      0     9        0        -
+  12           8           1 out   17    7   17     2     0      0     9        0        -
+-          Current Progress:  13 % - 
+  13           9           1 out   18    7   18     2     0      0     9        0        -
+  14          10           1 out   19    7   19     2     0      0     9        0        -
+  15          11           1 out   20    7   20     2     0      0     9        0        -
+  16          12           1 out   21    7   21     2     0      0     9        0        -
+  17          13           1 out   22    7   22     2     0      0     9        0        -
+  18          14           1 out   23    7   23     2     0      0     9        0        -
+-          Current Progress:  18 % - 
+  19          15           1 out   24    7   24     2     0      0     9        0        -
+  20          16           1 out   25    7   25     2     0      0     9        0        -
+  21          17           1 out   26    7   26     2     0      0     9        0        -
+  22          18           1 out   27    7   27     2     0      0     9        0        -
+  23          19           1 out   28    7   28     2     0      0     9        0        -
+--         Current Progress:  21 % - Assembling residual
+  24          20           1 out   29    7   29     2     0      0     9        0        -
+  25          21           1 out   30    7   30     2     0      0     9        0        -
+  26          22           1 out   31    7   31     2     0      0     9        0        -
+  27          23           1 out   32    7   32     2     0      0     9        0        -
+  28          24           1 out   33    7   33     2     0      0     9        0        -
+--         Current Progress:  25 % - Assembling residual
+  29          25           1 out   34    7   34     2     0      0     9        0        -
+  30          26           1 out   35    7   35     2     0      0     9        0        -
+  31          27           1 out   36    7   36     2     0      0     9        0        -
+  32          28           1 out   37    7   37     2     0      0     9        0        -
+  33          29           1 out   38    7   38     2     0      0     9        0        -
+  34          30           1 out   39    7   39     2     0      0     9        0        -
+---        Current Progress:  30 % - 
+  35          31           1 out   40    7   40     2     0      0     9        0        -
+  36          32           1 out   41    7   41     2     0      0     9        0        -
+  37          33           1 out   42    7   42     2     0      0     9        0        -
+  38          34           1 out   43    7   43     2     0      0     9        0        -
+  39          35           1 out   44    7   44     2     0      0     9        0        -
+  40          36           1 out   45    7   45     2     0      0     9        0        -
+  41          37           1 out   46    7   46     2     0      0     9        0        -
+---        Current Progress:  35 % - 
+  42          38           1 out   47    7   47     2     0      0     9        0        -
+  43          39           1 out   48    7   48     2     0      0     9        0        -
+  44          40           1 out   49    7   49     2     0      0     9        0        -
+  45          41           1 out   50    7   50     2     0      0     9        0        -
+  46          42           1 out   51    7   51     2     0      0     9        0        -
+  47          43           1 out   52    7   52     2     0      0     9        0        -
+----       Current Progress:  40 % - Assembling residual
+  48          44           1 out   53    7   53     2     0      0     9        0        -
+  49          45           1 out   54    7   54     2     0      0     9        0        -
+  50          46           1 out   55    7   55     2     0      0     9        0        -
+  51          47           1 out   56    7   56     2     0      0     9        0        -
+  52          48           1 out   57    7   57     2     0      0     9        0        -
+  53          49           1 out   58    7   58     2     0      0     9        0        -
+----       Current Progress:  45 % - 
+  54          50           1 out   59    7   59     2     0      0     9        0        -
+  55          51           1 out   60    7   60     2     0      0     9        0        -
+  56          52           1 out   61    7   61     2     0      0     9        0        -
+  57          53           1 out   62    7   62     2     0      0     9        0        -
+  58          54           1 out   63    7   63     2     0      0     9        0        -
+  59          55           1 out   64    7   64     2     0      0     9        0        -
+----       Current Progress:  49 % - 
+  60          56           1 out   65    7   65     2     0      0     9        0        -
+  61          57           1 out   66    7   66     2     0      0     9        0        -
+  62          58           1 out   67    7   67     2     0      0     9        0        -
+  63          59           1 out   68    7   68     2     0      0     9        0        -
+  64          60           1 out   69    7   69     2     0      0     9        0        -
+  65          61           1 out   70    7   70     2     0      0     9        0        -
+-----      Current Progress:  54 % - 
+  66          62           1 out   71    7   71     2     0      0     9        0        -
+  67          63           1 out   72    7   72     2     0      0     9        0        -
+  68          64           1 out   73    7   73     2     0      0     9        0        -
+  69          65           1 out   74    7   74     2     0      0     9        0        -
+-----      Current Progress:  57 % - 
+  70          66           1 out   75    7   75     2     0      0     9        0        -
+  71          67           1 out   76    7   76     2     0      0     9        0        -
+  72          68           1 out   77    7   77     2     0      0     9        0        -
+  73          69           1 out   78    7   78     2     0      0     9        0        -
+  74          70           1 out   79    7   79     2     0      0     9        0        -
+  75          71           1 out   80    7   80     2     0      0     9        0        -
+------     Current Progress:  62 % - 
+  76          72           1 out   81    7   81     2     0      0     9        0        -
+  77          73           1 out   82    7   82     2     0      0     9        0        -
+  78          74           1 out   83    7   83     2     0      0     9        0        -
+  79          75           1 out   84    7   84     2     0      0     9        0        -
+  80          76           1 out   85    7   85     2     0      0     9        0        -
+  81          77           1 out   86    7   86     2     0      0     9        0        -
+------     Current Progress:  67 % - 
+  82          78           1 out   87    7   87     2     0      0     9        0        -
+  83          79           1 out   88    7   88     2     0      0     9        0        -
+  84          80           1 out   89    7   89     2     0      0     9        0        -
+  85          81           1 out   90    7   90     2     0      0     9        0        -
+  86          82           1 out   91    7   91     2     0      0     9        0        -
+  87          83           1 out   92    7   92     2     0      0     9        0        -
+  88          84           1 out   93    7   93     2     0      0     9        0        -
+-------    Current Progress:  72 % - 
+  89          85           1 out   94    7   94     2     0      0     9        0        -
+  90          86           1 out   95    7   95     2     0      0     9        0        -
+  91          87           1 out   96    7   96     2     0      0     9        0        -
+  92          88           1 out   97    7   97     2     0      0     9        0        -
+  93          89           1 out   98    7   98     2     0      0     9        0        -
+  94          90           1 out   99    7   99     2     0      0     9        0        -
+  95          91           1 out  100    7  100     2     0      0     9        0        -
+-------    Current Progress:  77 % - Assembling residual
+  96          92           1 out  101    7  101     2     0      0     9        0        -
+  97          93           1 out  102    7  102     2     0      0     9        0        -
+  98          94           1 out  103    7  103     2     0      0     9        0        -
+  99          95           1 out  104    7  104     2     0      0     9        0        -
+ 100          96           1 out  105    7  105     2     0      0     9        0        -
+ 101          97           1 out  106    7  106     2     0      0     9        0        -
+ 102          98           1 out  107    7  107     2     0      0     9        0        -
+--------   Current Progress:  83 % - 
+ 103          99           1 out  108    7  108     2     0      0     9        0        -
+ 104         100           1 out  109    7  109     2     0      0     9        0        -
+ 105         101           1 out  110    7  110     2     0      0     9        0        -
+ 106         102           1 out  111    7  111     2     0      0     9        0        -
+ 107         103           1 out  112    7  112     2     0      0     9        0        -
+ 108         104           1 out  113    7  113     2     0      0     9        0        -
+ 109         105           1 out  114    7  114     2     0      0     9        0        -
+--------   Current Progress:  88 % - 
+ 110         106           1 out  115    7  115     2     0      0     9        0        -
+ 111         107           1 out  116    7  116     2     0      0     9        0        -
+ 112         108           1 out  117    7  117     2     0      0     9        0        -
+ 113         109           1 out  118    7  118     2     0      0     9        0        -
+ 114         110           1 out  119    7  119     2     0      0     9        0        -
+ 115         111           1 out  120    7  120     2     0      0     9        0        -
+ 116         112           1 out  121    7  121     2     0      0     9        0        -
+---------  Current Progress:  94 % - 
+ 117         113           1 out  122    7  122     2     0      0     9        0        -
+ 118         114           1 out  123    7  123     2     0      0     9        0        -
+ 119         115           1 out  124    7  124     2     0      0     9        0        -
+ 120         116           1 out  125    7  125     2     0      0     9        0        -
+ 121         117           1 out  126    7  126     2     0      0     9        0        -
+---------  Current Progress:  98 % - Assembling residual
+ 122         118           1 out  127    7  127     2     0      0     9        0        -
+ 123         119           1 out  128    7  128     2     0      0     9        0        -
+ 124         120           1 out  129    7  129     2     0      0     9        0        -
+---------- Current Progress: 100 % - 
+Memory: 2522/5365 3013/6623
+Solution time: 28 s.
+Physical memory: 2.56 GB
+Virtual memory: 3.06 GB
+Ended at Oct 24, 2026, 12:04:08?PM.
+----- Time-Dependent Solver 1 in Study 2/Solution 3 (sol3) -------------------->
+=== Study 2 (fpt transient) DONE [67742 ms] ===
+solver tags = [sol1, sol3, sol2]  -> particle dataset uses sol3
+           Current Progress:   0 % - 
+Memory: 2523/5365 3013/6623
+           Current Progress:   5 % - Evaluating
+Memory: 2524/5365 3014/6623
+-          Current Progress:  16 % - Evaluating
+Memory: 2525/5365 3014/6623
+---        Current Progress:  33 % - Evaluating
+           Current Progress:   0 % - 
+=== particle CSV exported ===
+PART qx: rows=1 (particles)  cols=121 (times)
+PART qy: rows=1 (particles)  cols=121 (times)
+PART qz: rows=1 (particles)  cols=121 (times)
+PARTDATA nPart=1 nTime=121
+PARTROW 0 0 5.5E7 5.0E7 4.999999999999999E7
+PARTROW 0 1 NaN NaN NaN
+PARTROW 0 2 NaN NaN NaN
+PARTROW 0 3 NaN NaN NaN
+PARTROW 0 4 NaN NaN NaN
+PARTROW 0 5 NaN NaN NaN
+PARTROW 0 6 NaN NaN NaN
+PARTROW 0 7 NaN NaN NaN
+PARTROW 0 8 NaN NaN NaN
+PARTROW 0 9 NaN NaN NaN
+PARTROW 0 10 NaN NaN NaN
+PARTROW 0 11 NaN NaN NaN
+PARTROW 0 12 NaN NaN NaN
+PARTROW 0 13 NaN NaN NaN
+PARTROW 0 14 NaN NaN NaN
+PARTROW 0 15 NaN NaN NaN
+PARTROW 0 16 NaN NaN NaN
+PARTROW 0 17 NaN NaN NaN
+PARTROW 0 18 NaN NaN NaN
+PARTROW 0 19 NaN NaN NaN
+PARTROW 0 20 NaN NaN NaN
+PARTROW 0 21 NaN NaN NaN
+PARTROW 0 22 NaN NaN NaN
+PARTROW 0 23 NaN NaN NaN
+PARTROW 0 24 NaN NaN NaN
+PARTROW 0 25 NaN NaN NaN
+PARTROW 0 26 NaN NaN NaN
+PARTROW 0 27 NaN NaN NaN
+PARTROW 0 28 NaN NaN NaN
+PARTROW 0 29 NaN NaN NaN
+PARTROW 0 30 NaN NaN NaN
+PARTROW 0 31 NaN NaN NaN
+PARTROW 0 32 NaN NaN NaN
+PARTROW 0 33 NaN NaN NaN
+PARTROW 0 34 NaN NaN NaN
+PARTROW 0 35 NaN NaN NaN
+PARTROW 0 36 NaN NaN NaN
+PARTROW 0 37 NaN NaN NaN
+PARTROW 0 38 NaN NaN NaN
+PARTROW 0 39 NaN NaN NaN
+PARTROW 0 40 NaN NaN NaN
+PARTROW 0 41 NaN NaN NaN
+PARTROW 0 42 NaN NaN NaN
+PARTROW 0 43 NaN NaN NaN
+PARTROW 0 44 NaN NaN NaN
+PARTROW 0 45 NaN NaN NaN
+PARTROW 0 46 NaN NaN NaN
+PARTROW 0 47 NaN NaN NaN
+PARTROW 0 48 NaN NaN NaN
+PARTROW 0 49 NaN NaN NaN
+PARTROW 0 50 NaN NaN NaN
+PARTROW 0 51 NaN NaN NaN
+PARTROW 0 52 NaN NaN NaN
+PARTROW 0 53 NaN NaN NaN
+PARTROW 0 54 NaN NaN NaN
+PARTROW 0 55 NaN NaN NaN
+PARTROW 0 56 NaN NaN NaN
+PARTROW 0 57 NaN NaN NaN
+PARTROW 0 58 NaN NaN NaN
+PARTROW 0 59 NaN NaN NaN
+PARTROW 0 60 NaN NaN NaN
+PARTROW 0 61 NaN NaN NaN
+PARTROW 0 62 NaN NaN NaN
+PARTROW 0 63 NaN NaN NaN
+PARTROW 0 64 NaN NaN NaN
+PARTROW 0 65 NaN NaN NaN
+PARTROW 0 66 NaN NaN NaN
+PARTROW 0 67 NaN NaN NaN
+PARTROW 0 68 NaN NaN NaN
+PARTROW 0 69 NaN NaN NaN
+PARTROW 0 70 NaN NaN NaN
+PARTROW 0 71 NaN NaN NaN
+PARTROW 0 72 NaN NaN NaN
+PARTROW 0 73 NaN NaN NaN
+PARTROW 0 74 NaN NaN NaN
+PARTROW 0 75 NaN NaN NaN
+PARTROW 0 76 NaN NaN NaN
+PARTROW 0 77 NaN NaN NaN
+PARTROW 0 78 NaN NaN NaN
+PARTROW 0 79 NaN NaN NaN
+PARTROW 0 80 NaN NaN NaN
+PARTROW 0 81 NaN NaN NaN
+PARTROW 0 82 NaN NaN NaN
+PARTROW 0 83 NaN NaN NaN
+PARTROW 0 84 NaN NaN NaN
+PARTROW 0 85 NaN NaN NaN
+PARTROW 0 86 NaN NaN NaN
+PARTROW 0 87 NaN NaN NaN
+PARTROW 0 88 NaN NaN NaN
+PARTROW 0 89 NaN NaN NaN
+PARTROW 0 90 NaN NaN NaN
+PARTROW 0 91 NaN NaN NaN
+PARTROW 0 92 NaN NaN NaN
+PARTROW 0 93 NaN NaN NaN
+PARTROW 0 94 NaN NaN NaN
+PARTROW 0 95 NaN NaN NaN
+PARTROW 0 96 NaN NaN NaN
+PARTROW 0 97 NaN NaN NaN
+PARTROW 0 98 NaN NaN NaN
+PARTROW 0 99 NaN NaN NaN
+PARTROW 0 100 NaN NaN NaN
+PARTROW 0 101 NaN NaN NaN
+PARTROW 0 102 NaN NaN NaN
+PARTROW 0 103 NaN NaN NaN
+PARTROW 0 104 NaN NaN NaN
+PARTROW 0 105 NaN NaN NaN
+PARTROW 0 106 NaN NaN NaN
+PARTROW 0 107 NaN NaN NaN
+PARTROW 0 108 NaN NaN NaN
+PARTROW 0 109 NaN NaN NaN
+PARTROW 0 110 NaN NaN NaN
+PARTROW 0 111 NaN NaN NaN
+PARTROW 0 112 NaN NaN NaN
+PARTROW 0 113 NaN NaN NaN
+PARTROW 0 114 NaN NaN NaN
+PARTROW 0 115 NaN NaN NaN
+PARTROW 0 116 NaN NaN NaN
+PARTROW 0 117 NaN NaN NaN
+PARTROW 0 118 NaN NaN NaN
+PARTROW 0 119 NaN NaN NaN
+PARTROW 0 120 NaN NaN NaN
+PARTLAST 0 NaN NaN NaN
+           Current Progress:   5 % - Evaluating
+Memory: 2450/5365 2958/6623
+           Current Progress:   6 % - Evaluating
+Memory: 2976/5365 3486/6623
+           Current Progress:   7 % - Evaluating
+Memory: 3179/5365 3698/6623
+           Current Progress:   8 % - Evaluating
+Memory: 3360/5365 3910/6623
+           Current Progress:   9 % - Evaluating
+Memory: 3441/5365 3991/6623
+-          Current Progress:  10 % - Evaluating
+-          Current Progress:  11 % - Evaluating
+-          Current Progress:  12 % - Evaluating
+-          Current Progress:  14 % - Evaluating
+-          Current Progress:  15 % - Evaluating
+-          Current Progress:  16 % - Evaluating
+-          Current Progress:  18 % - Evaluating
+-          Current Progress:  19 % - Evaluating
+--         Current Progress:  20 % - Evaluating
+--         Current Progress:  21 % - Evaluating
+--         Current Progress:  23 % - Evaluating
+--         Current Progress:  24 % - Evaluating
+--         Current Progress:  26 % - Evaluating
+--         Current Progress:  27 % - Evaluating
+--         Current Progress:  28 % - Evaluating
+Memory: 3434/5365 3984/6623
+--         Current Progress:  29 % - Evaluating
+---        Current Progress:  31 % - Evaluating
+---        Current Progress:  32 % - Evaluating
+---        Current Progress:  33 % - Evaluating
+---        Current Progress:  34 % - Evaluating
+Memory: 4249/5365 4846/6623
+---        Current Progress:  35 % - Evaluating
+Memory: 3571/5365 4144/6623
+---        Current Progress:  36 % - Evaluating
+Memory: 4013/5365 4608/6623
+---        Current Progress:  37 % - Evaluating
+---        Current Progress:  39 % - Evaluating
+Memory: 4014/5365 4608/6623
+----       Current Progress:  40 % - Evaluating
+Memory: 4015/5365 4612/6623
+----       Current Progress:  41 % - Evaluating
+Memory: 3645/5365 4221/6623
+----       Current Progress:  42 % - Evaluating
+Memory: 3171/5365 3714/6623
+----       Current Progress:  43 % - Evaluating
+----       Current Progress:  47 % - Writing file
+Memory: 3131/5365 3672/6623
+-----      Current Progress:  53 % - Writing file
+-----      Current Progress:  58 % - Writing file
+------     Current Progress:  66 % - Writing file
+Memory: 3132/5365 3672/6623
+-------    Current Progress:  73 % - Writing file
+--------   Current Progress:  82 % - Writing file
+---------  Current Progress:  92 % - Writing file
+Memory: 3131/5365 3672/6623
+=== field export OK for dataset dset1 ===
+           Current Progress:   0 % - 
+Memory: 3133/5365 3672/6623
+           Current Progress:   5 % - Evaluating
+Memory: 3397/5365 4008/6623
+           Current Progress:   7 % - Evaluating
+Memory: 3889/5365 4458/6623
+           Current Progress:   8 % - Evaluating
+Memory: 3897/5365 4458/6623
+-          Current Progress:  10 % - Evaluating
+Memory: 3915/5365 4477/6623
+-          Current Progress:  11 % - Evaluating
+Memory: 3899/5365 4460/6623
+-          Current Progress:  13 % - Evaluating
+Memory: 3895/5365 4456/6623
+-          Current Progress:  14 % - Evaluating
+Memory: 3869/5365 4429/6623
+-          Current Progress:  16 % - Evaluating
+-          Current Progress:  18 % - Evaluating
+--         Current Progress:  21 % - Evaluating
+--         Current Progress:  23 % - Evaluating
+--         Current Progress:  26 % - Evaluating
+--         Current Progress:  29 % - Evaluating
+---        Current Progress:  32 % - Evaluating
+---        Current Progress:  33 % - Evaluating
+---        Current Progress:  34 % - Evaluating
+Memory: 4616/5365 5206/6623
+---        Current Progress:  35 % - Evaluating
+---        Current Progress:  37 % - Evaluating
+Memory: 3923/5365 4489/6623
+---        Current Progress:  39 % - Evaluating
+Memory: 3924/5365 4489/6623
+----       Current Progress:  41 % - Evaluating
+Memory: 3926/5365 4517/6623
+----       Current Progress:  42 % - Evaluating
+Memory: 3554/5365 4124/6623
+----       Current Progress:  43 % - Evaluating
+-----      Current Progress:  54 % - Writing file
+Memory: 3552/5365 4122/6623
+------     Current Progress:  65 % - Writing file
+Memory: 3551/5365 4122/6623
+--------   Current Progress:  80 % - Writing file
+---------  Current Progress:  95 % - Writing file
+Memory: 3552/5365 4122/6623
+=== field export OK for dataset dset2 ===
+           Current Progress:   0 % - 
+           Current Progress:   5 % - Evaluating
+Memory: 3717/5365 4326/6623
+=== field export failed for dset3: Out_of_memory_xmesh_processing ===
+           Current Progress:   0 % - 
+Memory: 9261/9261 44476/44532
+           Current Progress:   5 % - Evaluating
+Memory: 9276/9292 44504/44532
+=== field export failed for pdat: Out_of_memory_xmesh_processing ===
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1580016 bytes. Error detail: Chunk::new
+# An error report file with more information is saved as:
+# <project>\comsol\hs_err_pid1460.log
+#
+# Compiler replay data is saved as:
+# <project>\comsol\replay_pid1460.log
+Current Progress:  95 % - Writing file
+Memory: 715/8134 1423/14920
+---------  Current Progress:  96 % - Writing file
+Memory: 672/8134 1423/14920
+---------  Current Progress:  97 % - Writing file
+---------  Current Progress:  98 % - Writing file
+Memory: 635/8134 1423/14920
+---------  Current Progress:  99 % - Writing file
+Memory: 630/8134 1423/14920
+---------- Current Progress: 100 % - Writing file
+Memory: 631/8134 1423/14920
+=== field export OK for dataset dset3 ===
+           Current Progress:   0 % - 
+Memory: 661/8134 1436/14920
+           Current Progress:   5 % - Evaluating
+Memory: 667/8134 1439/14920
+--         Current Progress:  23 % - Evaluating
+Memory: 700/8134 1453/14920
+---        Current Progress:  33 % - Evaluating
+           Current Progress:   0 % - 
+=== field export OK for dataset pdat ===
+=== Model saved ===
+=== Ex3 sanity check finished ===
+EX3CHECK DONE
+Class run time: 1364 s.
+Saving model: <project>\comsol\Ex3_Check_Ex3_Check.mph
+Save time: 3 s.
+Total time: 1366 s.

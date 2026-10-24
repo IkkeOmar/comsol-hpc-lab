@@ -1,0 +1,239 @@
+*******************************************
+***COMSOL 6.4.0.429 progress output file***
+*******************************************
+Sat Oct 24 02:23:20 CEST 2026
+COMSOL Multiphysics 6.4 (Build: 429) starting in batch mode
+Running: <project>\comsol\GeomExport.class
+output dir: <project>/figures
+=== EX1 geometry ===
+---------- Current Progress: 100 % - Updating selections
+Memory: 332/350 362/377
+           Current Progress:   0 % - Rectangle 1
+Memory: 352/352 382/384
+           Current Progress:   8 % - Line Segment 1
+Memory: 354/354 383/384
+-          Current Progress:  17 % - Form Union
+--------   Current Progress:  87 % - Resolving domains and void regions
+Memory: 356/356 383/384
+---------- Current Progress: 100 % - Updating selections
+           Current Progress:   0 % - Mesh Control Edges 1
+Memory: 360/360 384/384
+---------- Current Progress: 100 % - Updating selections
+Memory: 361/361 384/384
+  [ex1] domains=1 boundaries=4 edges=4 vertices=4
+  [ex1] bbox_raw=[0.0, 6000.0, -50.0, 50.0]
+  [ex1] bbox_um x[0.0, 6000.0] y[-50.0, 50.0]
+           Current Progress:   0 % - Free triangular
+Memory: 365/365 389/389
+Number of vertex elements: 6
+Number of boundary elements: 262
+Number of elements: 344
+Number of vertex elements: 4
+Number of boundary elements: 176
+Number of elements: 344
+Minimum element quality: 0.5922
+---------- Current Progress: 100 % - Smoothing across removed control entities
+Memory: 369/369 393/393
+  [ex1] mesh elements = 344
+           Current Progress:   1 % - Generating equations
+Memory: 387/387 411/411
+-          Current Progress:  10 % - Evaluating
+Memory: 418/422 444/454
+           Current Progress:   6 % - Evaluating
+Memory: 412/422 437/454
+-          Current Progress:  19 % - Evaluating
+Memory: 414/422 438/454
+---        Current Progress:  30 % - Generating image
+Memory: 437/445 438/454
+  exported <project>/figures/dev_ex1_comsol.png
+=== EX4 geometry ===
+---------- Current Progress: 100 % - Updating selections
+Memory: 501/508 500/508
+           Current Progress:   0 % - Block 1
+Memory: 510/510 508/508
+-          Current Progress:  10 % - Work Plane 1
+Memory: 513/513 509/513
+-          Current Progress:  10 % - Rectangle
+Memory: 512/513 507/513
+-          Current Progress:  12 % - Rectangle 1
+-          Current Progress:  14 % - Rectangle 2
+-          Current Progress:  16 % - Rectangle 3
+-          Current Progress:  18 % - Rectangle 4
+--         Current Progress:  20 % - Rectangle 5
+--         Current Progress:  22 % - Rectangle 6
+--         Current Progress:  24 % - Rectangle 7
+--         Current Progress:  26 % - Rectangle 8
+--         Current Progress:  28 % - Rectangle 9
+---        Current Progress:  30 % - Rectangle 10
+---        Current Progress:  32 % - Rectangle 11
+---        Current Progress:  34 % - Rectangle 12
+Memory: 512/513 511/513
+---        Current Progress:  36 % - Rectangle 13
+Memory: 515/515 511/513
+---        Current Progress:  38 % - Rectangle 14
+----       Current Progress:  40 % - Rectangle 15
+----       Current Progress:  42 % - Rectangle 16
+----       Current Progress:  44 % - Rectangle 17
+Memory: 512/515 508/513
+----       Current Progress:  46 % - Rectangle 18
+----       Current Progress:  48 % - Rectangle 19
+-----      Current Progress:  50 % - Rectangle 20
+-----      Current Progress:  52 % - Rectangle 21
+-----      Current Progress:  54 % - Rectangle 22
+-----      Current Progress:  56 % - Rectangle 23
+-----      Current Progress:  58 % - Rectangle 24
+------     Current Progress:  60 % - Rectangle 25
+------     Current Progress:  62 % - Rectangle 26
+------     Current Progress:  64 % - Rectangle 27
+------     Current Progress:  66 % - Rectangle 28
+------     Current Progress:  68 % - Rectangle 29
+-------    Current Progress:  70 % - Rectangle 30
+-------    Current Progress:  72 % - Rectangle 31
+-------    Current Progress:  74 % - Rectangle 32
+-------    Current Progress:  76 % - Rectangle 33
+-------    Current Progress:  78 % - Rectangle 34
+--------   Current Progress:  80 % - Rectangle 35
+--------   Current Progress:  82 % - Rectangle 36
+--------   Current Progress:  84 % - Rectangle 37
+--------   Current Progress:  86 % - Rectangle 38
+Memory: 514/515 510/513
+--------   Current Progress:  88 % - Rectangle 39
+---------  Current Progress:  90 % - Rectangle 40
+---------  Current Progress:  92 % - Rectangle 41
+---------  Current Progress:  94 % - Rectangle 42
+---------  Current Progress:  96 % - Rectangle 43
+---------  Current Progress:  98 % - Rectangle 44
+           Current Progress:   0 % - Form Union
+Memory: 513/515 508/513
+           Current Progress:   0 % - Performing Boolean operation
+Memory: 515/515 508/513
+---------- Current Progress: 100 % - Updating selections
+Memory: 517/517 508/513
+  [ex4] domains=1 boundaries=96 edges=282 vertices=188
+  [ex4] bbox_raw=[0.0, 1000.0, 0.0, 100.0, 0.0, 100.0]
+  [ex4] bbox_um x[0.0, 1000.0] y[0.0, 100.0] z[0.0, 100.0]
+           Current Progress:   0 % - Free tetrahedral
+Memory: 496/518 502/518
+Number of vertex elements: 188
+Number of edge elements: 482
+Number of boundary elements: 882
+------     Current Progress:  60 % - Respecting boundaries
+Memory: 521/524 519/522
+---------  Current Progress:  91 % - Improving element quality
+Memory: 524/527 520/523
+---------  Current Progress:  92 % - Improving element quality
+---------  Current Progress:  93 % - Improving element quality
+---------  Current Progress:  94 % - Improving element quality
+---------  Current Progress:  95 % - Improving element quality
+Number of elements: 1924
+Minimum element quality: 0.1233
+---------- Current Progress: 100 % - Finalizing mesh
+  [ex4] mesh elements = 1924
+           Current Progress:   1 % - Evaluating
+Memory: 532/532 521/523
+-          Current Progress:  10 % - Evaluating
+Memory: 543/545 531/534
+           Current Progress:   6 % - Evaluating
+Memory: 544/545 532/534
+-----      Current Progress:  50 % - Evaluating
+Memory: 544/545 533/534
+---        Current Progress:  30 % - Generating image
+Memory: 533/545 511/534
+  exported <project>/figures/dev_ex4_comsol.png
+=== EX2 geometry ===
+---------- Current Progress: 100 % - Updating selections
+Memory: 561/621 549/579
+           Current Progress:   0 % - Block
+Memory: 569/621 566/579
+           Current Progress:   6 % - Block 2
+Memory: 570/621 566/579
+-          Current Progress:  13 % - Block 3
+-          Current Progress:  19 % - Block 4
+--         Current Progress:  25 % - Block 5
+---        Current Progress:  31 % - Cylinder
+---        Current Progress:  38 % - Form Union
+Memory: 572/621 566/579
+---        Current Progress:  38 % - Performing Boolean operation
+Memory: 574/621 567/579
+---------- Current Progress: 100 % - Updating selections
+  [ex2] domains=6 boundaries=35 edges=64 vertices=36
+  [ex2] bbox_raw=[-75.00000000000001, 75.00000000000001, -30.0, 30.0, -0.1, 1.0]
+  [ex2] bbox_um x[-75000.00000000001, 75000.00000000001] y[-30000.0, 30000.0] z[-100.0, 1000.0]
+           Current Progress:   0 % - Free tetrahedral
+Memory: 584/621 569/579
+Number of vertex elements: 36
+Number of edge elements: 392
+Number of boundary elements: 1944
+------     Current Progress:  62 % - Improving element quality
+Memory: 585/621 575/579
+------     Current Progress:  63 % - Improving element quality
+------     Current Progress:  64 % - Improving element quality
+------     Current Progress:  65 % - Improving element quality
+Number of elements: 2961
+Minimum element quality: 0.00704
+Warning: Low minimum element quality
+---------- Current Progress: 100 % - Finalizing mesh
+Memory: 543/621 532/579
+  [ex2] mesh elements = 2961
+           Current Progress:   1 % - Evaluating
+Memory: 569/621 559/579
+-          Current Progress:  10 % - Evaluating
+Memory: 580/621 569/579
+           Current Progress:   2 % - Evaluating
+Memory: 581/621 570/579
+-          Current Progress:  19 % - Evaluating
+Memory: 582/621 571/579
+---        Current Progress:  30 % - Generating image
+Memory: 599/621 575/579
+  exported <project>/figures/dev_ex2_comsol.png
+=== EX3 geometry ===
+---------- Current Progress: 100 % - Updating selections
+Memory: 598/658 584/616
+           Current Progress:   0 % - Rectangle
+Memory: 603/658 588/616
+           Current Progress:   6 % - Rectangle 2
+Memory: 604/658 589/616
+-          Current Progress:  13 % - Rectangle 1
+-          Current Progress:  19 % - Rectangle 2a
+--         Current Progress:  25 % - Rectangle 3
+---        Current Progress:  31 % - Circle
+Memory: 603/658 588/616
+---        Current Progress:  38 % - Form Union
+---------  Current Progress:  90 % - Resolving domains and void regions
+Memory: 603/658 589/616
+---------- Current Progress: 100 % - Updating selections
+  [ex3] domains=6 boundaries=27 edges=27 vertices=23
+  [ex3] bbox_raw=[0.0, 80.0, 0.0, 100.0]
+  [ex3] bbox_um x[0.0, 80.0] y[0.0, 100.0]
+           Current Progress:   0 % - Free triangular
+Memory: 613/658 601/616
+Number of vertex elements: 23
+Number of boundary elements: 76
+Number of elements: 746
+Minimum element quality: 0.5133
+---------- Current Progress: 100 % - Improving element quality
+Memory: 624/658 610/616
+  [ex3] mesh elements = 746
+           Current Progress:   1 % - Evaluating
+Memory: 632/658 623/625
+-          Current Progress:  10 % - Evaluating
+Memory: 635/658 622/625
+           Current Progress:   2 % - Evaluating
+Memory: 633/658 620/625
+-----      Current Progress:  50 % - Evaluating
+Memory: 634/658 621/625
+---        Current Progress:  30 % - Generating image
+Memory: 650/658 627/631
+  exported <project>/figures/dev_ex3_comsol.png
+
+GEOMEXPORT DONE
+Class run time: 31 s.
+Saving model: <project>\comsol\GeomExport_GeomEx1.mph
+Save time: 1 s.
+Saving model: <project>\comsol\GeomExport_GeomEx4.mph
+Save time: 0 s.
+Saving model: <project>\comsol\GeomExport_GeomEx2.mph
+Save time: 0 s.
+Saving model: <project>\comsol\GeomExport_GeomEx3.mph
+Save time: 0 s.
+Total time: 33 s.

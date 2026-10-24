@@ -1,0 +1,327 @@
+*******************************************
+***COMSOL 6.4.0.293 progress output file***
+*******************************************
+Sat Oct 24 01:30:07 CEST 2026
+COMSOL Multiphysics 6.4 (Build: 293) starting in batch mode
+Running: /zhome/29/d/167641/a2/Ex2Chamber.class
+EX2 MODE = bc   OUT = .
+---------- Current Progress: 100 % - Updating selections
+Memory: 501/501 8667/8667
+           Current Progress:   0 % - Block
+Memory: 512/512 8731/8731
+           Current Progress:   7 % - Block 2
+Memory: 536/536 8833/8833
+-          Current Progress:  13 % - Block 3
+Memory: 537/537 8833/8833
+--         Current Progress:  20 % - Block 4
+--         Current Progress:  27 % - Block 5
+---        Current Progress:  33 % - Form Union
+---        Current Progress:  33 % - Performing Boolean operation
+Memory: 543/543 8913/8913
+---------- Current Progress: 100 % - Updating selections
+GEOM domains=5 boundaries=26 edges=44 verts=24
+---------- Current Progress: 100 % - Creating visualization mesh
+Memory: 547/547 8913/8913
+           Current Progress:   0 % - Form Union
+Memory: 552/552 8913/8913
+           Current Progress:   0 % - Performing Boolean operation
+---------- Current Progress: 100 % - Updating selections
+SEL strip=[3] chamA=[2] chamB=[4]
+SEL ductW=[1] ductE=[5] cell=[]
+SEL inlet=[1] outlet=[26]
+SEL z0=[3, 8, 12, 16, 22] z1=[4, 9, 13, 17, 23]
+SEL cellBot=[] cellTop=[]
+SEL vertical edges = 44
+
+################ MESH ################
+MESH Distribution form sub/geom1-int failed: Unsupported_geometric_entity_level
+MESH Distribution form sub/geom1-str failed: Unsupported_geometric_entity_level
+MESH Distribution OK  form=top/geom1-int
+           Current Progress:   0 % - Free Triangular 1
+Memory: 556/556 9105/9105
+Number of vertex elements: 12
+----       Current Progress:  41 % - Creating boundary mesh
+Memory: 565/565 9105/9105
+Number of edge elements: 934
+Number of boundary elements: 9676
+----       Current Progress:  42 % - Creating boundary mesh
+Memory: 569/569 9105/9105
+----       Current Progress:  42 % - Swept 1
+Number of vertex elements: 24
+Number of edge elements: 1904
+Number of boundary elements: 22154
+Number of elements: 29028
+Minimum element quality: 0.5412
+---------- Current Progress: 100 % - Finalizing mesh
+Memory: 577/577 9105/9105
+MESH numElem=29028 types=[prism, tri, quad, edg, vtx] minQ=0.2536 meanQ=0.8364
+
+################ PHYSICS ################
+   SET MassFlowRate = rho*Q_in  FAILED :: Unknown_parameter_X#MassFlowRate
+SPF inlet mfr = rho*Q_in  type = MassFlowRate
+spf built
+TDS cdm1 u_src = root.comp1.u  D_c = D_sp
+rect1 lower=-5[s] upper=t_fill smooth=5 ncontder=2
+   rect1(-10.0 s) = 0.0
+   rect1(-5.0 s) = 0.5
+   rect1(-2.5 s) = 1.0
+   rect1(0.0 s) = 1.0
+   rect1(100.0 s) = 1.0
+   rect1(2150.0 s) = 1.0
+   rect1(2160.0 s) = 0.5
+   rect1(2165.0 s) = 0.0
+   rect1(3000.0 s) = 0.0
+tds pulse built
+
+################ STUDY std1: stationary velocity ################
+
+################ STUDY std2: transient concentration (velocity taken from std1) ################
+----       Current Progress:  47 % - Generating equations
+Memory: 953/953 9089/9105
+------     Current Progress:  60 % - Generating equations
+Memory: 998/998 9089/9105
+------     Current Progress:  66 % - Generating equations
+Memory: 1027/1027 9089/9105
+---        Current Progress:  39 % - Generating equations
+Memory: 1036/1036 9089/9105
+------     Current Progress:  60 % - Generating equations
+Memory: 1045/1045 9089/9105
+----       Current Progress:  47 % - Generating equations
+Memory: 1050/1050 9089/9105
+---        Current Progress:  39 % - Generating equations
+Memory: 1054/1054 9089/9105
+studies built
+
+################ SOLVE std1 (stationary velocity) ################
+           Current Progress:   1 % - Generating equations
+Memory: 1057/1057 9089/9105
+           Current Progress:   2 % - Generating equations
+           Current Progress:   3 % - Generating equations
+Memory: 1058/1058 9089/9105
+<---- Compile Equations: Stationary in Study 1/Solution 1 (sol1) ---------------
+Started at Oct 24, 2026, 1:30:25 AM.
+Geometry shape function: Linear Lagrange
+Running on 2 x Intel(R) Xeon(R) Gold 6226R CPU at 2.90 GHz.
+Using 2 sockets with 8 cores in total on n-62-11-66.
+Available memory: 773.05 GB.
+           Current Progress:   7 % - Compile Equations: Stationary
+Memory: 1124/1124 9153/9153
+Time: 2 s.
+Physical memory: 1.16 GB
+Virtual memory: 9.15 GB
+Warning: Fluid flow interfaces are defined in the spatial frame. In the component node, select Permanently Define All Frames to avoid unexpected behavior.
+
+  - Node: Laminar Flow (spf)
+Ended at Oct 24, 2026, 1:30:27 AM.
+----- Compile Equations: Stationary in Study 1/Solution 1 (sol1) -------------->
+<---- Dependent Variables 1 in Study 1/Solution 1 (sol1) -----------------------
+Started at Oct 24, 2026, 1:30:27 AM.
+           Current Progress:   7 % - Dependent Variables 1
+Memory: 1169/1169 9153/9153
+Solution time: 0 s.
+Physical memory: 1.17 GB
+Virtual memory: 9.15 GB
+Ended at Oct 24, 2026, 1:30:27 AM.
+----- Dependent Variables 1 in Study 1/Solution 1 (sol1) ---------------------->
+<---- Stationary Solver 1 in Study 1/Solution 1 (sol1) -------------------------
+Started at Oct 24, 2026, 1:30:27 AM.
+Nonlinear solver
+Number of degrees of freedom solved for: 82049 (plus 1 internal DOFs).
+-          Current Progress:  12 % - Assembling residual
+Memory: 1204/1204 9204/9204
+Warning: Deprecated behavior: Evaluation of the partial expression failed, which forced the full expression to be zero. 
+Partial expression: comp1.spf.rho 
+Full expression: down(comp1.spf.rho) 
+Boundary: 1
+Solution time: 1 s.
+Physical memory: 1.27 GB
+Virtual memory: 9.2 GB
+Warning: Deprecated behavior: Evaluation of the partial expression failed, which forced the full expression to be zero. 
+Partial expression: comp1.spf.rho 
+Full expression: down(comp1.spf.rho) 
+Boundary: 1
+Ended at Oct 24, 2026, 1:30:28 AM.
+----- Stationary Solver 1 in Study 1/Solution 1 (sol1) ------------------------>
+EX2 FAILED: Exception:
+	com.comsol.nativejni.FlNativeException: Failed to evaluate Jacobian of expression.
+	(rethrown as com.comsol.util.exceptions.FlException)
+Messages:
+	The following feature has encountered a problem
+	- Feature: Stationary Solver 1 (sol1/s1)
+
+	Undefined variable
+	- Variable: comp1.mat1.def.mu
+	- Geometry: geom1
+	- Domains: 1-2
+
+	Failed to evaluate variable
+	- Variable: comp1.spf.mu
+	- Defined as: comp1.mat1.def.mu
+
+	Failed to evaluate variable
+	- Variable: comp1.spf.mu_eff
+	- Defined as: comp1.spf.mu
+
+	Failed to evaluate variable
+	- Variable: comp1.spf.K_stress_tensorxy
+	- Defined as: comp1.spf.mu_eff*(comp1.uy+comp1.vx)
+
+	Failed to evaluate expression
+	- Expression: dvol*(-comp1.spf.K_stress_tensorxy)
+
+	Failed to evaluate jacobian of expression
+	- Expression: ((comp1.p-comp1.spf.K_stress_tensorxx)*test(comp1.ux)-comp1.spf.K_stress_tensorxy*test(comp1.uy)-comp1.spf.K_stress_tensorxz*test(comp1.uz)-comp1.spf.K_stress_tensoryx*test(comp1.vx)+(comp1.p-comp1.spf.K_stress_tensoryy)*test(comp1.vy)-comp1.spf.K_stress_tensoryz*test(comp1.vz)-comp1.spf.K_stress_tensorzx*test(comp1.wx)-comp1.spf.K_stress_tensorzy*test(comp1.wy)+(comp1.p-comp1.spf.K_stress_tensorzz)*test(comp1.wz))*(dvol)
+
+EX2 DONE
+Exception:
+	com.comsol.nativejni.FlNativeException: Failed to evaluate Jacobian of expression.
+	(rethrown as com.comsol.util.exceptions.FlException)
+Messages:
+	The following feature has encountered a problem
+	- Feature: Stationary Solver 1 (sol1/s1)
+	Undefined variable
+	- Variable: comp1.mat1.def.mu
+	- Geometry: geom1
+	- Domains: 1-2
+	Failed to evaluate variable
+	- Variable: comp1.spf.mu
+	- Defined as: comp1.mat1.def.mu
+	Failed to evaluate variable
+	- Variable: comp1.spf.mu_eff
+	- Defined as: comp1.spf.mu
+	Failed to evaluate variable
+	- Variable: comp1.spf.K_stress_tensorxy
+	- Defined as: comp1.spf.mu_eff*(comp1.uy+comp1.vx)
+	Failed to evaluate expression
+	- Expression: dvol*(-comp1.spf.K_stress_tensorxy)
+	Failed to evaluate jacobian of expression
+	- Expression: ((comp1.p-comp1.spf.K_stress_tensorxx)*test(comp1.ux)-comp1.spf.K_stress_tensorxy*test(comp1.uy)-comp1.spf.K_stress_tensorxz*test(comp1.uz)-comp1.spf.K_stress_tensoryx*test(comp1.vx)+(comp1.p-comp1.spf.K_stress_tensoryy)*test(comp1.vy)-comp1.spf.K_stress_tensoryz*test(comp1.vz)-comp1.spf.K_stress_tensorzx*test(comp1.wx)-comp1.spf.K_stress_tensorzy*test(comp1.wy)+(comp1.p-comp1.spf.K_stress_tensorzz)*test(comp1.wz))*(dvol)
+Stack trace:
+at com.comsol.solver.SolverOperation.addError(SourceFile:593)
+	at com.comsol.solver.SolverOperation.execute(SourceFile:314)
+	at com.comsol.model.method.SolverSequenceMethod.doRun(SourceFile:2429)
+	at com.comsol.model.method.SolverSequenceMethod.doRunAll(SourceFile:3231)
+	at com.comsol.model.dbmodel.SolverSequenceDb.runAll(SourceFile:328)
+	at com.comsol.model.method.StudyMethod.doRunNoGen(SourceFile:137)
+	at com.comsol.model.method.StudyMethod.doRunNoGen(SourceFile:89)
+	at com.comsol.model.method.StudyMethod.doRun(SourceFile:78)
+	at com.comsol.model.dbmodel.StudyDb.run(SourceFile:133)
+	at com.comsol.model.impl.StudyImpl.run(SourceFile:229)
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.comsol.model.debugger.MethodExecModelHelper.runApiMethod(SourceFile:86)
+	at com.comsol.model.debugger.MethodExecModelHelper.a(SourceFile:100)
+	at com.comsol.util.security.a.a(SourceFile:129)
+	at com.comsol.model.debugger.MethodExecModelHelper.runApiMethodPrivileged(SourceFile:100)
+	at com.comsol.methodexecmph.a.a.a(SourceFile:276)
+	at com.comsol.methodexecmph.a.a.a(SourceFile:215)
+	at com.comsol.methodexecmph.b.a(SourceFile:120)
+	at com.comsol.model.util.ServerModelUtil.runExternalClass(SourceFile:649)
+	at com.comsol.model.util.ModelUtilInternal.runExternalClass(SourceFile:195)
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.comsol.bridge.command.b.a(SourceFile:161)
+	at com.comsol.bridge.command.c.run(SourceFile:63)
+	at com.comsol.bridge.command.k.c(SourceFile:227)
+	at com.comsol.bridge.command.k$1.run(SourceFile:100)
+	at com.comsol.util.thread.SuspendableTasks$1.run(SourceFile:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+	at ---.---(Unknown Source)
+	at com.comsol.methodexec.a.f$e.a(SourceFile:351)
+	at com.comsol.methodexec.a.f.d(SourceFile:143)
+	at com.comsol.methodexec.a.f.b(SourceFile:210)
+	at com.comsol.methodexec.a.f.a(SourceFile:187)
+	at com.comsol.methodexec.a.g.a(SourceFile:37)
+	at com.comsol.methodexec.comm.h.a(SourceFile:60)
+	at com.comsol.methodexec.meapi.engine.b.a(SourceFile:159)
+	at com.comsol.methodexec.meapi.engine.b.a(SourceFile:82)
+	at com.comsol.methodexec.meapi.impl.StudyMEClient.run(SourceFile:226)
+	at Ex2Chamber.runBC(Ex2Chamber.class:452)
+	at Ex2Chamber.build(Ex2Chamber.class:252)
+	at Ex2Chamber.main(Ex2Chamber.class:125)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at com.comsol.methodexec.me.d.a(SourceFile:387)
+	at com.comsol.methodexec.util.JDIDebugHook.invokeMethod(SourceFile:30)
+	at com.comsol.methodexec.me.d.a(SourceFile:386)
+	at com.comsol.methodexec.me.d$2.run(SourceFile:304)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at com.comsol.methodexec.me.d.a(SourceFile:285)
+	at com.comsol.methodexec.me.d.a(SourceFile:146)
+	at com.comsol.methodexec.me.d.a(SourceFile:98)
+	at com.comsol.methodexec.me.b$3.run(SourceFile:249)
+Caused by: Exception:
+	com.comsol.nativejni.FlNativeException: Failed to evaluate Jacobian of expression.
+Messages:
+	Undefined variable
+	- Variable: comp1.mat1.def.mu
+	- Geometry: geom1
+	- Domains: 1-2
+	Failed to evaluate variable
+	- Variable: comp1.spf.mu
+	- Defined as: comp1.mat1.def.mu
+	Failed to evaluate variable
+	- Variable: comp1.spf.mu_eff
+	- Defined as: comp1.spf.mu
+	Failed to evaluate variable
+	- Variable: comp1.spf.K_stress_tensorxy
+	- Defined as: comp1.spf.mu_eff*(comp1.uy+comp1.vx)
+	Failed to evaluate expression
+	- Expression: dvol*(-comp1.spf.K_stress_tensorxy)
+	Failed to evaluate jacobian of expression
+	- Expression: ((comp1.p-comp1.spf.K_stress_tensorxx)*test(comp1.ux)-comp1.spf.K_stress_tensorxy*test(comp1.uy)-comp1.spf.K_stress_tensorxz*test(comp1.uz)-comp1.spf.K_stress_tensoryx*test(comp1.vx)+(comp1.p-comp1.spf.K_stress_tensoryy)*test(comp1.vy)-comp1.spf.K_stress_tensoryz*test(comp1.vz)-comp1.spf.K_stress_tensorzx*test(comp1.wx)-comp1.spf.K_stress_tensorzy*test(comp1.wy)+(comp1.p-comp1.spf.K_stress_tensorzz)*test(comp1.wz))*(dvol)
+	at xevalutil.cpp. Row: 346(Detail: :5)
+	at evaltree.cpp. Row: 750(Detail: :4)
+	at evalnodes.cpp. Row: 1429(Detail: :3)
+	at evalnodes.cpp. Row: 1429(Detail: :2)
+	at evalnodes.cpp. Row: 1429(Detail: :1)
+	at xevaluators.cpp. Row: 375(Detail: :0)
+	at com.comsol.nativejni.solver.FlSolver.femStatic(Native Method)
+	at com.comsol.nativejni.solver.FlSolver.femStatic(SourceFile:29)
+	at com.comsol.nativemph.b.k.a(SourceFile:30)
+	at com.comsol.nativeutil.runnable.h.run(SourceFile:129)
+	at com.comsol.solver.solution.SolverBase.a(SourceFile:452)
+	at com.comsol.solver.solution.SolverStationary.a(SourceFile:316)
+	at com.comsol.solver.solution.SolverBase.doExecute(SourceFile:96)
+	at com.comsol.solver.SolverOperation.execute(SourceFile:310)
+	at com.comsol.model.method.SolverSequenceMethod.doRun(SourceFile:2429)
+	at com.comsol.model.method.SolverSequenceMethod.doRunAll(SourceFile:3231)
+	at com.comsol.model.dbmodel.SolverSequenceDb.runAll(SourceFile:328)
+	at com.comsol.model.method.StudyMethod.doRunNoGen(SourceFile:137)
+	at com.comsol.model.method.StudyMethod.doRunNoGen(SourceFile:89)
+	at com.comsol.model.method.StudyMethod.doRun(SourceFile:78)
+	at com.comsol.model.dbmodel.StudyDb.run(SourceFile:133)
+	at com.comsol.model.impl.StudyImpl.run(SourceFile:229)
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.comsol.model.debugger.MethodExecModelHelper.runApiMethod(SourceFile:86)
+	at com.comsol.model.debugger.MethodExecModelHelper.a(SourceFile:100)
+	at com.comsol.util.security.a.a(SourceFile:129)
+	at com.comsol.model.debugger.MethodExecModelHelper.runApiMethodPrivileged(SourceFile:100)
+	at com.comsol.methodexecmph.a.a.a(SourceFile:276)
+	at com.comsol.methodexecmph.a.a.a(SourceFile:215)
+	at com.comsol.methodexecmph.b.a(SourceFile:120)
+	at com.comsol.model.util.ServerModelUtil.runExternalClass(SourceFile:649)
+	at com.comsol.model.util.ModelUtilInternal.runExternalClass(SourceFile:195)
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.comsol.bridge.command.b.a(SourceFile:161)
+	at com.comsol.bridge.command.c.run(SourceFile:63)
+	at com.comsol.bridge.command.k.c(SourceFile:227)
+	at com.comsol.bridge.command.k$1.run(SourceFile:100)
+	at com.comsol.util.thread.SuspendableTasks$1.run(SourceFile:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+	at ---.---(Unknown Source)
+	at com.comsol.methodexec.a.f$e.a(SourceFile:351)
+	at com.comsol.methodexec.a.f.d(SourceFile:143)
+	at comClass run time: 21 s.
+Saving model: /zhome/29/d/167641/a2/Ex2Chamber_Ex2Chamber.mph
+Save time: 1 s.
+Total time: 22 s.
+.comsol.methodexec.a.f.b(SourceFile:210)
+	at com.comsol.methodexec.a.f.b(SourceFile:200)
+	... 20 more

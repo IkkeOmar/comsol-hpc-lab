@@ -1,0 +1,23 @@
+=== [01:02:05] compiling Ex1_HFilter.java ===
+
+    marker ok: DIAGNOSTIC
+    marker ok: c_inlet_avg
+=== [01:02:18] compile ok, starting Ex1_HFilter ===
+=== [01:14:38] comsolbatch finished, exit code 0 ===
+--- log: ../notes/ex1_comsol_run6.log ---
+=== Study 1 (stationary + D sweep) DONE ===
+=== DIAGNOSTIC: average c on the INLET edge ===
+combo 0: c_inlet_avg = 0.5
+combo 1: c_inlet_avg = 0.5
+combo 2: c_inlet_avg = 0.5
+combo 3: c_inlet_avg = 0.5
+combo 4: c_inlet_avg = 0.5
+combo 5: c_inlet_avg = 0.5
+combo 0: c_avg_upper = 0.9485257674388723
+combo 1: c_avg_upper = 0.8914382376909985
+combo 2: c_avg_upper = 0.8475954215210291
+combo 3: c_avg_upper = 0.6609487143728928
+combo 4: c_avg_upper = 0.5630035598392784
+combo 5: c_avg_upper = 0.4999242080902787
+Ave |U| at inlet = 0.003284313725490196 m/s  (U_avg = 0.0033333333333333344 m/s)
+Ave p at inlet = 9696.292392381778 Pa

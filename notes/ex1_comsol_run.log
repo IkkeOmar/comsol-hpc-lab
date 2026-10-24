@@ -1,0 +1,87 @@
+*******************************************
+***COMSOL 6.4.0.429 progress output file***
+*******************************************
+Fri Oct 23 20:24:08 CEST 2026
+COMSOL Multiphysics 6.4 (Build: 429) starting in batch mode
+Running: <project>\comsol\Ex1_HFilter.class
+---------- Current Progress: 100 % - Updating selections
+Memory: 404/414 435/445
+           Current Progress:   0 % - Rectangle 1
+Memory: 409/414 439/445
+           Current Progress:   8 % - Line Segment 1
+Memory: 410/414 440/445
+-          Current Progress:  17 % - Form Union
+Memory: 411/414 440/445
+--------   Current Progress:  87 % - Resolving domains and void regions
+Memory: 412/414 440/445
+---------- Current Progress: 100 % - Updating selections
+Memory: 414/414 442/445
+           Current Progress:   0 % - Mesh Control Edges 1
+Memory: 415/423 441/450
+---------- Current Progress: 100 % - Updating selections
+Memory: 416/423 441/450
+---------- Current Progress: 100 % - Creating visualization mesh
+Memory: 418/423 444/450
+---------- Current Progress: 100 % - Updating selections
+Memory: 420/423 445/450
+inlet edges     : [1]
+outlet edges    : [4]
+--- spf done ---
+Exception:
+	com.comsol.util.exceptions.UnknownEntityException: Unknown physics interface feature.
+Messages:
+	Unknown physics interface feature
+	- Tag: df1
+
+Stack trace:
+at com.comsol.model.dbmodel.ModelEntityListDb.findObject(SourceFile:393)
+	at com.comsol.model.dbmodel.ModelEntityDb.a(SourceFile:744)
+	at com.comsol.model.dbmodel.physics.PhysicsDb.feature(SourceFile:315)
+	at com.comsol.model.physics.impl.PhysicsImpl.feature(SourceFile:91)
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.comsol.model.debugger.MethodExecModelHelper.runApiMethod(SourceFile:86)
+	at com.comsol.model.debugger.MethodExecModelHelper.a(SourceFile:100)
+	at com.comsol.util.security.a.a(SourceFile:129)
+	at com.comsol.model.debugger.MethodExecModelHelper.runApiMethodPrivileged(SourceFile:100)
+	at com.comsol.methodexecmph.a.a.a(SourceFile:276)
+	at com.comsol.methodexecmph.a.a.a(SourceFile:215)
+	at com.comsol.methodexecmph.b.a(SourceFile:120)
+	at com.comsol.model.util.ServerModelUtil.runExternalClass(SourceFile:649)
+	at com.comsol.model.util.ModelUtilInternal.runExternalClass(SourceFile:195)
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.comsol.bridge.command.b.a(SourceFile:161)
+	at com.comsol.bridge.command.c.run(SourceFile:63)
+	at com.comsol.bridge.command.k.c(SourceFile:232)
+	at com.comsol.bridge.command.k$1.run(SourceFile:105)
+	at com.comsol.util.thread.SuspendableTasks$1.run(SourceFile:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+	at ---.---(Unknown Source)
+	at com.comsol.methodexec.a.f$e.a(SourceFile:351)
+	at com.comsol.methodexec.a.f.d(SourceFile:143)
+	at com.comsol.methodexec.a.f.b(SourceFile:210)
+	at com.comsol.methodexec.a.f.a(SourceFile:187)
+	at com.comsol.methodexec.a.g.a(SourceFile:37)
+	at com.comsol.methodexec.comm.h.a(SourceFile:60)
+	at com.comsol.methodexec.meapi.engine.b.a(SourceFile:159)
+	at com.comsol.methodexec.meapi.engine.b.a(SourceFile:82)
+	at com.comsol.methodexec.meapi.physics.impl.PhysicsMEClient.feature(SourceFile:89)
+	at Ex1_HFilter.run(Ex1_HFilter.class:188)
+	at Ex1_HFilter.main(Ex1_HFilter.class:45)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at com.comsol.methodexec.me.d.a(SourceFile:387)
+	at com.comsol.methodexec.util.JDIDebugHook.invokeMethod(SourceFile:30)
+	at com.comsol.methodexec.me.d.a(SourceFile:386)
+	at com.comsol.methodexec.me.d$2.run(SourceFile:304)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at com.comsol.methodexec.me.d.a(SourceFile:285)
+	at com.comsol.methodexec.me.d.a(SourceFile:146)
+	at com.comsol.methodexec.me.d.a(SourceFile:98)
+	at com.comsol.methodexec.me.b$3.run(SourceFile:249)Class run time: 50 s.
+Saving model: <project>\comsol\Ex1_HFilter_Ex1_HFilter.mph
+Save time: 9 s.
+Total time: 59 s.

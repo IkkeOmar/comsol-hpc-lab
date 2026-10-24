@@ -1,0 +1,119 @@
+*******************************************
+***COMSOL 6.4.0.429 progress output file***
+*******************************************
+Fri Oct 23 23:09:29 CEST 2026
+COMSOL Multiphysics 6.4 (Build: 429) starting in batch mode
+Running: <project>\comsol\ProbeEx1Mesh2.class
+---------- Current Progress: 100 % - Updating selections
+Memory: 414/414 448/449
+           Current Progress:   0 % - Rectangle 1
+Memory: 423/423 455/456
+           Current Progress:   8 % - Line Segment 1
+Memory: 424/424 457/457
+-          Current Progress:  17 % - Form Union
+-          Current Progress:  17 % - Handling edge intersections
+Memory: 423/425 454/457
+----       Current Progress:  46 % - Resolving domains and void regions
+-------    Current Progress:  73 % - Resolving domains and void regions
+--------   Current Progress:  87 % - Resolving domains and void regions
+Memory: 424/425 454/457
+---------- Current Progress: 100 % - Updating selections
+           Current Progress:   0 % - Mesh Control Edges 1
+Memory: 426/426 455/457
+---------- Current Progress: 100 % - Updating selections
+=== Size node properties ===
+[table, hmax, hmaxactive, hmin, hminactive, hcurve, hcurveactive, hnarrow, hnarrowactive, hgrad, hgradactive, hauto, custom]
+  default custom = off
+  default hauto = 5
+  default hmax = 40.2
+
+=== mesh variants on the 600 x 100 um domain ===
+           Current Progress:   0 % - Rectangle 1
+Memory: 436/436 460/460
+           Current Progress:   8 % - Line Segment 1
+-          Current Progress:  17 % - Form Union
+---------- Current Progress: 100 % - Updating selections
+           Current Progress:   0 % - Mesh Control Edges 1
+Memory: 437/437 460/460
+---------- Current Progress: 100 % - Updating selections
+           Current Progress:   0 % - Free Triangular 1
+Memory: 438/438 461/461
+Number of vertex elements: 4
+Number of boundary elements: 34
+Number of elements: 62
+Minimum element quality: 0.7191
+---------- Current Progress: 100 % - Improving element quality
+Memory: 440/440 461/461
+A predefined size, sel domain 1      : elements = 62  types=[tri, edg, vtx]
+---------- Current Progress: 100 % - Updating selections
+Memory: 441/442 462/463
+           Current Progress:   0 % - Rectangle 1
+           Current Progress:   8 % - Line Segment 1
+-          Current Progress:  17 % - Form Union
+-          Current Progress:  17 % - Handling edge intersections
+----       Current Progress:  46 % - Resolving domains and void regions
+-------    Current Progress:  73 % - Resolving domains and void regions
+--------   Current Progress:  87 % - Resolving domains and void regions
+---------- Current Progress: 100 % - Updating selections
+           Current Progress:   0 % - Mesh Control Edges 1
+---------- Current Progress: 100 % - Updating selections
+           Current Progress:   0 % - Free Triangular 1
+Memory: 442/442 463/463
+B custom size,    sel domain 1      : elements = 62  types=[tri, edg, vtx]
+---------- Current Progress: 100 % - Updating selections
+Memory: 443/444 464/465
+           Current Progress:   0 % - Rectangle 1
+           Current Progress:   8 % - Line Segment 1
+-          Current Progress:  17 % - Form Union
+-          Current Progress:  17 % - Handling edge intersections
+----       Current Progress:  46 % - Resolving domains and void regions
+-------    Current Progress:  73 % - Resolving domains and void regions
+--------   Current Progress:  87 % - Resolving domains and void regions
+---------- Current Progress: 100 % - Updating selections
+           Current Progress:   0 % - Mesh Control Edges 1
+Memory: 444/444 466/466
+---------- Current Progress: 100 % - Updating selections
+Memory: 444/445 466/466
+C custom size,    sel all domains   : FAILED - No_entity_dimension_specified
+           Current Progress:   0 % - Rectangle 1
+Memory: 449/450 471/472
+           Current Progress:   8 % - Line Segment 1
+-          Current Progress:  17 % - Form Union
+---------- Current Progress: 100 % - Updating selections
+           Current Progress:   0 % - Mesh Control Edges 1
+Memory: 451/451 472/472
+---------- Current Progress: 100 % - Updating selections
+           Current Progress:   0 % - Free Triangular 1
+Memory: 456/457 478/478
+Number of vertex elements: 6
+Number of boundary elements: 53
+Number of elements: 124
+--------   Current Progress:  81 % - Smoothing across removed control entities
+Memory: 459/463 484/488
+--------   Current Progress:  82 % - Smoothing across removed control entities
+Memory: 464/464 489/489
+--------   Current Progress:  85 % - Smoothing across removed control entities
+Memory: 436/467 466/493
+--------   Current Progress:  87 % - Smoothing across removed control entities
+---------  Current Progress:  95 % - Smoothing across removed control entities
+---------  Current Progress:  96 % - Smoothing across removed control entities
+Number of vertex elements: 4
+Number of boundary elements: 38
+Number of elements: 124
+Minimum element quality: 0.7129
+---------- Current Progress: 100 % - Smoothing across removed control entities
+D custom size,    sel domains 1,2    : elements = 124  types=[tri, edg, vtx]
+
+PROBEEX1MESH2 DONE
+Class run time: 107 s.
+Saving model: <project>\comsol\ProbeEx1Mesh2_ProbeEx1Mesh2A.mph
+Save time: 9 s.
+Saving model: <project>\comsol\ProbeEx1Mesh2_PX1M2A.mph
+Save time: 1 s.
+Saving model: <project>\comsol\ProbeEx1Mesh2_PX1M2B.mph
+Save time: 1 s.
+Saving model: <project>\comsol\ProbeEx1Mesh2_PX1M2C.mph
+Save time: 1 s.
+Saving model: <project>\comsol\ProbeEx1Mesh2_PX1M2D.mph
+Save time: 2 s.
+Total time: 122 s.

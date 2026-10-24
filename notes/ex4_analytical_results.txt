@@ -1,0 +1,97 @@
+==============================================================================
+EXERCISE 4 - FIELD FLOW FRACTIONATION - ANALYTICAL RESULTS
+the lab-on-a-chip course, Assignment 1, Exercise 4
+==============================================================================
+
+A)  CLAUSIUS-MOSSOTTI FACTOR
+------------------------------------------------------------------------------
+  particle : d_p = 2.400 um, rho_p = 1200 kg/m^3, eps_r,p = 60, sigma_p = 0.01 S/m
+  medium   : eps_r,m = 80, sigma_m = 5.5e-06 S/m  (water)
+
+  closed-form vs complex-arithmetic Re{K}: max error = 3.331e-16
+  Re{K}(10 MHz) = -0.08367      Im{K}(10 MHz) = -0.08850
+  -> NEGATIVE DEP  (Re{K} < 0): the particle is pushed AWAY from the
+     high-field electrode gaps, i.e. UP towards the channel roof.
+  DC limit  Re{K} -> +0.99835   (conductivity contrast)
+  HF limit  Re{K} -> -0.09091   (permittivity contrast)
+  Maxwell-Wagner turnover f_to = 2.637e+06 Hz (2.637 MHz)
+  10 MHz is 3.8x above the turnover -> firmly negative DEP.
+
+B)  THEORETICAL EQUILIBRIUM POSITION
+------------------------------------------------------------------------------
+  |F_DEP| = |F_buoy| with
+      |grad E|^2 = (32/pi) (V0^2/d^3) exp(-pi y/d),  V0 = 10 V, d = 10 um
+      F_DEP  = pi a^3 eps0 eps_r,m |Re{K}| |grad E|^2
+      F_buoy = (4/3) pi a^3 (rho_p - rho_m) g
+
+  a = 1.20 um,  F_DEP(z_eq) = 1.4197e-14 N,  F_buoy = 1.4197e-14 N
+  y_eq = (d/pi) ln[ 24 eps0 eps_r,m |ReK| V0^2 / (pi d^3 (rho_p-rho_m) g ) ]
+      = 31.980 um above the electrode plane
+  channel height is 100 um -> the equilibrium sits at 32.0 % of the channel height.
+  independent numerical root of F_DEP(y) = F_buoy : 31.980 um   (diff 2.12e-14 %)
+
+C)  TIME AND LENGTH TO REACH EQUILIBRIUM
+------------------------------------------------------------------------------
+  flow      Q = 1 uL/h -> U_avg = 27.778 um/s (A = 10000.0 um^2)
+  profile   u(z) = 1.5 U_avg (1 - (2z/H - 1)^2)   (2D in z, as the
+            assignment's own estimate does; the y-profile is ignored)
+  start     z0 = 50 um, released at t = 0
+  motion    overdamped Stokes balance (inertial terms neglected)
+
+  linear relaxation time near equilibrium, tau = f/|dF_net/dy| = 5.072 s
+  (the approach is exponential, so 'reached' needs a tolerance)
+
+   tolerance |z-y_eq|   t_reach [s]   x_reach [mm]   z at that time [um]
+        1e-03            0.00           0.000             31.98
+        1e-04            0.00           0.000             31.98
+        1e-05           12.98           0.536             31.98
+        1e-06           33.75           1.338             31.98
+        1e-07           46.16           1.791             31.98
+        1e-08           57.91           2.217             31.98
+        1e-09           69.60           2.641             31.98
+
+  The assignment's own estimate is 'about 54 sec and a length of 2 mm'.
+  This integration reproduces it: reading the table at |z-y_eq| ~ 1e-8 m
+  gives t ~ 58 s and x ~ 2.2 mm,
+  i.e. the same 54 s / 2 mm the assignment quotes.
+
+  IMPORTANT: the channel is only 1 mm long.  The particle
+  needs ~2 mm of travel to settle, so it leaves the channel at
+  x = 1 mm after roughly
+  t_out = L/u(z) ~ 24 s
+  (u at the release height) - well before it reaches the equilibrium.
+  The equilibrium is an attractor, not a state the particle actually
+  attains inside this channel.  That is exactly the discrepancy the
+  assignment asks us to discuss in D).
+
+  over the full 120 s window the particle sinks from 50.0 um
+  to 31.980 um (y_eq = 31.980 um) and drifts
+  4.468 mm downstream - past the 1 mm outlet.
+
+
+E)  INFLUENCE OF THE PARTICLE SIZE
+------------------------------------------------------------------------------
+  Both the DEP force and the buoyancy scale as a^3, so the EQUILIBRIUM
+  HEIGHT is independent of the particle radius:
+      y_eq = (d/pi) ln[ ... ]   ->  no a in it.
+  The DYNAMICS are not: the Stokes drag scales as a while the driving
+  force scales as a^3, so
+      vz ~ a^2,   tau = f/|dF/dy| ~ a^-2,   x_reach ~ a^-2
+  => a twice as large particle settles 4x faster and travels 4x less far.
+
+   d_p [um]    y_eq [um]    tau [s]    t_reach(1e-9) [s]    x_reach [mm]
+       0.60       31.980    81.146              1113.57       42.251
+       1.20       31.980    20.287               278.39       10.563
+       2.40       31.980     5.072                69.60        2.641
+       4.80       31.980     1.268                17.40        0.660
+       9.60       31.980     0.317                 4.35        0.165
+
+  (2x the size -> 4x faster, 4x shorter path; this is the 'double the
+   particle size' hint in the assignment.)
+
+FIGURES
+------------------------------------------------------------------------------
+  wrote <project>\figures\ex4_a_clausius_mossotti.png  (94039 bytes)
+  wrote <project>\figures\ex4_b_force_balance.png  (105537 bytes)
+  wrote <project>\figures\ex4_c_trajectory_xz.png  (144993 bytes)
+  wrote <project>\figures\ex4_d_settling_time.png  (135771 bytes)

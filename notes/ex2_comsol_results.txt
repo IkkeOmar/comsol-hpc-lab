@@ -1,0 +1,8 @@
+
+EX2 COMSOL - chamber exchange (3D, the course cluster, 29028 elements)
+--------------------------------------------------------------
+  chamber average peaks at 0.7767 mol/m3 at t = 2195 s
+  time to 50 % of c_in in the chamber: 1125.0
+  time to 90 % of c_in in the chamber: None  (never reached)
+  after the pulse, the chamber is back below 0.1 mol/m3 at t = 5065.0 s
+  figure: <project>\figures\comsol_ex2\ex2_comsol_exchange.png

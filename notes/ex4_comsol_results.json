@@ -1,0 +1,54 @@
+{
+  "comsol": {
+    "n_particles": 91,
+    "n_output_times": 121,
+    "t_range_s": [
+      0.0,
+      120.0
+    ],
+    "release_positions_um": {
+      "x": [
+        0.0,
+        0.0
+      ],
+      "y": [
+        5.0,
+        95.0
+      ],
+      "z": [
+        49.99999999999999,
+        49.99999999999999
+      ]
+    },
+    "mid_particle_index": 45,
+    "t_leaves_channel_s": 18.0,
+    "x_at_leave_um": 955.4491044185598,
+    "z_at_leave_um": 40.25378587196686,
+    "x_last_finite_um": 955.4491044185598,
+    "z_at_120s_um": NaN,
+    "x_at_120s_um": NaN,
+    "z_spread_at_120s_um": [
+      NaN,
+      NaN
+    ]
+  },
+  "analytical": {
+    "ReK_10MHz": -0.08366992797198751,
+    "y_eq_um": 31.98031684943085
+  },
+  "velocities": {
+    "comsol_dxdt_um_s": 35.88716668986697,
+    "analytical_2d_profile_um_s": 41.66666666666667,
+    "ratio_comsol_over_2d": 0.8612920005568072,
+    "comsol_dydt_max_um_s": 5.943820387900345,
+    "comsol_dydt_mid_um_s": -0.006432471913846882,
+    "u_avg_um_s": 27.77777777777778
+  },
+  "agreement_inside_channel": {
+    "max_abs_dz_um": 1.1982770025469804,
+    "max_abs_dx_um": 217.70811223397334,
+    "mean_abs_dz_um": 0.8049511717985496,
+    "dz_at_leave_um": 1.1982770025469804,
+    "dx_at_leave_um": 217.70811223397334
+  }
+}

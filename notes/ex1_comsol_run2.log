@@ -1,0 +1,391 @@
+*******************************************
+***COMSOL 6.4.0.429 progress output file***
+*******************************************
+Sat Oct 24 00:16:37 CEST 2026
+COMSOL Multiphysics 6.4 (Build: 429) starting in batch mode
+Running: <project>\comsol\Ex1_HFilter.class
+---------- Current Progress: 100 % - Updating selections
+Memory: 425/434 485/495
+           Current Progress:   0 % - Rectangle 1
+Memory: 448/448 496/498
+           Current Progress:   8 % - Line Segment 1
+Memory: 450/450 497/498
+-          Current Progress:  17 % - Form Union
+--------   Current Progress:  87 % - Resolving domains and void regions
+Memory: 452/452 497/498
+---------- Current Progress: 100 % - Updating selections
+           Current Progress:   0 % - Mesh Control Edges 1
+Memory: 457/457 498/498
+---------- Current Progress: 100 % - Updating selections
+--         Current Progress:  20 % - Creating visualization mesh
+Memory: 470/472 511/512
+---------- Current Progress: 100 % - Creating visualization mesh
+Memory: 473/473 513/513
+---------- Current Progress: 100 % - Updating selections
+Memory: 472/482 512/523
+inlet edges     : [1]
+outlet edges    : [4]
+--- spf done ---
+--- tds done ---
+           Current Progress:   0 % - Free Triangular 1
+Memory: 585/601 611/627
+Number of vertex elements: 6
+           Current Progress:   3 % - Adjusting boundary mesh
+Memory: 588/601 612/627
+           Current Progress:   4 % - Adjusting boundary mesh
+Memory: 567/601 600/627
+           Current Progress:   6 % - Adjusting boundary mesh
+Memory: 568/601 600/627
+           Current Progress:   7 % - Adjusting boundary mesh
+Memory: 563/601 594/627
+Number of boundary elements: 9100
+           Current Progress:   8 % - Preparing for advancing front meshing
+Memory: 566/601 597/627
+           Current Progress:   9 % - Preparing for advancing front meshing
+Memory: 688/696 730/742
+-          Current Progress:  15 % - Inserting interior points
+Memory: 691/713 740/763
+-          Current Progress:  16 % - Inserting interior points
+Memory: 692/713 741/763
+-          Current Progress:  17 % - Inserting interior points
+-          Current Progress:  18 % - Inserting interior points
+-          Current Progress:  19 % - Inserting interior points
+--         Current Progress:  20 % - Inserting interior points
+--         Current Progress:  21 % - Inserting interior points
+--         Current Progress:  22 % - Inserting interior points
+--         Current Progress:  23 % - Inserting interior points
+--         Current Progress:  24 % - Inserting interior points
+--         Current Progress:  25 % - Inserting interior points
+--         Current Progress:  26 % - Inserting interior points
+Memory: 693/713 746/763
+--         Current Progress:  28 % - Inserting interior points
+--         Current Progress:  29 % - Inserting interior points
+---        Current Progress:  31 % - Inserting interior points
+---        Current Progress:  33 % - Inserting interior points
+---        Current Progress:  34 % - Inserting interior points
+Memory: 696/713 747/763
+---        Current Progress:  35 % - Inserting interior points
+---        Current Progress:  36 % - Inserting interior points
+----       Current Progress:  40 % - Inserting interior points
+----       Current Progress:  44 % - Inserting interior points
+Memory: 699/713 749/763
+----       Current Progress:  46 % - Inserting interior points
+Memory: 704/713 759/763
+----       Current Progress:  48 % - Inserting interior points
+Memory: 706/713 760/763
+----       Current Progress:  49 % - Inserting interior points
+Memory: 710/713 763/763
+-----      Current Progress:  50 % - Inserting interior points
+-----      Current Progress:  51 % - Inserting interior points
+Memory: 711/713 763/763
+-----      Current Progress:  52 % - Inserting interior points
+-----      Current Progress:  53 % - Inserting interior points
+Memory: 709/713 758/763
+-----      Current Progress:  54 % - Inserting interior points
+Memory: 710/713 760/763
+-----      Current Progress:  55 % - Inserting interior points
+Memory: 714/714 764/764
+-----      Current Progress:  56 % - Inserting interior points
+Memory: 714/717 764/768
+-----      Current Progress:  57 % - Inserting interior points
+Memory: 715/717 764/768
+-----      Current Progress:  58 % - Inserting interior points
+Memory: 703/720 752/773
+------     Current Progress:  60 % - Inserting interior points
+------     Current Progress:  61 % - Inserting interior points
+-------    Current Progress:  74 % - Improving element quality
+-------    Current Progress:  75 % - Improving element quality
+Number of elements: 372096
+-------    Current Progress:  76 % - Improving element quality
+Memory: 652/720 682/773
+--------   Current Progress:  81 % - Smoothing across removed control entities
+Memory: 665/720 703/773
+--------   Current Progress:  82 % - Smoothing across removed control entities
+Memory: 674/720 714/773
+--------   Current Progress:  83 % - Smoothing across removed control entities
+--------   Current Progress:  84 % - Smoothing across removed control entities
+--------   Current Progress:  85 % - Smoothing across removed control entities
+--------   Current Progress:  86 % - Smoothing across removed control entities
+--------   Current Progress:  87 % - Smoothing across removed control entities
+---------  Current Progress:  91 % - Smoothing across removed control entities
+Memory: 675/720 715/773
+---------  Current Progress:  92 % - Smoothing across removed control entities
+---------  Current Progress:  95 % - Smoothing across removed control entities
+---------  Current Progress:  96 % - Smoothing across removed control entities
+---------  Current Progress:  97 % - Smoothing across removed control entities
+---------  Current Progress:  98 % - Smoothing across removed control entities
+---------  Current Progress:  99 % - Smoothing across removed control entities
+---------- Current Progress: 100 % - Smoothing across removed control entities
+Number of vertex elements: 4
+Number of boundary elements: 6100
+Number of elements: 372096
+Minimum element quality: 0.703
+--- mesh done, elements: 372096 ---
+----       Current Progress:  47 % - Generating equations
+Memory: 687/720 721/773
+------     Current Progress:  60 % - Generating equations
+Memory: 710/720 742/773
+------     Current Progress:  66 % - Generating equations
+Memory: 713/720 745/773
+---        Current Progress:  39 % - Generating equations
+Memory: 715/720 747/773
+-----      Current Progress:  54 % - Generating equations
+Memory: 718/743 750/775
+------     Current Progress:  60 % - Generating equations
+-------    Current Progress:  72 % - Generating equations
+Memory: 721/743 752/775
+           Current Progress:   1 % - Generating equations
+Memory: 718/743 750/775
+           Current Progress:   2 % - Generating equations
+Memory: 720/743 752/775
+           Current Progress:   3 % - Generating equations
+Memory: 707/743 741/775
+<---- Compile Equations: Stationary in Study 1/Solution 1 (sol1) ---------------
+Started at Oct 24, 2026, 12:22:52?AM.
+Geometry shape function: Linear Lagrange
+Running on Intel64 Family 6 Model 142 Stepping 12, GenuineIntel.
+Using 1 socket with 4 cores in total on DESKTOP-K4OD2KS.
+Available memory: 16.18 GB.
+           Current Progress:   3 % - Compile Equations: Stationary
+Memory: 724/743 753/775
+           Current Progress:   4 % - Compile Equations: Stationary
+Memory: 746/752 778/784
+Time: 14 s.
+Physical memory: 752 MB
+Virtual memory: 784 MB
+Warning: Fluid flow interfaces are defined in the spatial frame. In the component node, select Permanently Define All Frames to avoid unexpected behavior.
+
+  - Node: Laminar Flow (spf)
+Ended at Oct 24, 2026, 12:23:06?AM.
+----- Compile Equations: Stationary in Study 1/Solution 1 (sol1) -------------->
+<---- Dependent Variables 1 in Study 1/Solution 1 (sol1) -----------------------
+Started at Oct 24, 2026, 12:23:06?AM.
+           Current Progress:   4 % - Dependent Variables 1
+Memory: 835/835 866/866
+Solution time: 3 s.
+Physical memory: 838 MB
+Virtual memory: 869 MB
+Ended at Oct 24, 2026, 12:23:09?AM.
+----- Dependent Variables 1 in Study 1/Solution 1 (sol1) ---------------------->
+<---- Stationary Solver 1 in Study 1/Solution 1 (sol1) -------------------------
+Started at Oct 24, 2026, 12:23:09?AM.
+           Current Progress:   5 % - Stationary Solver 1
+Memory: 841/848 871/874
+Parametric solver
+Nonlinear solver
+Number of degrees of freedom solved for: 756396 (plus 6105 internal DOFs).
+    
+Parameter D_sweep = 1e-11.
+           Current Progress:   5 % - Assembling residual
+Memory: 899/906 927/935
+Solution time: 12 s.
+Physical memory: 906 MB
+Virtual memory: 935 MB
+Ended at Oct 24, 2026, 12:23:21?AM.
+----- Stationary Solver 1 in Study 1/Solution 1 (sol1) ------------------------>
+Exception:
+	com.comsol.nativejni.FlNativeException: Failed to evaluate Jacobian of expression.
+	(rethrown as com.comsol.util.exceptions.FlException)
+Messages:
+	The following feature has encountered a problem
+	- Feature: Stationary Solver 1 (sol1/s1)
+
+	Undefined variable
+	- Variable: comp1.mat1.def.mu
+	- Geometry: geom1
+	- Domain: 1
+
+	Failed to evaluate variable
+	- Variable: comp1.spf.mu
+	- Defined as: comp1.mat1.def.mu
+
+	Failed to evaluate variable
+	- Variable: comp1.spf.mu_eff
+	- Defined as: comp1.spf.mu
+
+	Failed to evaluate variable
+	- Variable: comp1.spf.K_stress_tensorxy
+	- Defined as: comp1.spf.mu_eff*(comp1.uy+comp1.vx)
+
+	Failed to evaluate expression
+	- Expression: dvol*(-comp1.spf.K_stress_tensorxy)
+
+	Failed to evaluate jacobian of expression
+	- Expression: ((comp1.p-comp1.spf.K_stress_tensorxx)*test(comp1.ux)-comp1.spf.K_stress_tensorxy*test(comp1.uy)-comp1.spf.K_stress_tensoryx*test(comp1.vx)+(comp1.p-comp1.spf.K_stress_tensoryy)*test(comp1.vy))*(dvol)
+
+Stack trace:
+at com.comsol.solver.SolverOperation.addError(SourceFile:597)
+	at com.comsol.solver.SolverOperation.execute(SourceFile:318)
+	at com.comsol.model.method.SolverSequenceMethod.doRun(SourceFile:2466)
+	at com.comsol.model.method.SolverSequenceMethod.doRunAll(SourceFile:3268)
+	at com.comsol.model.dbmodel.SolverSequenceDb.runAll(SourceFile:328)
+	at com.comsol.model.method.StudyMethod.doRunNoGen(SourceFile:137)
+	at com.comsol.model.method.StudyMethod.doRunNoGen(SourceFile:89)
+	at com.comsol.model.method.StudyMethod.doRun(SourceFile:78)
+	at com.comsol.model.dbmodel.StudyDb.run(SourceFile:133)
+	at com.comsol.model.impl.StudyImpl.run(SourceFile:229)
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.comsol.model.debugger.MethodExecModelHelper.runApiMethod(SourceFile:86)
+	at com.comsol.model.debugger.MethodExecModelHelper.a(SourceFile:100)
+	at com.comsol.util.security.a.a(SourceFile:129)
+	at com.comsol.model.debugger.MethodExecModelHelper.runApiMethodPrivileged(SourceFile:100)
+	at com.comsol.methodexecmph.a.a.a(SourceFile:276)
+	at com.comsol.methodexecmph.a.a.a(SourceFile:215)
+	at com.comsol.methodexecmph.b.a(SourceFile:120)
+	at com.comsol.model.util.ServerModelUtil.runExternalClass(SourceFile:649)
+	at com.comsol.model.util.ModelUtilInternal.runExternalClass(SourceFile:195)
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.comsol.bridge.command.b.a(SourceFile:161)
+	at com.comsol.bridge.command.c.run(SourceFile:63)
+	at com.comsol.bridge.command.k.c(SourceFile:232)
+	at com.comsol.bridge.command.k$1.run(SourceFile:105)
+	at com.comsol.util.thread.SuspendableTasks$1.run(SourceFile:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+	at ---.---(Unknown Source)
+	at com.comsol.methodexec.a.f$e.a(SourceFile:351)
+	at com.comsol.methodexec.a.f.d(SourceFile:143)
+	at com.comsol.methodexec.a.f.b(SourceFile:210)
+	at com.comsol.methodexec.a.f.a(SourceFile:187)
+	at com.comsol.methodexec.a.g.a(SourceFile:37)
+	at com.comsol.methodexec.comm.h.a(SourceFile:60)
+	at com.comsol.methodexec.meapi.engine.b.a(SourceFile:159)
+	at com.comsol.methodexec.meapi.engine.b.a(SourceFile:82)
+	at com.comsol.methodexec.meapi.impl.StudyMEClient.run(SourceFile:226)
+	at Ex1_HFilter.run(Ex1_HFilter.class:284)
+	at Ex1_HFilter.main(Ex1_HFilter.class:45)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at com.comsol.methodexec.me.d.a(SourceFile:387)
+	at com.comsol.methodexec.util.JDIDebugHook.invokeMethod(SourceFile:30)
+	at com.comsol.methodexec.me.d.a(SourceFile:386)
+	at com.comsol.methodexec.me.d$2.run(SourceFile:304)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at com.comsol.methodexec.me.d.a(SourceFile:285)
+	at com.comsol.methodexec.me.d.a(SourceFile:146)
+	at com.comsol.methodexec.me.d.a(SourceFile:98)
+	at com.comsol.methodexec.me.b$3.run(SourceFile:249)
+Caused by: Exception:
+	com.comsol.nativejni.FlNativeException: Failed to evaluate Jacobian of expression.
+Messages:
+	Undefined variable
+	- Variable: comp1.mat1.def.mu
+	- Geometry: geom1
+	- Domain: 1
+
+	Failed to evaluate variable
+	- Variable: comp1.spf.mu
+	- Defined as: comp1.mat1.def.mu
+
+	Failed to evaluate variable
+	- Variable: comp1.spf.mu_eff
+	- Defined as: comp1.spf.mu
+
+	Failed to evaluate variable
+	- Variable: comp1.spf.K_stress_tensorxy
+	- Defined as: comp1.spf.mu_eff*(comp1.uy+comp1.vx)
+
+	Failed to evaluate expression
+	- Expression: dvol*(-comp1.spf.K_stress_tensorxy)
+
+	Failed to evaluate jacobian of expression
+	- Expression: ((comp1.p-comp1.spf.K_stress_tensorxx)*test(comp1.ux)-comp1.spf.K_stress_tensorxy*test(comp1.uy)-comp1.spf.K_stress_tensoryx*test(comp1.vx)+(comp1.p-comp1.spf.K_stress_tensoryy)*test(comp1.vy))*(dvol)
+
+	at xevalutil.cpp. Row: 346(Detail: :5)
+	at evaltree.cpp. Row: 750(Detail: :4)
+	at evalnodes.cpp. Row: 1429(Detail: :3)
+	at evalnodes.cpp. Row: 1429(Detail: :2)
+	at evalnodes.cpp. Row: 1429(Detail: :1)
+	at xevaluators.cpp. Row: 375(Detail: :0)
+	at com.comsol.nativejni.solver.FlSolver.femStatic(Native Method)
+	at com.comsol.nativejni.solver.FlSolver.femStatic(SourceFile:29)
+	at com.comsol.nativemph.b.k.a(SourceFile:30)
+	at com.comsol.nativeutil.runnable.h.run(SourceFile:129)
+	at com.comsol.solver.solution.SolverBase.a(SourceFile:452)
+	at com.comsol.solver.solution.SolverStationary.a(SourceFile:316)
+	at com.comsol.solver.solution.SolverBase.doExecute(SourceFile:96)
+	at com.comsol.solver.SolverOperation.execute(SourceFile:314)
+	at com.comsol.model.method.SolverSequenceMethod.doRun(SourceFile:2466)
+	at com.comsol.model.method.SolverSequenceMethod.doRunAll(SourceFile:3268)
+	at com.comsol.model.dbmodel.SolverSequenceDb.runAll(SourceFile:328)
+	at com.comsol.model.method.StudyMethod.doRunNoGen(SourceFile:137)
+	at com.comsol.model.method.StudyMethod.doRunNoGen(SourceFile:89)
+	at com.comsol.model.method.StudyMethod.doRun(SourceFile:78)
+	at com.comsol.model.dbmodel.StudyDb.run(SourceFile:133)
+	at com.comsol.model.impl.StudyImpl.run(SourceFile:229)
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.comsol.model.debugger.MethodExecModelHelper.runApiMethod(SourceFile:86)
+	at com.comsol.model.debugger.MethodExecModelHelper.a(SourceFile:100)
+	at com.comsol.util.security.a.a(SourceFile:129)
+	at com.comsol.model.debugger.MethodExecModelHelper.runApiMethodPrivileged(SourceFile:100)
+	at com.comsol.methodexecmph.a.a.a(SourceFile:276)
+	at com.comsol.methodexecmph.a.a.a(SourceFile:215)
+	at com.comsol.methodexecmph.b.a(SourceFile:120)
+	at com.comsol.model.util.ServerModelUtil.runExternalClass(SourceFile:649)
+	at com.comsol.model.util.ModelUtilInternal.runExternalClass(SourceFile:195)
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.comsol.bridge.command.b.a(SourceFile:161)
+	at com.comsol.bridge.command.c.run(SourceFile:63)
+	at com.comsol.bridge.command.k.c(SourceFile:232)
+	at com.comsol.bridge.command.k$1.run(SourceFile:105)
+	at com.comsol.util.thread.SuspendableTasks$1.run(SourceFile:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+	at ---.---(Unknown Source)
+	at com.comsol.methodexec.a.f$e.a(SourceFile:351)
+	at com.comsol.methodexec.a.f.d(SourceFile:143)
+	at com.comsol.methodexec.a.f.b(SourceFile:210)
+	at com.comsol.methodexec.a.f.b(SourceFile:200)
+	... 19 more=== Study 1 FAILED ===
+=== upper-half outlet average concentration ===
+n combos = 1
+combo 0: c_avg_upper = 0.0
+=== concentration at the outlet wall (y = +w/2) ===
+combo 0: c_wall = 0.0
+Ave |U| at inlet = 0.0 m/s  (U_avg = 0.0033333333333333344 m/s)
+Ave p at inlet = 0.0 Pa
+           Current Progress:   0 % - Plotting
+Memory: 898/906 924/935
+           Current Progress:   7 % - Evaluating
+Memory: 889/906 915/935
+-          Current Progress:  10 % - Plotting
+-          Current Progress:  14 % - Evaluating
+Memory: 902/920 930/948
+-          Current Progress:  19 % - Evaluating
+Memory: 876/920 908/948
+--------   Current Progress:  82 % - Evaluating
+Memory: 879/920 912/948
+--------   Current Progress:  83 % - Evaluating
+Memory: 887/920 921/948
+---------  Current Progress:  93 % - Evaluating
+Memory: 927/928 964/966
+           Current Progress:   0 % - Plotting
+Memory: 928/930 965/967
+           Current Progress:   1 % - Evaluating
+           Current Progress:   7 % - Evaluating
+-          Current Progress:  10 % - Plotting
+-          Current Progress:  12 % - Evaluating
+Memory: 935/935 972/972
+-          Current Progress:  19 % - Evaluating
+Memory: 936/936 972/972
+-----      Current Progress:  59 % - Evaluating
+Memory: 933/936 968/972
+--------   Current Progress:  82 % - Evaluating
+Memory: 929/936 964/972
+--------   Current Progress:  83 % - Evaluating
+---------  Current Progress:  93 % - Evaluating
+Memory: 954/954 990/990
+---        Current Progress:  30 % - Generating image
+Memory: 987/987 1012/1012
+=== PNGs exported ===
+=== Model saved ===
+Class run time: 458 s.
+Saving model: <project>\comsol\Ex1_HFilter_Ex1_HFilter.mph
+Save time: 2 s.
+Total time: 460 s.

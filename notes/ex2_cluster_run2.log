@@ -1,0 +1,168 @@
+*******************************************
+***COMSOL 6.4.0.293 progress output file***
+*******************************************
+Sat Oct 24 01:24:59 CEST 2026
+COMSOL Multiphysics 6.4 (Build: 293) starting in batch mode
+Running: /zhome/29/d/167641/a2/Ex2Chamber.class
+EX2 MODE = bc   OUT = .
+---------- Current Progress: 100 % - Updating selections
+Memory: 493/493 8603/8603
+           Current Progress:   0 % - Block
+Memory: 517/517 8667/8667
+           Current Progress:   7 % - Block 2
+Memory: 539/539 8769/8769
+-          Current Progress:  13 % - Block 3
+--         Current Progress:  20 % - Block 4
+--         Current Progress:  27 % - Block 5
+---        Current Progress:  33 % - Form Union
+---        Current Progress:  33 % - Performing Boolean operation
+Memory: 545/545 8849/8849
+---------- Current Progress: 100 % - Updating selections
+Memory: 546/546 8849/8849
+GEOM domains=5 boundaries=26 edges=44 verts=24
+---------- Current Progress: 100 % - Creating visualization mesh
+Memory: 558/558 8849/8849
+           Current Progress:   0 % - Form Union
+Memory: 571/571 8849/8849
+           Current Progress:   0 % - Performing Boolean operation
+Memory: 571/571 8913/8913
+---------- Current Progress: 100 % - Updating selections
+SEL strip=[3] chamA=[2] chamB=[4]
+SEL ductW=[1] ductE=[5] cell=[]
+SEL inlet=[1] outlet=[26]
+SEL z0=[3, 8, 12, 16, 22] z1=[4, 9, 13, 17, 23]
+SEL cellBot=[] cellTop=[]
+SEL vertical edges = 44
+
+################ MESH ################
+MESH Distribution form sub/geom1-int failed: Unsupported_geometric_entity_level
+MESH Distribution form sub/geom1-str failed: Unsupported_geometric_entity_level
+MESH Distribution OK  form=top/geom1-int
+           Current Progress:   0 % - Free Triangular 1
+Memory: 607/607 9041/9041
+Number of vertex elements: 12
+----       Current Progress:  41 % - Creating boundary mesh
+Memory: 617/617 9041/9041
+Number of edge elements: 934
+Number of boundary elements: 9676
+----       Current Progress:  42 % - Creating boundary mesh
+Memory: 619/619 9041/9041
+----       Current Progress:  42 % - Swept 1
+Number of vertex elements: 24
+Number of edge elements: 1904
+Number of boundary elements: 22154
+Number of elements: 29028
+Minimum element quality: 0.5412
+---------- Current Progress: 100 % - Finalizing mesh
+Memory: 629/629 9041/9041
+MESH numElem=29028 types=[prism, tri, quad, edg, vtx] minQ=0.2536 meanQ=0.8364
+
+################ PHYSICS ################
+   SET MassFlowRate = rho*Q_in  FAILED :: Unknown_parameter_X#MassFlowRate
+SPF inlet mfr = rho*Q_in  type = MassFlowRate
+spf built
+TDS cdm1 u_src = root.comp1.u  D_c = D_sp
+rect1 lower=-5[s] upper=t_fill smooth=5 ncontder=2
+   rect1(-10.0 s) = 0.0
+   rect1(-5.0 s) = 0.5
+   rect1(-2.5 s) = 1.0
+   rect1(0.0 s) = 1.0
+   rect1(100.0 s) = 1.0
+   rect1(2150.0 s) = 1.0
+   rect1(2160.0 s) = 0.5
+   rect1(2165.0 s) = 0.0
+   rect1(3000.0 s) = 0.0
+tds pulse built
+
+################ STUDY std1: stationary velocity ################
+
+################ STUDY std2: transient concentration (velocity taken from std1) ################
+----       Current Progress:  47 % - Generating equations
+Memory: 843/843 9025/9041
+------     Current Progress:  60 % - Generating equations
+------     Current Progress:  66 % - Generating equations
+Memory: 920/920 9025/9041
+---        Current Progress:  39 % - Generating equations
+Memory: 922/922 9025/9041
+------     Current Progress:  60 % - Generating equations
+Memory: 930/930 9025/9041
+----       Current Progress:  47 % - Generating equations
+Memory: 925/930 9025/9041
+---        Current Progress:  39 % - Generating equations
+Memory: 929/930 9025/9041
+studies built
+domAvg selection set FAILED: Unsupported_geometry
+EX2 FAILED: Exception:
+	com.comsol.nativeutil.properties.InvalidPropertyValueException: Invalid property value.
+Messages:
+	Invalid property value
+	- Property: dimension (Dimension)
+
+	'Dimension' is a string.
+	- : "1", "2", "3"
+
+EX2 DONE
+Class run time: 17 s.
+Saving model: /zhome/29/d/167641/a2/Ex2Chamber_Ex2Chamber.mph
+Save time: 1 s.
+Total time: 18 s.
+Exception:
+	com.comsol.nativeutil.properties.InvalidPropertyValueException: Invalid property value.
+Messages:
+	Invalid property value
+	- Property: dimension (Dimension)
+	'Dimension' is a string.
+	- : "1", "2", "3"
+Stack trace:
+at com.comsol.nativeutil.properties.Property.c(SourceFile:1351)
+	at com.comsol.nativeutil.properties.Property.set(SourceFile:854)
+	at com.comsol.model.data.primitive.PropValuePrim.set(SourceFile:1978)
+	at com.comsol.model.dbmodel.PropFeatureDb.d(SourceFile:1689)
+	at com.comsol.model.dbmodel.PropFeatureDb.c(SourceFile:1496)
+	at com.comsol.model.dbmodel.PropFeatureDb.set(SourceFile:671)
+	at com.comsol.model.impl.PropFeatureImpl.set(SourceFile:748)
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.comsol.model.debugger.MethodExecModelHelper.runApiMethod(SourceFile:86)
+	at com.comsol.model.debugger.MethodExecModelHelper.a(SourceFile:100)
+	at com.comsol.util.security.a.a(SourceFile:129)
+	at com.comsol.model.debugger.MethodExecModelHelper.runApiMethodPrivileged(SourceFile:100)
+	at com.comsol.methodexecmph.a.a.a(SourceFile:276)
+	at com.comsol.methodexecmph.a.a.a(SourceFile:215)
+	at com.comsol.methodexecmph.b.a(SourceFile:120)
+	at com.comsol.model.util.ServerModelUtil.runExternalClass(SourceFile:649)
+	at com.comsol.model.util.ModelUtilInternal.runExternalClass(SourceFile:195)
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.comsol.bridge.command.b.a(SourceFile:161)
+	at com.comsol.bridge.command.c.run(SourceFile:63)
+	at com.comsol.bridge.command.k.c(SourceFile:227)
+	at com.comsol.bridge.command.k$1.run(SourceFile:100)
+	at com.comsol.util.thread.SuspendableTasks$1.run(SourceFile:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+	at ---.---(Unknown Source)
+	at com.comsol.methodexec.a.f$e.a(SourceFile:351)
+	at com.comsol.methodexec.a.f.d(SourceFile:143)
+	at com.comsol.methodexec.a.f.b(SourceFile:210)
+	at com.comsol.methodexec.a.f.a(SourceFile:187)
+	at com.comsol.methodexec.a.g.a(SourceFile:37)
+	at com.comsol.methodexec.comm.h.a(SourceFile:60)
+	at com.comsol.methodexec.meapi.engine.b.a(SourceFile:159)
+	at com.comsol.methodexec.meapi.engine.b.a(SourceFile:82)
+	at com.comsol.methodexec.meapi.impl.PropFeatureMEClient.set(SourceFile:680)
+	at Ex2Chamber.runBC(Ex2Chamber.class:461)
+	at Ex2Chamber.build(Ex2Chamber.class:252)
+	at Ex2Chamber.main(Ex2Chamber.class:125)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at com.comsol.methodexec.me.d.a(SourceFile:387)
+	at com.comsol.methodexec.util.JDIDebugHook.invokeMethod(SourceFile:30)
+	at com.comsol.methodexec.me.d.a(SourceFile:386)
+	at com.comsol.methodexec.me.d$2.run(SourceFile:304)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at com.comsol.methodexec.me.d.a(SourceFile:285)
+	at com.comsol.methodexec.me.d.a(SourceFile:146)
+	at com.comsol.methodexec.me.d.a(SourceFile:98)
+	at com.comsol.methodexec.me.b$3.run(SourceFile:249)

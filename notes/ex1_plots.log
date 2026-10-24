@@ -1,0 +1,107 @@
+*******************************************
+***COMSOL 6.4.0.429 progress output file***
+*******************************************
+Sat Oct 24 04:03:58 CEST 2026
+COMSOL Multiphysics 6.4 (Build: 429) starting in batch mode
+Running: <project>\comsol\Ex1_Plots.class
+loading <project>/comsol/out/Ex1_HFilter.mph
+loaded. plot groups: [pg1, pg2]
+component views: [view1]
+using view: view1
+solutions: [sol1]
+  sol1 parameter values: [1.0E-11, 5.0E-11, 1.0E-10, 5.0E-10, 1.0E-9, 5.0E-9]
+showing sweep combination 3 of 6  (D = 1e-10 m^2/s)
+  sweep combination 3 (D = 1e-10 m^2/s)
+    (looplevelinput on p_ex1_c_inlet rejected: Unknown_property)
+           Current Progress:   0 % - Plotting
+Memory: 615/615 658/658
+           Current Progress:   6 % - Evaluating
+Memory: 628/630 661/664
+-          Current Progress:  10 % - Plotting
+Memory: 630/630 661/664
+--------   Current Progress:  82 % - Evaluating
+Memory: 689/689 724/724
+--------   Current Progress:  83 % - Evaluating
+Memory: 705/705 739/739
+--------   Current Progress:  86 % - Evaluating
+Memory: 664/705 715/739
+---        Current Progress:  30 % - Generating image
+Memory: 737/737 760/760
+-          Current Progress:  10 % - Plotting
+Memory: 755/797 777/803
+----       Current Progress:  46 % - Evaluating
+Memory: 782/797 794/803
+----       Current Progress:  47 % - Evaluating
+----       Current Progress:  48 % - Evaluating
+Memory: 785/797 801/803
+-----      Current Progress:  55 % - Plotting
+-------    Current Progress:  76 % - Evaluating
+Memory: 794/797 807/810
+---------  Current Progress:  92 % - Evaluating
+Memory: 795/797 807/810
+---------  Current Progress:  96 % - Evaluating
+  [ex1_c_inlet] looplevel = [3.0]
+  exported ex1_c_inlet -> <project>/figures/comsol_ex1/ex1_c_inlet.png
+    (looplevelinput on p_ex1_c_outlet rejected: Unknown_property)
+           Current Progress:   0 % - Plotting
+Memory: 797/797 809/810
+           Current Progress:   6 % - Evaluating
+-          Current Progress:  10 % - Plotting
+--------   Current Progress:  82 % - Evaluating
+Memory: 812/812 825/825
+--------   Current Progress:  83 % - Evaluating
+Memory: 813/813 825/825
+--------   Current Progress:  86 % - Evaluating
+Memory: 809/813 821/825
+---        Current Progress:  30 % - Generating image
+Memory: 818/819 822/825
+-          Current Progress:  10 % - Plotting
+Memory: 805/856 818/848
+-          Current Progress:  14 % - Evaluating
+Memory: 815/856 826/848
+----       Current Progress:  46 % - Evaluating
+Memory: 820/856 835/848
+----       Current Progress:  47 % - Evaluating
+Memory: 822/856 837/848
+----       Current Progress:  48 % - Evaluating
+Memory: 838/856 851/851
+-----      Current Progress:  55 % - Plotting
+Memory: 834/856 847/851
+-------    Current Progress:  76 % - Evaluating
+---------  Current Progress:  92 % - Evaluating
+---------  Current Progress:  96 % - Evaluating
+  [ex1_c_outlet] looplevel = [3.0]
+  exported ex1_c_outlet -> <project>/figures/comsol_ex1/ex1_c_outlet.png
+    (looplevelinput on p_ex1_u_inlet rejected: Unknown_property)
+           Current Progress:   0 % - Plotting
+Memory: 840/856 852/852
+           Current Progress:   6 % - Evaluating
+Memory: 843/856 856/857
+-          Current Progress:  10 % - Plotting
+Memory: 840/856 853/857
+--------   Current Progress:  82 % - Evaluating
+Memory: 851/856 863/863
+--------   Current Progress:  83 % - Evaluating
+Memory: 853/856 865/865
+--------   Current Progress:  86 % - Evaluating
+Memory: 853/856 866/866
+---        Current Progress:  30 % - Generating image
+Memory: 859/860 861/866
+-          Current Progress:  10 % - Plotting
+Memory: 851/884 863/875
+----       Current Progress:  46 % - Evaluating
+Memory: 856/884 871/875
+----       Current Progress:  47 % - Evaluating
+----       Current Progress:  48 % - Evaluating
+-----      Current Progress:  55 % - Plotting
+-------    Current Progress:  76 % - Evaluating
+Memory: 857/884 871/875
+---------  Current Progress:  92 % - Evaluating
+---------  Current Progress:  96 % - Evaluating
+  [ex1_u_inlet] looplevel = [3.0]
+  exported ex1_u_inlet -> <project>/figures/comsol_ex1/ex1_u_inlet.png
+=== EX1PLOTS DONE ===
+Class run time: 48 s.
+Saving model: <project>\comsol\Ex1_Plots_Ex1.mph
+Save time: 5 s.
+Total time: 53 s.

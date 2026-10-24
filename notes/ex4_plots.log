@@ -1,0 +1,27 @@
+*******************************************
+***COMSOL 6.4.0.429 progress output file***
+*******************************************
+Sat Oct 24 03:12:17 CEST 2026
+COMSOL Multiphysics 6.4 (Build: 429) starting in batch mode
+Running: <project>\comsol\Ex4_Plots.class
+java.security.AccessControlException: access denied ("java.io.FilePermission" "<project>\comsol\out\Ex4_FFF_prod.mph" "read")
+	at java.base/java.security.AccessControlContext.checkPermission(Unknown Source)
+	at java.base/java.security.AccessController.checkPermission(Unknown Source)
+	at java.base/java.lang.SecurityManager.checkPermission(Unknown Source)
+	at java.base/java.lang.SecurityManager.checkRead(Unknown Source)
+	at java.base/java.io.File.exists(Unknown Source)
+	at Ex4_Plots.main(Ex4_Plots.class:145)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at com.comsol.methodexec.me.d.a(SourceFile:387)
+	at com.comsol.methodexec.util.JDIDebugHook.invokeMethod(SourceFile:30)
+	at com.comsol.methodexec.me.d.a(SourceFile:386)
+	at com.comsol.methodexec.me.d$2.run(SourceFile:304)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at com.comsol.methodexec.me.d.a(SourceFile:285)
+	at com.comsol.methodexec.me.d.a(SourceFile:146)
+	at com.comsol.methodexec.me.d.a(SourceFile:98)
+	at com.comsol.methodexec.me.b$3.run(SourceFile:249)
+EX4PLOTS ABORTED: java.security.AccessControlException: access denied ("java.io.FilePermission" "<project>\comsol\out\Ex4_FFF_prod.mph" "read")
+Class run time: 0 s.
+Total time: 0 s.

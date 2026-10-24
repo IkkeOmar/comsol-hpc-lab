@@ -1,0 +1,243 @@
+==============================================================================
+EXERCISE 2 - CELL GROWTH CHAMBER - ANALYTICAL RESULTS
+the lab-on-a-chip course, Assignment 1, Exercise 2 (pure analytical, no COMSOL)
+==============================================================================
+
+A1  VOLUMES
+    chamber   6 cm x 6 cm x 1 mm  : 3.600000e-06 m^3 = 3600.0 uL
+    inlet ch. 150 mm x 2 mm x 1 mm: 3.000000e-07 m^3 = 300.0 uL
+    inlet channel: A = 2.000e-06 m^2, P = 6.000e-03 m, D_h = 4A/P = 1.3333 mm
+    NOTE: the 150 mm channel crosses the 60 mm chamber, so the
+    channel volume inside the chamber footprint is 120 uL, but that is part of the chamber volume, not extra; the remaining 90 mm of channel (the 45 mm inlet and 45 mm outlet ducts) holds another 180 uL, so the system holds 3780 uL of fluid in all. The exercise (and the
+    required sanity check) uses the CHAMBER volume alone.
+
+A2  FILLING TIME AT Q = 100 uL/min
+    Q = 100 uL/min = 1.666667e-09 m^3/s
+    t_fill = V_chamber/Q = 2160.0000 s = 36.0000 min
+    solute mass in the pulse = c*Q*t_fill = 3.600000e-06 mol = V_chamber*c exactly
+    => choose the pulse 'filling time' parameter = t_fill = 2160 s:
+       the chamber is just filled when the pulse ends. (Shorter
+       pulses under-dose the far corners; longer ones only add
+       solute that leaves through the outlet.)
+    time-dependent study window: -5 s .. 3*t_fill = 6480 s
+
+A3  REYNOLDS NUMBER, INLET CHANNEL
+    U = Q/A = 8.333333e-04 m/s
+    Re = rho*U*D_h/eta = 1000*8.3333e-04*1.3333e-03/1e-03 = 1.1111
+    -> Re = 1.111 << 2000: the flow is firmly LAMINAR.
+
+A4  INLET-CHANNEL VELOCITY AND RESIDENCE TIME
+    U_avg = 8.333333e-04 m/s = 0.8333 mm/s
+    t_res = L/U = 180.0000 s = 3.000 min
+    cross-check V_channel/Q = 180.0000 s
+
+A5  DIFFUSION TIMES (D = 200 um^2/s)
+    across the chamber height, h^2/(pi^2 D) : 5.0661e+02 s (8.44 min)
+    across half the height,   h^2/(4 D)   : 1.2500e+03 s (20.83 min)
+    along the chamber, L^2/D (L = 6 cm)   : 1.8000e+07 s (5000.0 h = 208.3 days)
+    vs t_fill = 2160 s:  t_fill/t_diff,perp = 4.26,  t_diff,long/t_fill = 8333
+    -> transverse (1 mm) homogenisation is ~4x FASTER than the
+       flushing time, so the chamber mixes across its height;
+       but diffusion along the 60 mm length is ~8000x SLOWER than
+       the flushing time, so only the flow path is exchanged.
+
+A6  EFFECTIVE PECLET NUMBER IN THE CHAMBER
+    primary: flow cross-section A = 60 mm x 1 mm = 6.0000e-05 m^2
+      U_chamber = Q/A = 2.777778e-05 m/s (27.78 um/s)
+      advective traverse L/U = 2160.0000 s (= V_chamber/Q = t_fill)
+      Pe = U_chamber*h/D = 138.889   (h = 1 mm)
+      t_adv / t_diff,perp = 4.264
+    variant: with the plan area 60 x 60 mm:
+      U = 4.6296e-07 m/s, Pe = 2.315
+    jet Pe in the 2 mm channel: U*h/D = 4167
+    -> Pe >> 1: transport is advection dominated, i.e. the
+       concentration is set by what ENTERS, not by diffusion.
+       Two consequences:
+       (i)  across the 1 mm height: t_diff,perp = 507 s is
+           still 4.3x shorter than the residence time
+           2160 s, so the flushed column stays vertically
+           uniform (the inflow is already uniform at c = 1);
+       (ii) along the 60 cm: t_diff,long = 1.8e+07 s =
+           8333x the residence time, so lateral
+           homogenisation by diffusion is hopeless - only the 2 mm
+           wide flow path is exchanged and the rest of the
+           footprint is a dead zone (this is the part-C effect).
+
+A7  CELL LAYER (cylinder r = 2.5 cm, h = 100 um)
+    V_cell = pi r^2 h = 1.963495e-07 m^3 = 196.35 uL
+    D_eff = 0.7*D = 1.400000e-10 m^2/s (140.0 um^2/s)
+    m = sqrt(k/D_eff) = 32732.6835 1/m,  m*L_c = 3.2733
+    c(base) = c_s/cosh(m L_c) = 7.565625e-02 mol/m^3
+    surface-to-base drop = 9.243437e-01 mol/m^3 (92.43 % of c_s)
+    verify 1 - scipy.integrate.solve_bvp: max |c_bvp - c_analytic| = 1.845e-10 mol/m^3 (rel. 3.222e-10), BVP rms residual 6.26e-07
+    verify 2 - ODE residual D_eff c'' - k c = 5.551e-17 mol/m^3
+    verify 3 - integrate the same ODE from the surface downwards
+             (solve_ivp):
+             c_mid = 7.56562503e-02 mol/m^3, |error| = 1.006e-14
+    verify 4 - transient: finite-difference + matrix exponential vs
+             eigen-expansion, max |difference| at t = 1/10/100 s = 3.267e-06 mol/m^3
+             cell-layer relaxation tau = 5.419 s, t_90 = 18.66 s, t_99 = 31.15 s (pinned surface)
+
+==============================================================================
+SETUP QUANTITIES FOR THE COMSOL SUB-QUESTIONS B-G
+==============================================================================
+
+PART B - DOMAIN-AVERAGE CONCENTRATION VS TIME (fluid exchange)
+------------------------------------------------------------------------------
+  Pulse (Rect1): start = -5 s, end = t_fill = 2160 s,
+    transition-zone size = 5, 2 continuous derivatives.
+    NB: with a smoothing zone of 5 the effective ON/OFF edges sit
+    at -5+2.5 = -2.5 s and t_fill-2.5 s, so the delivered dose is
+    ~ (t_fill+2.5) s of full-strength inflow, i.e. ~1.001 x V_chamber of solute.
+  Study: stationary step 1 (velocity) + time-dependent step 2
+  (species, velocity taken from step 1), t from -5 s to
+  3*t_fill = 6480 s, output step 5-10 s (use 5 s).
+  Analytical brackets for the domain probe (chamber-average c):
+    well-mixed (CSTR): tau = V/Q = 2160 s,
+      c_avg(t_fill) = 1-exp(-1) = 0.6321 mol/m^3,
+      c_avg(3*t_fill) = 0.6321*exp(-2) = 0.0855 mol/m^3;
+    plug-flow limit: c_avg = min(t/t_fill, 1) -> 1.0 mol/m^3 at
+      t_fill (upper bracket).
+    The COMSOL probe should fall between the two brackets; a value
+    well below the CSTR curve means the chamber corners are dead
+    zones that are not flushed at all.
+  Solute mass balance: Q*c*t_fill = 3.6000e-06 mol = V_chamber*c
+    -> at best the chamber reaches c = 1 mol/m^3 if nothing is
+    lost to the outlet and the mixing is perfect.
+
+PART C - THREE POINT PROBES (homogeneity)
+------------------------------------------------------------------------------
+  Suggested probe points (chamber footprint 60 x 60 mm, channel along
+  x, centred on y = 0):
+    P1 = (-29.5, 0, 0) mm  - upstream end, on the channel axis
+    P2 = (0, 29.5, 0) mm   - off-axis, next to a side wall
+    P3 = (29.5, 0, 0) mm   - downstream end, on the channel axis
+  On-axis advective arrival (jet speed 0.833 mm/s):
+    P1: 45.5 mm from the inlet -> 54.6 s
+    P3: 105.5 mm from the inlet -> 126.6 s
+  Off-axis P2: lateral gap from the channel edge (1 mm) = 28.5 mm,
+    diffusion time = gap^2/D = 4.061e+06 s = 47.0 days
+    -> utterly outside the 3*t_fill study window: the off-axis
+       corner stays near c = 0 unless the FLOW reaches it.
+  Transverse diffusion across the 1 mm height: 507 s, i.e.
+  4.26 x SHORTER than the chamber residence time 2160 s:
+    the column above the floor homogenises fast, but only the narrow
+    strip along the channel axis is actually flushed -> large
+    in-plane inhomogeneity, which is what part C should show.
+  Meaning for cells on the floor: cells under the channel get the
+  drug first and most; cells far from the axis get almost none.
+
+PART D - HOW TO IMPROVE HOMOGENEITY (simulate one)
+------------------------------------------------------------------------------
+  (1) Serpentine / meander inlet that sweeps the whole 60 x 60 mm
+      footprint, or several parallel inlet channels.
+  (2) Shrink the chamber footprint until L^2/D ~ t_fill.
+  (3) Raise Q (t_fill scales as 1/Q; Re stays << 2000).
+  Recommended: option (1). t_diff,along = L^2/D = 1.80e+07 s is
+  8333 x the residence time, so diffusion
+  can never fill the far corners in this study - the flow must be
+  brought to them. A meander keeps Re and t_fill unchanged but
+  gives every point an advective residence time of O(t_fill).
+
+PART E - TRANSIENT IN THE CELL DOMAIN
+------------------------------------------------------------------------------
+  Cell-domain physics: zero velocity (Fluid domain condition),
+  D = 0.7*Dsp = 1.4000e-10 m^2/s, reaction -k*c with
+  k = 0.15 mol/m^3/s (15 %/s of the local concentration).
+  Initial Values: c = 1 mol/m^3 in the inlet channel only (chamber
+  starts at 0), inflow c = 1 mol/m^3 (no pulse), study from t = 0.
+  Cell-layer relaxation (pinned surface): slowest mode
+  tau = 1/(k + D_eff*(pi/2L_c)^2) = 5.42 s,
+  t_90 = 18.7 s, t_99 = 31.2 s
+  (1/k = 6.67 s dominates: reaction is much faster than
+  diffusion across the layer, L_c^2/D_eff = 71.4 s).
+  => the cell layer itself equilibrates within tens of seconds,
+     but its SURFACE concentration only rises as the chamber fills
+     (O(t_fill) = 2160 s), so the cell-domain curve in the
+     COMSOL run follows the chamber flush and is flat only after
+     roughly 2-3 t_fill = 4320-6480 s.
+  Output saving: every 5 s up to t_fill, every 200 s afterwards
+  (as suggested in the assignment).
+
+PART F - STATIONARY STUDY, FLOW-RATE SWEEP
+------------------------------------------------------------------------------
+  Stationary step 2 (species) coupled to the stationary velocity of
+  step 1; parametric sweep Q = 10 uL/min, 100 uL/min, 1 mL/min.
+  Re over the sweep: 0.111, 1.111, 11.111  (all << 2000, laminar).
+  Pinned-surface expectation: c_mid = 7.565625e-02 mol/m^3 for ALL
+  three flow rates - the cell-layer profile is set by reaction and
+  diffusion alone, not by the flow rate.
+  How Q enters (the point of the comparison): through the
+  chamber-side mass-transfer film. I use k_m ~ D_fluid/delta with
+  the diffusion boundary-layer thickness estimated from the
+  residence time, delta = sqrt(D_fluid * t_res) and t_res = V/Q,
+  so k_m = sqrt(D_fluid*Q/V) and k_m ~ Q^(1/2).
+  (The classical Leveque/Levich scaling for laminar channel flow is
+   k_m ~ (D_f^2 U/(Dh*L))^(1/3) ~ U^(1/3) ~ Q^(1/3); it gives the
+   same monotone trend. NOTE: the form quoted in the task brief,
+   (D_f^2 U/(nu*L_ch))^(-1/3), is dimensionally inconsistent - the
+   correct Leveque exponent is +1/3 and nu does not appear.)
+  Qualitative statement: a HIGHER flow rate gives a thinner film,
+  a larger k_m, a smaller film drop, hence a HIGHER steady-state
+  concentration in the cell layer - 1 mL/min > 100 uL/min >
+  10 uL/min (with the caveat that the chamber is not well mixed,
+  so the real trend is steeper than the idealised model).
+
+PART G - ARE ALL CELLS IN IDENTICAL CONDITIONS?
+------------------------------------------------------------------------------
+  Inside one cell layer c varies from 1 mol/m^3 at the surface to
+  0.0757 mol/m^3 at the impermeable base (factor 13.2):
+  cells at different depths are NOT identical, and this gradient is
+  intrinsic (reaction-limited), not a flow artefact.
+  Laterally, the part-C inhomogeneity relaxes only by diffusion:
+  sqrt(2 D t) = 5.9 mm per day, so
+  a 60 mm dead zone needs ~104 days.
+  Over a multi-day culture the lateral gradient is therefore only
+  washed out if the flow keeps renewing the boundary layer; the
+  reaction (1/k = 6.7 s) makes the supply chronically marginal.
+  Verdict: cells growing on the floor over the whole 60 x 60 mm
+  footprint are NOT in identical conditions; only cells within the
+  swept strip (or under a meander inlet) see the same nutrient.
+
+FLOW-RATE SWEEP (part F)
+------------------------------------------------------------------------------
+             Q        Re    U_ch[m/s]   t_res[s]  c_mid pinned
+     10 uL/min    0.1111   8.3333e-05    21600.0  7.565625e-02
+    100 uL/min    1.1111   8.3333e-04     2160.0  7.565625e-02
+      1 mL/min   11.1111   8.3333e-03      216.0  7.565625e-02
+  -> pinned-surface cell-layer steady state is IDENTICAL for all
+     three flow rates (it is set by k and D_eff only).
+
+  Film-resistance model (chamber film + reaction layer + flow
+  balance; idealised well-mixed chamber, c_in = 1 mol/m^3):
+             Q     k_m[m/s]   delta[um]  k_m(Lev)[m/s]  c_surface       c_mid   c_bulk
+     10 uL/min   9.6225e-08     2078.46     2.8114e-07    0.00977 7.394118e-04  0.47388
+    100 uL/min   3.0429e-07      657.27     6.0571e-07    0.04673 3.535345e-03  0.74845
+      1 mL/min   9.6225e-07      207.85     1.3050e-06    0.15906 1.203371e-02  0.91438
+  -> 1 mL/min gives the highest cell-layer concentration.
+  CAVEAT: this film model is a first-order estimate. The estimated
+  film thickness delta is 0.66-2.08 mm, i.e. of the same order as
+  the 1 mm chamber height (ratio shown in the JSON), so the linear
+  gradient across the film and the perfectly-mixed-bulk assumption
+  are marginal; the numbers should be read as a trend, not as
+  predictions of the COMSOL result. The pinned-surface column
+  above is the defensible quantity.
+
+SANITY CHECKS
+------------------------------------------------------------------------------
+  1) t_fill for the 6 x 6 x 1 mm chamber at 100 uL/min:
+     V_chamber = 3.6000e-06 m^3 = 3600.0 uL (expected 3.6e-6 m^3 = 3600 uL)  -> OK
+     t_fill = V/Q = 2160.00 s = 36.000 min (expected ~36 min = 2160 s)    -> OK
+  2) Re in the inlet channel = 1.1111 (expected ~1-10)                   -> OK
+     laminar (Re << 2000): OK
+  3) cell layer: diffusion time L_c^2/D_eff = 71.4 s,
+     reaction time 1/k = 6.67 s -> reaction dominates
+     c(base)/c_surface = 0.0757 (c_mid = 7.5656e-02 mol/m^3 vs 1 mol/m^3)
+     -> base MUCH lower than surface: OK
+
+FIGURES
+------------------------------------------------------------------------------
+  wrote <project>\figures\ex2_a_fill.png  (100097 bytes)
+  wrote <project>\figures\ex2_a_reynolds.png  (126644 bytes)
+  wrote <project>\figures\ex2_cell_layer.png  (215682 bytes)
+  wrote <project>\figures\ex2_b_cstr_benchmark.png  (123049 bytes)

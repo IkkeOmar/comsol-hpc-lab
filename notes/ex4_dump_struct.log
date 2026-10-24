@@ -1,0 +1,23 @@
+*******************************************
+***COMSOL 6.4.0.429 progress output file***
+*******************************************
+Sat Oct 24 08:44:50 CEST 2026
+COMSOL Multiphysics 6.4 (Build: 429) starting in batch mode
+Running: <project>\comsol\Ex4_DumpStruct.class
+DATASETS:
+  dset1  type=Solution
+  dset2  type=Solution
+  dset3  type=Solution
+  pdat  type=Particle
+PLOT GROUPS:
+EXPORTS:
+  ePart  type=Data
+  eF_dset1  type=Data
+  eF_dset2  type=Data
+  eF_dset3  type=Data
+  eF_pdat  type=Data
+=== DUMP DONE ===
+Class run time: 19 s.
+Saving model: <project>\comsol\Ex4_DumpStruct_Ex4.mph
+Save time: 3 s.
+Total time: 22 s.

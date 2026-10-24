@@ -1,0 +1,67 @@
+EXERCISE 4 - COMSOL vs ANALYTICAL
+====================================================================
+
+COMSOL run (the course cluster, comsol/ex4_desktop/Ex4_FFF.java):
+  3D channel 1000 x 100 x 100 um, 45 electrodes (23 x 10 V, 22 x GND)
+  91 particles released on the y = 5..95 um grid at x = 0, z = 50 um
+  121 output times, 0..120 s
+  mid-channel particle (released at y = 50 um) is particle #45
+
+Release check (t = 0):
+  x = 0.0 .. 0.0 um   (expected 0)
+  y = 5.0 .. 95.0 um   (expected 5 .. 95)
+  z = 50.0 .. 50.0 um   (expected 50)
+
+Analytical reference:
+  Re{K}(10 MHz) = -0.083670  -> negative DEP
+  y_eq = 31.980 um
+
+Key comparison numbers:
+  particle leaves the 1 mm channel at t = 18.0 s
+     x = 955.4 um, z = nan um
+  at t = 120 s (extrapolated beyond the channel):
+     x = nan um, z = nan um
+  max |z_COMSOL - z_analytical| while inside the channel = 1.198 um
+  max |x_COMSOL - x_analytical| while inside the channel = 217.708 um
+  mean |dz| = 0.805 um
+
+Vertical motion (the physics that sets the equilibrium):
+  max |z_COMSOL - z_analytical| inside the channel = 1.198 um
+  mean |dz| = 0.805 um
+  z when the particle leaves the channel = 40.25 um
+  (equilibrium y_eq = 31.98 um, NOT reached)
+
+Downstream motion:
+  COMSOL dx/dt at release = 35.89 um/s
+  analytical 2D profile   = 41.67 um/s   (ratio 0.861)
+  square-duct centre peak = 37.78 um/s
+  largest |dy/dt| at release = 5.94 um/s (wall particles drift towards the
+  centreline; the centre particle's own drift is -0.01 um/s).  The
+  COMSOL channel is 3D, the analytical reference assumes a 2D profile
+  in z only.
+  max |x_COMSOL - x_analytical| inside the channel = 217.7 um
+
+Interpretation:
+  The vertical physics - the part that actually sets the equilibrium -
+  agrees to ~1.2 um over the whole in-channel travel.
+  The downstream distance differs because the analytical reference uses a
+  2D parallel-plate profile while COMSOL solves the 3D square duct, so the
+  particle is carried faster and drifts in y as well.  Both agree on the
+  headline point: the particle leaves the 1 mm channel long before it
+  reaches y_eq = 32.0 um (COMSOL z at the outlet 40.3 um).
+
+FIGURES
+  <project>\figures\comsol_ex4\ex4_comsol_vs_analytical.png
+
+ELECTRIC FIELD CHECK (COMSOL vs the analytical decay)
+--------------------------------------------------------------
+  the analytical law |grad|E|^2 = (32/pi)(V0^2/d^3) exp(-pi z/d) means
+  |E| decays with length 2d/pi = 6.366 um and |E|^2 with d/pi = 3.183 um
+  (d = 10 um).  The law is defined at the gap centre, x = 65 um for this
+  electrode layout.
+
+  gap centre (65 um)                 L(|E|) =  8.532 um   ratio to 2d/pi = 1.340
+  10 V electrode edge (60 um)        L(|E|) =  7.944 um   ratio to 2d/pi = 1.248
+  10 V electrode centre (55 um)      L(|E|) =  9.893 um   ratio to 2d/pi = 1.554
+  ground electrode edge (70 um)      L(|E|) =  7.361 um   ratio to 2d/pi = 1.156
+  figure: <project>\figures\comsol_ex4\ex4_efield_profile.png

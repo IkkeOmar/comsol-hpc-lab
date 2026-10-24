@@ -1,0 +1,104 @@
+*******************************************
+***COMSOL 6.4.0.293 progress output file***
+*******************************************
+Sat Oct 24 01:22:55 CEST 2026
+COMSOL Multiphysics 6.4 (Build: 293) starting in batch mode
+Running: /zhome/29/d/167641/a2/Ex2Chamber.class
+EX2 MODE = bc   OUT = .
+---------- Current Progress: 100 % - Updating selections
+Memory: 464/464 8663/8663
+           Current Progress:   0 % - Block
+Memory: 473/473 8727/8727
+           Current Progress:   7 % - Block 2
+Memory: 499/499 8829/8829
+-          Current Progress:  13 % - Block 3
+Memory: 500/500 8829/8829
+--         Current Progress:  20 % - Block 4
+--         Current Progress:  27 % - Block 5
+---        Current Progress:  33 % - Form Union
+---        Current Progress:  33 % - Performing Boolean operation
+Memory: 505/505 8909/8909
+---------- Current Progress: 100 % - Updating selections
+Memory: 507/507 8909/8909
+GEOM domains=5 boundaries=26 edges=44 verts=24
+---------- Current Progress: 100 % - Creating visualization mesh
+Memory: 501/507 8909/8909
+           Current Progress:   0 % - Form Union
+Memory: 505/507 8913/8913
+           Current Progress:   0 % - Performing Boolean operation
+---------- Current Progress: 100 % - Updating selections
+SEL strip=[3] chamA=[2] chamB=[4]
+SEL ductW=[1] ductE=[5] cell=[]
+SEL inlet=[1] outlet=[26]
+SEL z0=[3, 8, 12, 16, 22] z1=[4, 9, 13, 17, 23]
+SEL cellBot=[] cellTop=[]
+SEL vertical edges = 44
+
+################ MESH ################
+EX2 FAILED: Exception:
+	com.comsol.util.exceptions.FlException: Unsupported geometric entity level.
+Messages:
+	Unsupported geometric entity level
+	- Level: 1
+
+EX2 DONE
+Class run time: 7 s.
+Saving model: /zhome/29/d/167641/a2/Ex2Chamber_Ex2Chamber.mph
+Save time: 1 s.
+Total time: 8 s.
+Exception:
+	com.comsol.util.exceptions.FlException: Unsupported geometric entity level.
+Messages:
+	Unsupported geometric entity level
+	- Level: 1
+Stack trace:
+at com.comsol.model.selections.AbstractSelectionMethod.checkDomainLevel(SourceFile:251)
+	at com.comsol.model.selections.SelectionMethod.geom(SourceFile:718)
+	at com.comsol.model.selections.MeshSelectionMethod.geom(SourceFile:295)
+	at com.comsol.model.data.primitive.SelectionPrim.geom(SourceFile:321)
+	at com.comsol.model.impl.SelectionImpl.geom(SourceFile:205)
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.comsol.model.debugger.MethodExecModelHelper.runApiMethod(SourceFile:86)
+	at com.comsol.model.debugger.MethodExecModelHelper.a(SourceFile:100)
+	at com.comsol.util.security.a.a(SourceFile:129)
+	at com.comsol.model.debugger.MethodExecModelHelper.runApiMethodPrivileged(SourceFile:100)
+	at com.comsol.methodexecmph.a.a.a(SourceFile:276)
+	at com.comsol.methodexecmph.a.a.a(SourceFile:215)
+	at com.comsol.methodexecmph.b.a(SourceFile:120)
+	at com.comsol.model.util.ServerModelUtil.runExternalClass(SourceFile:649)
+	at com.comsol.model.util.ModelUtilInternal.runExternalClass(SourceFile:195)
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.comsol.bridge.command.b.a(SourceFile:161)
+	at com.comsol.bridge.command.c.run(SourceFile:63)
+	at com.comsol.bridge.command.k.c(SourceFile:227)
+	at com.comsol.bridge.command.k$1.run(SourceFile:100)
+	at com.comsol.util.thread.SuspendableTasks$1.run(SourceFile:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+	at ---.---(Unknown Source)
+	at com.comsol.methodexec.a.f$e.a(SourceFile:351)
+	at com.comsol.methodexec.a.f.d(SourceFile:143)
+	at com.comsol.methodexec.a.f.b(SourceFile:210)
+	at com.comsol.methodexec.a.f.a(SourceFile:187)
+	at com.comsol.methodexec.a.g.a(SourceFile:37)
+	at com.comsol.methodexec.comm.h.a(SourceFile:60)
+	at com.comsol.methodexec.meapi.engine.b.a(SourceFile:159)
+	at com.comsol.methodexec.meapi.engine.b.a(SourceFile:82)
+	at com.comsol.methodexec.meapi.impl.SelectionMEClient.geom(SourceFile:162)
+	at Ex2Chamber.buildMesh(Ex2Chamber.class:307)
+	at Ex2Chamber.build(Ex2Chamber.class:246)
+	at Ex2Chamber.main(Ex2Chamber.class:125)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at com.comsol.methodexec.me.d.a(SourceFile:387)
+	at com.comsol.methodexec.util.JDIDebugHook.invokeMethod(SourceFile:30)
+	at com.comsol.methodexec.me.d.a(SourceFile:386)
+	at com.comsol.methodexec.me.d$2.run(SourceFile:304)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at com.comsol.methodexec.me.d.a(SourceFile:285)
+	at com.comsol.methodexec.me.d.a(SourceFile:146)
+	at com.comsol.methodexec.me.d.a(SourceFile:98)
+	at com.comsol.methodexec.me.b$3.run(SourceFile:249)

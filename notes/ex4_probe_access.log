@@ -1,0 +1,17 @@
+*******************************************
+***COMSOL 6.4.0.429 progress output file***
+*******************************************
+Sat Oct 24 08:26:06 CEST 2026
+COMSOL Multiphysics 6.4 (Build: 429) starting in batch mode
+Running: <project>\comsol\Ex4_ProbeAccess.class
+PROBE args is null: true
+PROBE_OK   ModelUtil.load(<project>/comsol/out/Ex4_FFF_prod.mph) :: loaded, physics=[spf, es, fpt]
+PROBE_OK   ModelUtil.load(out/Ex4_FFF_prod.mph) :: loaded, physics=[spf, es, fpt]
+PROBE_FAIL java.nio read of the .mph :: access denied ("java.io.FilePermission" "<project>\comsol\out\Ex4_FFF_prod.mph" "read")
+=== PROBE DONE ===
+Class run time: 25 s.
+Saving model: <project>\comsol\Ex4_ProbeAccess_pAbs.mph
+Save time: 5 s.
+Saving model: <project>\comsol\Ex4_ProbeAccess_pRel.mph
+Save time: 1 s.
+Total time: 32 s.

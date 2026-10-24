@@ -1,0 +1,271 @@
+{
+  "exercise": "Exercise 1 - The H-filter (Bruus p.99)",
+  "course": "the lab-on-a-chip course, Assignment 1",
+  "constants": {
+    "k_B_J_K": 1.380649e-23,
+    "eps0_F_m": 8.8541878128e-12,
+    "eta_Pa_s": 0.001,
+    "T_K": 293.15,
+    "g_m_s2": 9.80665
+  },
+  "geometry": {
+    "w_m": 0.0001,
+    "h_m": 5e-06,
+    "D_sugar_m2_s": 2e-10,
+    "c0_mol_m3": 1.0,
+    "L_analytical_m": 0.025,
+    "L_comsol_m": 0.006,
+    "Q_comsol_m3_s": 1.6666666666666668e-12,
+    "Q_comsol_uL_min": 0.1
+  },
+  "results": {
+    "verification": {
+      "eq1_max_residual_t0_offjump_mol_m3": 0.0025331257370698745,
+      "eq1_rms_residual_t0_offjump_mol_m3": 0.0003617614887714512,
+      "eq1_L2_error_t0": 0.011806080570648697,
+      "eq1_value_at_jump_mol_m3": 0.5,
+      "eq1_gibbs_overshoot_pct_of_jump": 8.948988265275082,
+      "eq1_reproduces_step": true,
+      "eq1_vs_general_series_max_diff_mol_m3": 0.0,
+      "eq1_vs_finite_difference_max_diff_mol_m3": 0.0006923341262685678,
+      "eq1_vs_finite_difference_max_diff_away_from_jump_mol_m3": 0.0006923016541909299,
+      "eq1_vs_image_sum_max_diff_mol_m3": 3.3306690738754696e-16,
+      "mass_conservation_rel_error": 0.00025006251562891327,
+      "flux_average_closed_vs_quad_diff": 3.234480128178063e-08,
+      "area_average_closed_vs_quad_diff": 1.358123785655252e-08,
+      "flux_average_generalised_closed_vs_quad_diff": 3.234480128178063e-08,
+      "area_average_generalised_closed_vs_quad_diff": 1.358123785655252e-08,
+      "shifted_flux_average_closed_vs_quad_diff": 2.9409099933097593e-08,
+      "shifted_area_average_closed_vs_quad_diff": 1.0315141518724147e-08
+    },
+    "a": {
+      "case_B_comsol": {
+        "L_m": 0.006,
+        "Q0_m3_s": 1.6666666666666668e-12,
+        "Q0_uL_min": 0.1,
+        "channel_volume_m3": 3.0000000000000005e-12,
+        "t_res_s": 1.8000000000000003,
+        "U_mean_m_s": 0.003333333333333333,
+        "t_diff_y_s": 5.066059182116888,
+        "t_diff_x_s": 180000.0,
+        "Pe_x": 99999.99999999999,
+        "Pe_y": 1666.6666666666667,
+        "Re_h": 0.016666666666666666,
+        "Re_w": 0.3333333333333333,
+        "t_diff_x_over_t_res": 99999.99999999999,
+        "t_res_over_t_diff_y": 0.355305758439217
+      },
+      "case_A_analytical": {
+        "L_m": 0.025,
+        "Q0_m3_s": 1.6666666666666668e-12,
+        "Q0_uL_min": 0.1,
+        "channel_volume_m3": 1.2500000000000002e-11,
+        "t_res_s": 7.500000000000001,
+        "U_mean_m_s": 0.003333333333333333,
+        "t_diff_y_s": 5.066059182116888,
+        "t_diff_x_s": 3125000.0000000005,
+        "Pe_x": 416666.6666666666,
+        "Pe_y": 1666.6666666666667,
+        "Re_h": 0.016666666666666666,
+        "Re_w": 0.3333333333333333,
+        "t_diff_x_over_t_res": 416666.6666666667,
+        "t_res_over_t_diff_y": 1.4804406601634041,
+        "note": "flow rate is NOT given in the assignment for this case; 0.1 uL/min is used as the reference and every quantity is also given as an explicit function of Q0"
+      },
+      "t_res_formula": "t_res = L w h / Q0",
+      "t_diff_y_formula": "w^2/(pi^2 D)",
+      "t_diff_x_formula": "L^2/D"
+    },
+    "b": {
+      "target_fraction_of_c0": 0.3,
+      "t1_series_wall_s": 5.865602729091296,
+      "t1_erfc_infinite_domain_s": 22.727611763036347,
+      "t1_image_sum_s": 5.865602729091296,
+      "abs_difference_s": 16.86200903394505,
+      "rel_diff_vs_series": 2.8747274257623183,
+      "rel_diff_vs_erfc": 0.741917329887209,
+      "ratio_erfc_over_series": 3.8747274257623183,
+      "achieved_fraction_series": 0.29999999999999993,
+      "achieved_fraction_erfc": 0.29999999999999993,
+      "x_at_t1": 1.1578235702016242,
+      "diffusion_length_at_t1_um": 48.438012878693925,
+      "diffusion_length_at_t1_erfc_um": 95.3469700893245,
+      "t1_area_averaged_top_half_s": 3.579991396831573,
+      "t1_flux_weighted_top_half_s": 2.5151843974526167,
+      "convergence_study": [
+        {
+          "N_terms": 2,
+          "t1_s": 5.86560272909043,
+          "c_at_t1_over_c0": 0.3
+        },
+        {
+          "N_terms": 5,
+          "t1_s": 5.8656027290912975,
+          "c_at_t1_over_c0": 0.30000000000000004
+        },
+        {
+          "N_terms": 10,
+          "t1_s": 5.865602729091296,
+          "c_at_t1_over_c0": 0.29999999999999993
+        },
+        {
+          "N_terms": 20,
+          "t1_s": 5.865602729091295,
+          "c_at_t1_over_c0": 0.29999999999999993
+        },
+        {
+          "N_terms": 50,
+          "t1_s": 5.865602729091296,
+          "c_at_t1_over_c0": 0.29999999999999993
+        },
+        {
+          "N_terms": 100,
+          "t1_s": 5.865602729091296,
+          "c_at_t1_over_c0": 0.29999999999999993
+        },
+        {
+          "N_terms": 500,
+          "t1_s": 5.8656027290912975,
+          "c_at_t1_over_c0": 0.30000000000000004
+        },
+        {
+          "N_terms": 2000,
+          "t1_s": 5.865602729091296,
+          "c_at_t1_over_c0": 0.29999999999999993
+        }
+      ]
+    },
+    "c": {
+      "t_diff_w2_4D_s": 12.5,
+      "t_diff_eigen_w2_pi2D_s": 5.066059182116888,
+      "t_diff_w2_8D_consistent_s": 6.25,
+      "t1_over_t_diff": 0.4692482183273037,
+      "t1_over_t_diff_eigen": 1.1578235702016242,
+      "t1_over_t_diff_w2_8D": 0.9384964366546074,
+      "t1_erfc_over_t_diff": 1.8182089410429076,
+      "t1_erfc_over_t_diff_eigen": 4.486250741654277,
+      "t1_erfc_over_t_diff_w2_8D": 3.6364178820858153
+    },
+    "d": {
+      "R_h_analytical_Pa_s_m3": 2.3999999999999996e+16,
+      "R_h_comsol_Pa_s_m3": 5759999999999998.0,
+      "formula": "R_h = 12 eta L / (w h^3)",
+      "eta_Pa_s": 0.001,
+      "w_m": 0.0001,
+      "h_m": 5e-06,
+      "dp_dx_check_Pa_per_m": 1599999.9999999995
+    },
+    "e": {
+      "model": "symmetric H-filter: alpha = Q_sugar/Q0 = 1/2, f_up = 1/2; c_up/c0 = F_cross(t_res) = Phi_up/(alpha Q0 c0); t_res = L w h / Q0; dp = Q0 R_h",
+      "criteria": {
+        "A_wall": {
+          "criterion": "wall value c(+w/2)=0.30 c0",
+          "t_res_s": 5.865602729091296,
+          "Q0_m3_s": 2.1310682938011577e-12,
+          "Q0_uL_min": 0.12786409762806947,
+          "dp_Pa": 51145.63905122778,
+          "dp_mbar": 511.4563905122778
+        },
+        "A_area": {
+          "criterion": "collected avg (area)",
+          "t_res_s": 3.579991396831573,
+          "Q0_m3_s": 3.491628502532987e-12,
+          "Q0_uL_min": 0.20949771015197924,
+          "dp_Pa": 83799.08406079168,
+          "dp_mbar": 837.9908406079168
+        },
+        "A_flux": {
+          "criterion": "collected avg (Poiseuille)",
+          "t_res_s": 2.5151843974526167,
+          "Q0_m3_s": 4.9698145442775585e-12,
+          "Q0_uL_min": 0.2981888726566535,
+          "dp_Pa": 119275.54906266139,
+          "dp_mbar": 1192.755490626614
+        },
+        "B_wall": {
+          "criterion": "wall value c(+w/2)=0.30 c0",
+          "t_res_s": 5.865602729091296,
+          "Q0_m3_s": 5.114563905122778e-13,
+          "Q0_uL_min": 0.030687383430736674,
+          "dp_Pa": 2945.9888093507193,
+          "dp_mbar": 29.459888093507193
+        },
+        "B_area": {
+          "criterion": "collected avg (area)",
+          "t_res_s": 3.579991396831573,
+          "Q0_m3_s": 8.379908406079169e-13,
+          "Q0_uL_min": 0.05027945043647501,
+          "dp_Pa": 4826.827241901599,
+          "dp_mbar": 48.26827241901599
+        },
+        "B_flux": {
+          "criterion": "collected avg (Poiseuille)",
+          "t_res_s": 2.5151843974526167,
+          "Q0_m3_s": 1.1927554906266142e-12,
+          "Q0_uL_min": 0.07156532943759686,
+          "dp_Pa": 6870.271626009295,
+          "dp_mbar": 68.70271626009296
+        }
+      },
+      "comsol_operating_point": {
+        "Q0_m3_s": 1.6666666666666668e-12,
+        "Q0_uL_min": 0.1,
+        "dp_Pa": 9599.999999999996,
+        "dp_mbar": 95.99999999999997,
+        "t_res_s": 1.8000000000000003,
+        "wall_value_over_c0": 0.06240739588395722,
+        "top_area_average_over_c0": 0.2140700126350259,
+        "top_flux_average_over_c0": 0.26684456637630133
+      },
+      "analytical_case_at_comsol_Q": {
+        "Q0_m3_s": 1.6666666666666668e-12,
+        "Q0_uL_min": 0.1,
+        "dp_Pa": 39999.99999999999,
+        "dp_mbar": 399.99999999999994
+      },
+      "split_solved_at_comsol_flow": {
+        "alpha_sugar_fraction": 0.5420188576194278,
+        "water_fraction": 0.4579811423805722,
+        "interface_y_um": 2.804197290405637,
+        "caveat": "alpha>1/2 delivers sugar by advection, not by diffusion; degenerate as a sorting device"
+      },
+      "fallback_split_estimate": {
+        "F_cross_at_comsol_flow_flux": 0.26684456637630133,
+        "alpha_required_flux": 0.5621249929761418,
+        "F_cross_at_comsol_flow_area": 0.2140700126350259,
+        "alpha_required_area": 0.700705335388284,
+        "note": "a solution exists only for alpha>1/2 (sugar side stream carries more than half the flow), i.e. part of the sugar reaches the upper exit by advection - the degenerate branch; the physical design point is alpha=1/2 at lower flow rate",
+        "F_cross_at_t1_flux": 0.39737124672942703,
+        "F_cross_at_t1_area": 0.3726706745872552
+      },
+      "sanity": {
+        "dp_per_uL_min_comsol_Pa": 95999.99999999997,
+        "dp_per_uL_min_analytical_Pa": 399999.99999999994,
+        "expected_order_of_magnitude_Pa": "1e3-1e4 (tens-hundreds of mbar)"
+      }
+    },
+    "bonus_critical_diffusion": {
+      "Case B (COMSOL, Q = 0.1 uL/min)": {
+        "t_res_s": 1.8000000000000003,
+        "D_crit_classical_m2_s": 6.944444444444444e-10,
+        "d_max_classical_um": 0.0006183929729591445,
+        "D_crit_wall_criterion_m2_s": 6.517336365656995e-10,
+        "d_max_wall_criterion_um": 0.0006589188288913347
+      },
+      "Case A (Bruus, L = 25 mm, Q = 0.1 uL/min)": {
+        "t_res_s": 7.500000000000001,
+        "D_crit_classical_m2_s": 1.6666666666666666e-10,
+        "d_max_classical_um": 0.0025766373873297686,
+        "D_crit_wall_criterion_m2_s": 1.5641607277576787e-10,
+        "d_max_wall_criterion_um": 0.002745495120380561
+      }
+    }
+  },
+  "figures": [
+    "<project>\\figures\\ex1_a_time_scales.png",
+    "<project>\\figures\\ex1_b_mixing.png",
+    "<project>\\figures\\ex1_b_profiles.png",
+    "<project>\\figures\\ex1_e_pressure.png",
+    "<project>\\figures\\ex1_e_crossing_fraction.png"
+  ]
+}

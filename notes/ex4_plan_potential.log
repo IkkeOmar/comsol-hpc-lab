@@ -1,0 +1,94 @@
+*******************************************
+***COMSOL 6.4.0.429 progress output file***
+*******************************************
+Sat Oct 24 09:24:18 CEST 2026
+COMSOL Multiphysics 6.4 (Build: 429) starting in batch mode
+Running: <project>\comsol\Ex4_PlanPotential.class
+PPOT loading model
+PPOT physics = [spf, es, fpt]
+PPOT datasets = [dset1, dset2, dset3, pdat]
+PPOT dataset cpl_avs0 created (CutPlane)
+PPOT dataset bound to dset1
+PPOT quickplane = xy
+PPOT quickz = 0
+PPOT AVG V on z=0 : 5.321955549193856
+PPOT dataset cpl_avs1 created (CutPlane)
+PPOT dataset bound to dset1
+PPOT quickplane = xy
+PPOT quickz = 1
+PPOT AVG V on z=1 : 5.319550572022812
+PPOT dataset cpl_avs2 created (CutPlane)
+PPOT dataset bound to dset1
+PPOT quickplane = xy
+PPOT quickz = 10
+PPOT AVG V on z=10 : 5.326082237870979
+PPOT dataset cpl_avs3 created (CutPlane)
+PPOT dataset bound to dset1
+PPOT quickplane = xy
+PPOT quickz = 50
+PPOT AVG V on z=50 : 5.321961667820012
+PPOT dataset cpl_avs4 created (CutPlane)
+PPOT dataset bound to dset1
+PPOT quickplane = xy
+PPOT quickz = 100
+PPOT AVG V on z=100 : 5.321956202022602
+PPOT dataset cpl_full created (CutPlane)
+PPOT dataset bound to dset1
+PPOT quickplane = xy
+PPOT quickz = 0
+PPOT (pg axislimits skipped: Unknown_property)
+PPOT (pg xmin skipped: Unknown_property)
+PPOT (pg xmax skipped: Unknown_property)
+PPOT (pg ymin/ymax skipped: Unknown_property)
+PPOT view axis limits set to x 0..1000, y 0..100 um
+PPOT (pg fontsize skipped: Unknown_property)
+           Current Progress:   0 % - Plotting
+Memory: 907/998 941/1040
+           Current Progress:   8 % - Evaluating
+Memory: 909/998 942/1040
+           Current Progress:   7 % - Evaluating
+-          Current Progress:  10 % - Plotting
+-------    Current Progress:  73 % - Evaluating
+Memory: 960/998 997/1040
+-------    Current Progress:  74 % - Evaluating
+Memory: 970/998 1008/1040
+--------   Current Progress:  83 % - Evaluating
+Memory: 972/998 1009/1040
+--------   Current Progress:  86 % - Evaluating
+PPOT internal plot title turned off
+---        Current Progress:  30 % - Generating image
+Memory: 1025/1026 1039/1041
+PPOT SURFACE EXPORT OK -> <project>/figures/comsol_ex4/ex4_potential_full.png
+PPOT dataset cpl_zoom created (CutPlane)
+PPOT dataset bound to dset1
+PPOT quickplane = xy
+PPOT quickz = 0
+PPOT (pg axislimits skipped: Unknown_property)
+PPOT (pg xmin skipped: Unknown_property)
+PPOT (pg xmax skipped: Unknown_property)
+PPOT (pg ymin/ymax skipped: Unknown_property)
+PPOT view axis limits set to x 100..500, y 0..100 um
+PPOT (pg fontsize skipped: Unknown_property)
+           Current Progress:   0 % - Plotting
+Memory: 1052/1077 1072/1077
+           Current Progress:   8 % - Evaluating
+Memory: 1017/1077 1036/1077
+           Current Progress:   7 % - Evaluating
+Memory: 1019/1077 1040/1077
+-          Current Progress:  10 % - Plotting
+-------    Current Progress:  73 % - Evaluating
+Memory: 1049/1077 1068/1077
+-------    Current Progress:  74 % - Evaluating
+Memory: 1057/1077 1074/1090
+--------   Current Progress:  83 % - Evaluating
+Memory: 1040/1077 1056/1090
+--------   Current Progress:  86 % - Evaluating
+PPOT internal plot title turned off
+---        Current Progress:  30 % - Generating image
+Memory: 1053/1077 1061/1090
+PPOT SURFACE EXPORT OK -> <project>/figures/comsol_ex4/ex4_potential_zoom.png
+PPOT === EX4PLANPOT DONE ===
+Class run time: 27 s.
+Saving model: <project>\comsol\Ex4_PlanPotential_Ex4.mph
+Save time: 2 s.
+Total time: 29 s.

@@ -1,0 +1,5 @@
+# Ex4_FFF run configuration (read by the model from its working directory).
+# quick=1 -> small 300 um channel, 9 electrodes, 0.5 s transient (API validation).
+# quick=0 / absent -> production run: 1000 um channel, 45 electrodes, 120 s.
+quick=1
+out=<project>/figures/comsol
